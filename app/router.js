@@ -15,6 +15,11 @@ Router.map(function() {
   this.route('notes');
   this.route('eastereggs');
   this.route('code-of-conduct');
+  this.route('rx-days');
+  this.route('partners');
+  this.route('apprenticeship');
+  this.route('mentorship');
+  this.route('consulting');
 });
 
 export default Router;
