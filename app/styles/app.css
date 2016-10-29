@@ -169,6 +169,10 @@ form.ember-chimp .chimp-says {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+  }
+  .questions a {
+    color: #fafafa;
   }
 }
 
