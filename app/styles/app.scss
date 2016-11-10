@@ -1,0 +1,10 @@
+@import 'foundation/all';
+@import 'modules/nav-bar';
+@import 'modules/footer';
+@import 'modules/slider';
+
+@import 'modules/home';
+
+body {
+  @include body-copy();
+}

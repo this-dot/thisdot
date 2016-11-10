@@ -16,7 +16,11 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+
+    googleFonts: [
+      'Raleway:500,500i,600,600i'
+    ]
   };
 
   if (environment === 'development') {

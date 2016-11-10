@@ -1,0 +1,37 @@
+.nav-bar {
+  background: #fff;
+  padding: 20px 0;
+
+  .row {
+    justify-content: space-between;
+  }
+  nav {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    .subtitle {
+      display: block;
+      text-align: right;
+    }
+    .links {
+      a {
+        @include title-type();
+        font-size: 24px;
+        text-decoration: none;
+        color: $main-color;
+        line-height: 24px;
+        padding: 0 10px;
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+.this-dot-logo {
+  background: url(images/this-dot-logo.svg) center / cover no-repeat;
+  display: inline-block;
+  width: 155px;
+  height: 116px;
+  text-indent: -10000px;
+  overflow: hidden;
+}
