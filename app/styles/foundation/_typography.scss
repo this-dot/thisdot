@@ -47,3 +47,19 @@ p {
   font-weight: 600;
   color: $alt-color;
 }
+
+.read-more {
+  @include body-copy();
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $action-color;
+  font-size: 18px;
+  font-weight: 600;
+  display: block;
+  text-align: right;
+  margin-top: unit-space(2);
+  &:after {
+    content: '...';
+    font-size: 36px;
+  }
+}

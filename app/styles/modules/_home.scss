@@ -4,7 +4,6 @@
   padding-top: unit-space(4);
   padding-bottom: unit-space(4);
   @include title-type();
-  border-bottom: 2px solid $alt-color;
 
   .input-button {
     flex-shrink: 0;

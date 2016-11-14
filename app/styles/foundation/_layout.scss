@@ -1,29 +1,5 @@
-.row {
-  display: block;
-  box-sizing: border-box;
-
-  @include tablet() {
-    display: flex;
-    flex-flow: row nowrap;
-    .half-col {
-      width: 50%;
-      box-sizing: border-box;
-    }
-    .third-col {
-      width: 38.2%;
-      box-sizing: border-box;
-    }
-  }
-}
-
-.wrap {
-  padding: 0 unit-space(1);
-  @include desktop() {
-    max-width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
+$enable-flex: true;
+@import 'bootstrap-grid';
 
 @mixin clearfix() {
   &:after {

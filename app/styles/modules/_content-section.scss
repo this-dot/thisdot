@@ -1,0 +1,61 @@
+.content-section {
+  @extend .container;
+  border-top: 2px solid $alt-color;
+  padding-top: unit-space(2);
+
+  header {
+    @include clearfix();
+    margin-bottom: unit-space(4);
+    &:before {
+      content: '';
+      background: $bright-color;
+      height: 40px;
+      width: 40px;
+      border-radius: 100px;
+      display: inline-block;
+      float: left;
+      margin-right: unit-space(1);
+    }
+    h2 {
+      background: $bright-color;
+      border-radius: 100px;
+      color: #fff;
+      padding: 0 unit-space(2);
+      display: inline-block;
+      height: 40px;
+      box-sizing: border-box;
+      font-size: 24px;
+      line-height: 40px;
+    }
+    p {
+      float: right;
+      line-height: 40px;
+      margin: 0;
+    }
+  }
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    background: url(images/footer-dots.svg) no-repeat center center;
+    height: 10px;
+  }
+
+  h3 {
+    @include title-type();
+    font-size: 32px;
+    color: $title-color;
+    margin-bottom: unit-space(2);
+  }
+  h4 {
+    @include title-type();
+    color: $title-color;
+    font-size: 24px;
+  }
+  > .row {
+    margin-bottom: unit-space(4);
+  }
+  .centered-cols {
+    text-align: center;
+  }
+}

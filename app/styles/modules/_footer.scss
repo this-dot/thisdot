@@ -3,16 +3,8 @@
   padding: unit-space(4) 0;
   margin-top: unit-space(3);
   color: #fff;
-  .wrap {
-    justify-content: space-between;
-  }
-  .this-dot-dot {
-    flex-shrink: 0;
-  }
+
   .links {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
     a {
       @include title-type();
       color: #fff;
@@ -24,14 +16,6 @@
     margin-top: unit-space(2);
     font-size: 18px;
     line-height: 27px;
-  }
-  @include desktop() {
-    nav {
-      width: 75%;
-      p {
-        width: 75%;
-      }
-    }
   }
 }
 .this-dot-dot {
