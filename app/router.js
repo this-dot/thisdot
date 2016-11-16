@@ -10,7 +10,7 @@ Router.map(function() {
   this.route('about');
   this.route('labs');
   this.route('media');
-  this.route('home');
+  this.route('home', { path: '/' });
   this.route('friends');
   this.route('notes');
   this.route('eastereggs');
