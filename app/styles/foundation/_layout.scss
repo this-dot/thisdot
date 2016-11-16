@@ -1,0 +1,10 @@
+$enable-flex: true;
+@import 'bootstrap-grid';
+
+@mixin clearfix() {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

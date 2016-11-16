@@ -1,0 +1,25 @@
+{{nav-bar}}
+{{outlet}}
+
+<footer class="app-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <h2 class="this-dot-dot">This Dot</h2>
+      </div>
+      <nav class="col-md-8">
+        <div class="links row">
+          {{#link-to 'media' class="col-md"}}Media{{/link-to}}
+          {{#link-to 'labs' class="col-md"}}Labs{{/link-to}}
+          {{#link-to 'about' class="col-md"}}About{{/link-to}}
+          {{#link-to 'partners' class="col-md"}}Partners{{/link-to}}
+        </div>
+        <div class="row">
+          <p class="col-md-6">
+            We are a framework agnostic agency that believes in enabling teams to become better developers. Focused on working with companies to build ambitious web applications with modern web techniques and strategies.
+          </p>
+        </div>
+      </nav>
+    </div>
+  </div>
+</footer>
