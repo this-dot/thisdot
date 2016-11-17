@@ -2,6 +2,7 @@
   @extend .container;
   border-top: 2px solid $alt-color;
   padding-top: unit-space(2);
+  @include dots-footer(center);
 
   header {
     @include clearfix();
@@ -32,13 +33,6 @@
       line-height: 40px;
       margin: 0;
     }
-  }
-  &:after {
-    content: '';
-    display: block;
-    width: 100%;
-    background: url(images/footer-dots.svg) no-repeat center center;
-    height: 10px;
   }
 
   h3 {
