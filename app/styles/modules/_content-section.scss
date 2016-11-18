@@ -2,6 +2,7 @@
   @extend .container;
   border-top: 2px solid $alt-color;
   padding-top: unit-space(2);
+  margin-top: unit-space(2);
   @include dots-footer(center);
 
   header {
@@ -27,6 +28,9 @@
       box-sizing: border-box;
       font-size: 24px;
       line-height: 40px;
+      a {
+        color: #fff;
+      }
     }
     p {
       float: right;
@@ -35,16 +39,33 @@
     }
   }
 
+  &.alt {
+    header {
+      h2 {
+        background-color: $bright-color-alt;
+      }
+      &:before {
+        background-color: $bright-color-alt;
+      }
+    }
+  }
+
   h3 {
     @include title-type();
     font-size: 32px;
     color: $title-color;
     margin-bottom: unit-space(2);
+    a {
+      color: $title-color;
+    }
   }
   h4 {
     @include title-type();
     color: $title-color;
     font-size: 24px;
+    a {
+      color: $title-color;
+    }
   }
   > .row {
     margin-bottom: unit-space(4);
