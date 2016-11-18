@@ -1,0 +1,23 @@
+.subscribe {
+  justify-content: center;
+  align-items: center;
+  padding-top: unit-space(4);
+  padding-bottom: unit-space(4);
+  @include title-type();
+
+  .input-button {
+    flex-shrink: 0;
+    .input-text {
+      border-color: $action-color;
+    }
+    .button {
+      background: $action-color;
+    }
+    @include tablet() {
+      margin-left: unit-space(2);
+      .input-text {
+        min-width: 250px;
+      }
+    }
+  }
+}

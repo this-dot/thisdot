@@ -1,0 +1,18 @@
+// Import all foundations
+@import 'reset';
+
+@import 'variables';
+@import 'typography';
+@import 'breakpoints';
+@import 'layout';
+@import 'forms';
+
+@mixin dots-footer($xAlignment) {
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    background: url(images/footer-dots.svg) no-repeat $xAlignment center;
+    height: 10px;
+  }
+}
