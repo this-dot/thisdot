@@ -73,4 +73,8 @@
   .centered-cols {
     text-align: center;
   }
+  a {
+    color: $title-color;
+    border-bottom: 2px dotted $action-color;
+  }
 }
