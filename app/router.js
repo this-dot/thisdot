@@ -20,6 +20,7 @@ Router.map(function() {
   this.route('apprenticeship');
   this.route('mentorship');
   this.route('consulting');
+  this.route('contact');
 });
 
 export default Router;
