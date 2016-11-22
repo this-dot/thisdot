@@ -1,3 +1,14 @@
+.contact-title {
+  background: lighten($bright-color, 10);
+  .container {
+    padding: unit-space(2) 0;
+  }
+}
+
+.contact-section {
+  margin-top: 0;
+}
+
 .contact-form {
   margin-bottom: unit-space(4);
 
