@@ -37,8 +37,12 @@
 
 .labs-source {
   text-align: center;
-  padding: unit-space(4) 0;
-  border-top: 2px solid $alt-color;
+  padding: unit-space(4) 0 0 0;
+  @include dots-footer(center);
+  &:after {
+    margin-top: unit-space(4);
+  }
+
   @include tablet() {
     background: url(images/source-left.svg) no-repeat 0 center / 15%, url(images/source-right.svg) no-repeat right center / 15%;
   }
@@ -54,13 +58,15 @@
 }
 
 .labs-success {
-  padding: unit-space(4) 0;
-  border-top: 2px solid $alt-color;
+  padding: unit-space(4) 0 0 0;
+  @include dots-footer(center);
+  &:after {
+    margin-top: unit-space(4);
+  }
 }
 
 .labs-together {
   padding: unit-space(4) 0;
-  border-top: 2px solid $alt-color;
   text-align: center;
   @include dots-footer(center);
   h2 {
