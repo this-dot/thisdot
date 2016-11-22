@@ -1,0 +1,46 @@
+.about-intro {
+  background: $main-color;
+  padding: unit-space(4) 0;
+  text-align: center;
+  .container {
+    justify-content: center;
+    display: flex;
+    flex-flow: column nowrap;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  h2 {
+    color: #fff;
+    font-size: 48px;
+    line-height: 56px;
+    .this-media {
+      color: $bright-color-alt;
+    }
+    .this-labs {
+      color: $calm-color;
+    }
+  }
+}
+.about-section {
+  h2 {
+    color: $action-color;
+  }
+}
+
+.people-list {
+  li {
+    margin-top: unit-space(2);
+  }
+  h3 {
+    font-size: 24px;
+    margin-bottom: 0;
+    color: $action-color;
+  }
+  .social {
+    margin-top: unit-space(1);
+    a {
+      color: $title-color;
+      border-bottom: 2px dotted $alt-color;
+    }
+  }
+}

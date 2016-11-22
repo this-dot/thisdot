@@ -7,6 +7,8 @@
 @import 'modules/home';
 @import 'modules/media';
 @import 'modules/labs';
+@import 'modules/about';
+@import 'modules/contact';
 
 body {
   @include body-copy();

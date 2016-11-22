@@ -1,6 +1,5 @@
 .content-section {
   @extend .container;
-  border-top: 2px solid $alt-color;
   padding-top: unit-space(2);
   margin-top: unit-space(2);
   @include dots-footer(center);
@@ -72,5 +71,29 @@
   }
   .centered-cols {
     text-align: center;
+  }
+
+  p {
+    a {
+      color: $title-color;
+      border-bottom: 2px dotted $action-color;
+    }
+  }
+
+  .read-more {
+    @include body-copy();
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $action-color;
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    text-align: right;
+    margin-top: unit-space(2);
+    border: none;
+    &:after {
+      content: '...';
+      font-size: 36px;
+    }
   }
 }

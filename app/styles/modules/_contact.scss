@@ -1,0 +1,67 @@
+.contact-title {
+  background: lighten($bright-color, 10);
+  .container {
+    padding: unit-space(2) 0;
+  }
+}
+
+.contact-section {
+  margin-top: 0;
+}
+
+.contact-form {
+  margin-bottom: unit-space(4);
+
+  label {
+    display: block;
+    width: 100%;
+    margin-top: unit-space(1);
+  }
+  .input-text {
+    display: block;
+    width: 100%;
+    border-radius: 0 50px 50px 0;
+
+    -webkit-transition: background 0.5s;
+    transition: background 0.5s;
+    &:disabled {
+      background: $main-color;
+      color: #fff;
+    }
+  }
+  textarea.input-text {
+    border-radius: 0 20px 20px 0;
+    outline: none;
+  }
+  .error-message {
+    text-align: center;
+    border-bottom: 2px dotted $action-color;
+    color: darken($action-color, 10);
+  }
+  .button {
+    background: $action-color;
+    margin-top: unit-space(1);
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-size: 24px;
+    padding: unit-space(1) unit-space(1);
+
+    -webkit-transition: background 0.5s;
+    transition: background 0.5s;
+    &:disabled {
+      background: $bright-color-alt;
+    }
+    &.loading {
+      animation: loading-button 0.5s infinite ease-out alternate;
+    }
+    @keyframes loading-button {
+       0% {
+          background: lighten($action-color, 5);
+       }
+       100% {
+          background: darken($action-color, 5);
+       }
+    }
+  }
+}

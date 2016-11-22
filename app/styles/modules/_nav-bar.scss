@@ -20,8 +20,11 @@
         text-decoration: none;
         color: $main-color;
         line-height: 24px;
-        padding: 0 10px;
+        padding: 5px 0;
         margin: 0 10px;
+        &.active {
+          border-bottom: 2px dotted $action-color;
+        }
       }
     }
   }
