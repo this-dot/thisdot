@@ -57,99 +57,19 @@
     <h2>Modern.Web</h2>
   </header>
   <div class="row centered-cols">
-    {{#each (filter-by 'brand' 'moder-web' model) as item}}
-      <div class="col-md">
-        <span class="image-placeholder"></span>
-        <h4>Modern.web</h4>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut nunc ut erat porttitor porta nec ac metus. Vestibulum at pellentesque tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </p>
-      </div>
+    {{#each (filter-by 'brand' 'modern-web' model.posts) as |post|}}
+      {{video-card post=post class="col-md-4"}}
     {{/each}}
   </div>
-
-  <h3>Video Archive</h3>
-  <ul class="row list-archive">
-    <li class="col-md-5">
-      <a href="#" class="row">
-        <span class="date col-md-2">Sep 27</span>
-        <strong class="title">Security and Authentication</strong>
-      </a>
-    </li>
-    <li class="col-md-5 push-md-1">
-      <a href="#" class="row">
-        <span class="date col-md-2">Sep 27</span>
-        <strong class="title">Security and Authentication</strong>
-      </a>
-    </li>
-    <li class="col-md-5">
-      <a href="#" class="row">
-        <span class="date col-md-2">Sep 27</span>
-        <strong class="title">Security and Authentication</strong>
-      </a>
-    </li>
-    <li class="col-md-5 push-md-1">
-      <a href="#" class="row">
-        <span class="date col-md-2">Sep 27</span>
-        <strong class="title">Security and Authentication</strong>
-      </a>
-    </li>
-  </ul>
 </section>
 
 <section class="content-section media-content">
   <header>
-    <h2>This.Javascript</h2>
+    <h2>The ember show</h2>
   </header>
   <div class="row centered-cols">
-    <div class="col-md">
-      <span class="image-placeholder"></span>
-      <h4>Modern.web</h4>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut nunc ut erat porttitor porta nec ac metus. Vestibulum at pellentesque tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </p>
-    </div>
-    <div class="col-md">
-      <span class="image-placeholder"></span>
-      <h4>Modern.web</h4>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut nunc ut erat porttitor porta nec ac metus. Vestibulum at pellentesque tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </p>
-    </div>
-    <div class="col-md">
-      <span class="image-placeholder"></span>
-      <h4>Modern.web</h4>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut nunc ut erat porttitor porta nec ac metus. Vestibulum at pellentesque tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </p>
-    </div>
+    {{#each (filter-by 'brand' 'the-ember-show' model.posts) as |post|}}
+      {{video-card post=post class="col-md-4"}}
+    {{/each}}
   </div>
-
-  <h3>Video Archive</h3>
-  <ul class="row list-archive">
-    <li class="col-md-5">
-      <a href="#" class="row">
-        <span class="date col-md-2">Sep 27</span>
-        <strong class="title">Security and Authentication</strong>
-      </a>
-    </li>
-    <li class="col-md-5 push-md-1">
-      <a href="#" class="row">
-        <span class="date col-md-2">Sep 27</span>
-        <strong class="title">Security and Authentication</strong>
-      </a>
-    </li>
-    <li class="col-md-5">
-      <a href="#" class="row">
-        <span class="date col-md-2">Sep 27</span>
-        <strong class="title">Security and Authentication</strong>
-      </a>
-    </li>
-    <li class="col-md-5 push-md-1">
-      <a href="#" class="row">
-        <span class="date col-md-2">Sep 27</span>
-        <strong class="title">Security and Authentication</strong>
-      </a>
-    </li>
-  </ul>
 </section>
