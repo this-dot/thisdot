@@ -1,11 +1,26 @@
 <section class="slider">
   <div class="slide">
-    <div class="container">
-      <h2>Latest ember news</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut nunc ut erat porttitor porta nec ac metus.
-      </p>
-    </div>
+      {{#background-video
+        classNames="dark-background"
+        mp4="media/ben-reative-programming.mp4"
+        ogv="media/ben-reative-programming.ogv"
+        webm="media/ben-reative-programming.webm"
+        poster="media/ben-reative-programming.jpg"
+      }}
+        <div class="content container">
+        {{#let "https://medium.com/@thisdotmedia/this-dot-inc-the-future-of-the-modern-web-946f913da636#.9bd9frdhf" as |link|}}
+          <h2>
+            <a href="{{link}}" target="_blank">The Future of The Modern Web</a>
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut nunc ut erat porttitor porta nec ac metus.
+          </p>
+          <p>
+            <a href="{{link}}" target="_blank">Read more</a>
+          </p>
+        {{/let}}
+        </div>        
+      {{/background-video}}
   </div>
 </section>
 
