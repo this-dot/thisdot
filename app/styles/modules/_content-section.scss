@@ -91,9 +91,5 @@
     text-align: right;
     margin-top: unit-space(2);
     border: none;
-    &:after {
-      content: '...';
-      font-size: 36px;
-    }
   }
 }

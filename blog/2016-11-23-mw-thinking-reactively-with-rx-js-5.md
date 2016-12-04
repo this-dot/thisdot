@@ -6,3 +6,4 @@ brand: modern-web
 tags: videos, rxjs
 video: https://www.youtube.com/watch?v=1vR9lQLfqjo
 ---
+Learn the common patterns and practices from Ben Lesh - creator of RxJS. Ben explains common gotchas, problems and how to get around them. This talk will take you one step closer to "thinking reactively"

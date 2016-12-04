@@ -1,67 +1,90 @@
-<section class="media-intro">
-  <div class="container">
-    <h2 class="col-lg-8">The news resource for modern web technologies.</h2>
-    <div class="col-lg-5">
-      <p>
-        Celebrating the evolution of the frontend technology stack.
-      </p>
+{{#scroll-to-parameter show}}
+  <section class="media-intro">
+    <div class="container">
+      <h2 class="col-lg-8">Unifying voice in modern web technologies.</h2>
+      <div class="col-lg-5">
+        <p>
+          Celebrating the evolution of the frontend technology stack.
+        </p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="media-verbs container">
-  <p>
-    <strong>Watch</strong>
-    <strong>Engage</strong>
-    <strong>Listen</strong>
-    <strong>Learn</strong>
-  </p>
-</section>
+  <section class="media-verbs container">
+    <p>
+      <strong>Watch</strong>
+      <strong>Engage</strong>
+      <strong>Listen</strong>
+      <strong>Learn</strong>
+    </p>
+  </section>
 
-<section class="content-section media-brands">
-  <header>
-    <h2>This.Brand</h2>
-  </header>
-  <div class="row centered-cols">
-    <div class="col-md">
-      <span class="image-placeholder"></span>
-      <h4><a href="http://modern-web.org" target="_blank">Modern.Web</a></h4>
+  <section class="content-section media-brands">
+    <header>
+      <h2>Brands</h2>
+    </header>
+    <div class="row centered-cols">
+      <div class="col-md">
+        <a href="http://modern-web.org" target="_blank">
+          <img src="media/modern-web-logo.svg" alt="Modern.Web Logo">
+        </a>
+        <h4>
+          <a href="http://modern-web.org" target="_blank">Modern.Web</a>
+        </h4>
+      </div>
+      <div class="col-md">
+        <a href="https://www.rxworkshop.com" target="_blank">
+        <img src="media/rx-workshop-logo.svg" alt="Rx Workshop Logo">
+        </a>
+        <h4><a href="https://www.rxworkshop.com" target="_blank">Rx Workshop</a></h4>
+      </div>
+      <div class="col-md">
+        <a href="https://www.embermeetup.com" target="_blank">
+          <img src="media/the-ember-show.svg" alt="The Ember Show Logo">
+        </a>
+        <h4><a href="http://www.embermeetup.com" target="_blank">The Ember Show</a></h4>
+      </div>
     </div>
-    <div class="col-md">
-      <span class="image-placeholder"></span>
-      <h4><a href="http://www.rxworkshop.com" target="_blank">Rx Workshop</a></h4>
+    <div class="row centered-cols">
+      <div class="col-md">
+        <a href="https://ngcruise.com" target="_blank">
+          <img src="media/ng-cruise-logo.svg" alt="NG Cruise Logo">
+        </a>      
+        <h4><a href="http://ngcruise.com" target="_blank">Ng-Cruise</a></h4>
+      </div>
     </div>
-    <div class="col-md">
-      <span class="image-placeholder"></span>
-      <h4><a href="http://www.embermeetup.com" target="_blank">The Ember Show</a></h4>
-    </div>
-  </div>
-  <div class="row centered-cols">
-    <div class="col-md">
-      <span class="image-placeholder"></span>
-      <h4><a href="http://ngcruise.com" target="_blank">Ng-Cruise</a></h4>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="content-section alt media-content">
-  <header>
-    <h2>Modern.Web</h2>
-  </header>
-  <div class="row centered-cols">
-    {{#each (filter-by 'brand' 'modern-web' model.posts) as |post|}}
-      {{video-card post=post class="col-md-4"}}
-    {{/each}}
-  </div>
-</section>
+  <section class="content-section alt media-content">
+    <header>
+      <h2 id="moderndotweb">Modern.Web</h2>
+    </header>
+    <div class="row centered-cols">
+      {{#each (filter-by 'brand' 'modern-web' model.posts) as |post|}}
+        {{video-card post=post class="col-md-4"}}
+      {{/each}}
+    </div>
+  </section>
 
-<section class="content-section media-content">
-  <header>
-    <h2>The ember show</h2>
-  </header>
-  <div class="row centered-cols">
-    {{#each (filter-by 'brand' 'the-ember-show' model.posts) as |post|}}
-      {{video-card post=post class="col-md-4"}}
-    {{/each}}
-  </div>
-</section>
+  <section class="content-section media-content">
+    <header>
+      <h2 id="the-ember-show">The ember show</h2>
+    </header>
+    <div class="row centered-cols">
+      {{#each (filter-by 'brand' 'the-ember-show' model.posts) as |post|}}
+        {{video-card post=post class="col-md-4"}}
+      {{/each}}
+    </div>
+  </section>
+
+  <section class="content-section media-content">
+    <header>
+      <h2 id="thisdotjavascript">THIS.JAVASCRIPT</h2>
+    </header>
+    <div class="row centered-cols">
+      {{#each (filter-by 'brand' 'the-ember-show' model.posts) as |post|}}
+        {{video-card post=post class="col-md-4"}}
+      {{/each}}
+    </div>
+  </section>
+{{/scroll-to-parameter}}
