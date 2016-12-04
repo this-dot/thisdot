@@ -30,7 +30,7 @@
 
 <section class="content-section">
   <header>
-    <h2>Media</h2>
+    <h2>Featured Video</h2>
     <p class="subtitle">
       The news resource for modern web technologies
     </p>
@@ -41,7 +41,7 @@
       {{lazy-video url=model.featured.video}}
     </div>
     <div class="col-md">
-      <h3>Featured Video</h3>
+      <h3>{{model.featured.title}}</h3>
       {{{model.featured.summary}}}
       <a href="{{model.featured.video}}" class="read-more">Watch on YouTube</a>
     </div>
