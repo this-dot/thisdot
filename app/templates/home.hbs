@@ -1,4 +1,4 @@
-<section class="slider">
+<section class="slider home-slider">
   <div class="slide">
       {{#background-video
         classNames="dark-background"
@@ -13,18 +13,18 @@
             <a href="{{link}}" target="_blank">The Future of The Modern Web</a>
           </h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut nunc ut erat porttitor porta nec ac metus.
+            We are experiencing another great moment in history right now, and are participating in one of the greatest chapters of our generation: writing the modern web.
           </p>
           <p>
             <a href="{{link}}" target="_blank" class="read-more">Read more</a>
           </p>
         {{/let}}
-        </div>        
+        </div>
       {{/background-video}}
   </div>
 </section>
 
-<section class="subscribe row">
+<section class="subscribe">
   {{home-subscribe}}
 </section>
 
@@ -50,7 +50,7 @@
   <div class="row centered-cols">
     <div class="col-md">
       {{#link-to 'media' (query-params show="moderndotweb")}}
-        <img src="media/modern-web-logo.svg" alt="Modern.Web Logo">
+        <img src="media/modern-web-logo.svg" alt="Modern.Web Logo" class="image-tile-modernweb">
       {{/link-to}}
       <h4><a href="media#moderndotweb">Modern.Web</a></h4>
       <p>
@@ -59,7 +59,7 @@
     </div>
     <div class="col-md">
       {{#link-to 'media' (query-params show="the-ember-show")}}
-        <img src="media/the-ember-show.svg" alt="The Ember Show Logo">
+        <img src="media/the-ember-show.svg" alt="The Ember Show Logo" class="image-tile-gem">
       {{/link-to}}
       <h4><a href="media#the-ember-show">The Ember Show</a></h4>
       <p>Monthly show about the latest developments in Ember.js community presented by addon and framework creators.</p>

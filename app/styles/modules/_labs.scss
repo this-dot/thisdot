@@ -30,8 +30,6 @@
       max-width: 100%;
       margin-bottom: unit-space(1);
     }
-    padding-top: unit-space(1);
-    @include dots-footer(left);
   }
 }
 
@@ -47,7 +45,7 @@
     background: url(images/source-left.svg) no-repeat 0 center / 15%, url(images/source-right.svg) no-repeat right center / 15%;
   }
   @include desktop {
-    background: url(images/source-left.svg) no-repeat 0 center, url(images/source-right.svg) no-repeat right center;
+    background: url(images/source-left.svg) no-repeat 0 center / 20%, url(images/source-right.svg) no-repeat right center / 20%;
   }
   h2 {
     color: $action-color;
