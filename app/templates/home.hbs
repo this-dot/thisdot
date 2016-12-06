@@ -52,7 +52,11 @@
       {{#link-to 'media' (query-params show="moderndotweb")}}
         <img src="media/modern-web-logo.svg" alt="Modern.Web Logo" class="image-tile-modernweb">
       {{/link-to}}
-      <h4><a href="media#moderndotweb">Modern.Web</a></h4>
+      <h4>
+        {{#link-to 'media' (query-params show="moderndotweb")}}
+          Modern.Web
+        {{/link-to}}
+      </h4>
       <p>
         Monthly meetup of thought leaders with a focus on JavaScript, browsers and reactive programming.
       </p>
@@ -61,7 +65,11 @@
       {{#link-to 'media' (query-params show="the-ember-show")}}
         <img src="media/the-ember-show.svg" alt="The Ember Show Logo" class="image-tile-gem">
       {{/link-to}}
-      <h4><a href="media#the-ember-show">The Ember Show</a></h4>
+      <h4>
+        {{#link-to 'media' (query-params show="the-ember-show")}}
+          The Ember Show
+        {{/link-to}}
+      </h4>
       <p>Monthly show about the latest developments in Ember.js community presented by addon and framework creators.</p>
     </div>
     <div class="col-md">
