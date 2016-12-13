@@ -1,8 +1,16 @@
 .slider {
   background: #B6BFD6;
+
   .slide {
-    padding: unit-space(2) 0;
+    display: flex;
+    flex-flow: column;
     min-height: 60vh;
+    > div {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     h2 {
       font-size: 49px;
       line-height: 52px;
@@ -13,5 +21,13 @@
       line-height: 38px;
       max-width: 600px;
     }
+  }
+
+  .dark-background {
+    color: white;
+  }
+
+  .content {
+    padding: unit-space(2) 0;
   }
 }

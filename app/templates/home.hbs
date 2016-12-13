@@ -1,25 +1,36 @@
-<section class="slider">
+<section class="slider home-slider">
   <div class="slide">
-    <div class="container">
-      <h2>Latest ember news</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut nunc ut erat porttitor porta nec ac metus.
-      </p>
-    </div>
+      {{#background-video
+        classNames="dark-background"
+        mp4="media/ben-reative-programming.mp4"
+        ogv="media/ben-reative-programming.ogv"
+        webm="media/ben-reative-programming.webm"
+        poster="media/ben-reative-programming.jpg"
+      }}
+        <div class="content container">
+        {{#let "https://medium.com/@thisdotmedia/this-dot-inc-the-future-of-the-modern-web-946f913da636#.9bd9frdhf" as |link|}}
+          <h2>
+            <a href="{{link}}" target="_blank">The Future of The Modern Web</a>
+          </h2>
+          <p>
+            We are experiencing another great moment in history right now, and are participating in one of the greatest chapters of our generation: writing the modern web.
+          </p>
+          <p>
+            <a href="{{link}}" target="_blank" class="read-more">Read more</a>
+          </p>
+        {{/let}}
+        </div>
+      {{/background-video}}
   </div>
 </section>
 
-<section class="subscribe row">
-  Don’t miss an event or video
-  <form class="input-button">
-    <input type="email" name="email" value="" placeholder="Your Email Address" class="input-text">
-    <button type="button" name="button" class="button">Join</button>
-  </form>
+<section class="subscribe">
+  {{home-subscribe}}
 </section>
 
 <section class="content-section">
   <header>
-    <h2>This.Media</h2>
+    <h2>Featured Video</h2>
     <p class="subtitle">
       The news resource for modern web technologies
     </p>
@@ -27,37 +38,47 @@
 
   <div class="row">
     <div class="col-md">
-      <span class="image-placeholder tall"></span>
+      {{lazy-video url=model.featured.video}}
     </div>
     <div class="col-md">
-      <h3>Featured Video</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut nunc ut erat porttitor porta nec ac metus. Vestibulum at pellentesque tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </p>
-      <a href="#" class="read-more">Read more</a>
+      <h3>{{model.featured.title}}</h3>
+      {{{model.featured.summary}}}
+      <a href="{{model.featured.video}}" class="read-more">Watch on YouTube</a>
     </div>
   </div>
 
   <div class="row centered-cols">
     <div class="col-md">
-      <span class="image-placeholder"></span>
-      <h4>Ember Show</h4>
+      {{#link-to 'media' (query-params show="moderndotweb")}}
+        <img src="media/modern-web-logo.svg" alt="Modern.Web Logo" class="image-tile-modernweb">
+      {{/link-to}}
+      <h4>
+        {{#link-to 'media' (query-params show="moderndotweb")}}
+          Modern.Web
+        {{/link-to}}
+      </h4>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut nunc ut erat porttitor porta nec ac metus. Vestibulum at pellentesque tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Monthly meetup of thought leaders with a focus on JavaScript, browsers and reactive programming.
       </p>
     </div>
     <div class="col-md">
-      <span class="image-placeholder"></span>
-      <h4>Modern.web</h4>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut nunc ut erat porttitor porta nec ac metus. Vestibulum at pellentesque tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </p>
+      {{#link-to 'media' (query-params show="the-ember-show")}}
+        <img src="media/the-ember-show.svg" alt="The Ember Show Logo" class="image-tile-gem">
+      {{/link-to}}
+      <h4>
+        {{#link-to 'media' (query-params show="the-ember-show")}}
+          The Ember Show
+        {{/link-to}}
+      </h4>
+      <p>Monthly show about the latest developments in Ember.js community presented by addon and framework creators.</p>
     </div>
     <div class="col-md">
-      <span class="image-placeholder"></span>
-      <h4>Modern.podcast</h4>
+      {{#link-to 'media' (query-params show="thisdotjavascript")}}
+       <span class="image-placeholder"></span>
+      {{/link-to}}
+      <h4>This.Javascript</h4>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut nunc ut erat porttitor porta nec ac metus. Vestibulum at pellentesque tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Bimonthly gathering of frontend framework creators to share progress and explore collaboration.
       </p>
     </div>
   </div>

@@ -60,6 +60,7 @@
   }
   h4 {
     @include title-type();
+    line-height: 30px;
     color: $title-color;
     font-size: 24px;
     a {
@@ -67,7 +68,7 @@
     }
   }
   > .row {
-    margin-bottom: unit-space(4);
+    margin-bottom: unit-space(2);
   }
   .centered-cols {
     text-align: center;
@@ -78,6 +79,10 @@
       color: $title-color;
       border-bottom: 2px dotted $action-color;
     }
+  }
+
+  .video-card {
+    margin-bottom: unit-space(2);
   }
 
   .read-more {
@@ -91,9 +96,5 @@
     text-align: right;
     margin-top: unit-space(2);
     border: none;
-    &:after {
-      content: '...';
-      font-size: 36px;
-    }
   }
 }
