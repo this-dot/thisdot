@@ -30,11 +30,24 @@
 .people-list {
   li {
     margin-top: unit-space(2);
+    &:nth-child(even) {
+      @extend .push-md-1;
+    }
+  }
+  img {
+    max-width: 100%;
   }
   h3 {
     font-size: 24px;
     margin-bottom: 0;
     color: $action-color;
+  }
+  .avatar {
+    width: 250px;
+    height: 250px;
+    border-radius: 250px;
+    overflow: hidden;
+    float: right;
   }
   .social {
     margin-top: unit-space(1);
