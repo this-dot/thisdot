@@ -48,9 +48,9 @@
   </div>
 
   <div class="row centered-cols">
-    <div class="col-md">
+    <div class="col-md-4">
       {{#link-to 'media' (query-params show="moderndotweb")}}
-        <img src="media/modern-web-logo.svg" alt="Modern.Web Logo" class="image-tile-modernweb">
+        <img src="media/modern-web-logo.svg" alt="Modern.Web Logo">
       {{/link-to}}
       <h4>
         {{#link-to 'media' (query-params show="moderndotweb")}}
@@ -61,9 +61,9 @@
         The Modern.Web podcast, monthly JavaScript meetups, and a focus on frameworks, browsers and reactive programming.
       </p>
     </div>
-    <div class="col-md">
+    <div class="col-md-4">
       {{#link-to 'media' (query-params show="the-ember-show")}}
-        <img src="media/the-ember-show.svg" alt="The Ember Show Logo" class="image-tile-gem">
+        <img src="media/the-ember-show.svg" alt="The Ember Show Logo">
       {{/link-to}}
       <h4>
         {{#link-to 'media' (query-params show="the-ember-show")}}
@@ -72,13 +72,31 @@
       </h4>
       <p>A monthly show about the latest developments in the Ember.js community presented by addon and framework creators.</p>
     </div>
-    <div class="col-md">
+    <div class="col-md-4">
       {{#link-to 'media' (query-params show="thisdotjavascript")}}
-       <span class="image-placeholder"></span>
+       <img src="media/this-dot-js.svg" alt="This Dot Javascript">
       {{/link-to}}
       <h4>This.Javascript</h4>
       <p>
         Quarterly state of the union from JavaScript authors to encourage cross collaboration, learning, and conversation from the community.
+      </p>
+    </div>
+    <div class="col-md-4 push-md-2">
+      {{#link-to 'media' (query-params show="contributors-days")}}
+       <img src="/media/cd-logo.svg" alt="Contributors Days">
+      {{/link-to}}
+      <h4>Contributors Days</h4>
+      <p>
+        In et vestibulum neque. In consectetur nunc non consectetur lobortis. In et vestibulum neque. In consectetur nunc non consectetur lobortis.
+      </p>
+    </div>
+    <div class="col-md-4 push-md-2">
+      {{#link-to 'media' (query-params show="rx-workshop")}}
+       <img src="/media/rx-workshop-logo.svg" alt="Rx Workshop">
+      {{/link-to}}
+      <h4>Rx Workshop</h4>
+      <p>
+        In et vestibulum neque. In consectetur nunc non consectetur lobortis. In et vestibulum neque. In consectetur nunc non consectetur lobortis.
       </p>
     </div>
   </div>
