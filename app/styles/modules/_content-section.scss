@@ -83,6 +83,12 @@
 
   .video-card {
     margin-bottom: unit-space(2);
+    &.is-future {
+      .button {
+        margin-top: unit-space(1);
+        background: $action-color;
+      }
+    }
   }
 
   .read-more {

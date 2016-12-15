@@ -1,6 +1,13 @@
-<a href="{{post.video}}" target="_blank">
-  {{lazy-thumbnail url=post.video}}
-</a>
+{{#if isFuture}}
+  {{moment-calendar post.date}}
+{{else}}
+  <a href="{{post.video}}" target="_blank">
+    {{lazy-thumbnail url=post.video}}
+  </a>
+{{/if}}
 <h4>
   <a href="{{post.video}}" target="_blank">{{post.title}}</a>
 </h4>
+{{#if isFuture}}
+  <a href="{{post.video}}" target="_blank" class="button">Watch Live</a>
+{{/if}}
