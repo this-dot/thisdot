@@ -67,13 +67,24 @@
 </section>
 
 {{#scroll-to-parameter show}}
-  <section class="content-section media-content">
+  <section class="content-section alt media-content">
     <header>
       <h2 id="thisdotjavascript">THIS.JAVASCRIPT</h2>
     </header>
     <div class="row centered-cols">
       {{#each (filter-by 'brand' 'this-dot-js' model.posts) as |post|}}
-        {{video-card post=post class="col-md-4"}}
+        {{video-card post=post class="col-md-4" actionLabel="Live stream"}}
+      {{/each}}
+    </div>
+  </section>
+
+  <section class="content-section media-content">
+    <header>
+      <h2 id="thisdotjavascript">Contributors Days</h2>
+    </header>
+    <div class="row centered-cols">
+      {{#each (filter-by 'brand' 'contributors-days' model.posts) as |post|}}
+        {{video-card post=post class="col-md-4" actionLabel="Apply"}}
       {{/each}}
     </div>
   </section>
