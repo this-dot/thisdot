@@ -1,8 +1,15 @@
 {{#if isFuture}}
+  {{#if post.thumbnail}}
+    <img src="{{post.thumbnail}}" alt="{{post.title}}" /><br>
+  {{/if}}
   {{moment-calendar post.date}}
 {{else}}
   <a href="{{post.video}}" target="_blank">
-    {{lazy-thumbnail url=post.video}}
+    {{#if post.thumbnail}}
+      <img src="{{post.thumbnail}}" alt="{{post.title}}" />
+    {{else}}
+      {{lazy-thumbnail url=post.video}}
+    {{/if}}
   </a>
 {{/if}}
 <h4>

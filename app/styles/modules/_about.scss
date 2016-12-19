@@ -56,4 +56,13 @@
       border-bottom: 2px dotted $alt-color;
     }
   }
+  .framework {
+    display: inline-block;
+    padding: unit-space(0.25) unit-space(0.5);
+    text-transform: uppercase;
+    border: 1px solid $alt-color;
+    color: $alt-color;
+    border-radius: 4px;
+    margin-bottom: unit-space(0.5);
+  }
 }

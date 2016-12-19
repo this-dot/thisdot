@@ -1,7 +1,7 @@
 <section class="about-intro">
-    <h2>
-      <span class="this-media">This.Media</span> &amp; <span class="this-labs">This.Labs</span>
-    </h2>
+  <h2>
+    <span class="this-media">This.Media</span> &amp; <span class="this-labs">This.Labs</span>
+  </h2>
 </section>
 
 <section class="about-section content-section">
@@ -16,7 +16,7 @@
       </p>
     </div>
     <div class="col-md-5 push-md-1">
-      <span class="image-placeholder"></span>
+      <img src="/media/about-media-pic.jpg" alt="" />
     </div>
   </div>
 
@@ -45,7 +45,9 @@
         </div>
         <h3>{{mentor.name}}</h3>
         <p>
-           Cras augue mauris, sagittis blandit nunc ac, consequat lacinia augue.
+           {{#each mentor.frameworks as |framework|}}
+            <span class="framework">{{framework}}</span>
+           {{/each}}
         </p>
         <div class="social">
           <a href="https://twitter.com/{{mentor.twitter}}" target="_blank">@{{mentor.twitter}}</a><br>
@@ -59,10 +61,10 @@
   <h2>Co-Founders</h2>
   <ul class="row people-list">
     <li class="col-md-5">
+      <div class="avatar">
+        <img src="/media/mentors/taras-mankovski.jpg" alt="Taras" />
+      </div>
       <h3>Taras Mankovski</h3>
-      <p>
-         Cras augue mauris, sagittis blandit nunc ac, consequat lacinia augue. Sed dolor lectus, vehicula ac aliquam id, malesuada id justo.
-      </p>
       <div class="social">
         <a href="https://twitter.com/embersherpa" target="_blank">@EmberSherpa</a><br>
         <a href="mailto:taras@thisdot.co">taras@thisdot.co</a>
@@ -70,9 +72,9 @@
     </li>
     <li class="col-md-5 push-md-1">
       <h3>Tracy Lee</h3>
-      <p>
-         Cras augue mauris, sagittis blandit nunc ac, consequat lacinia augue. Sed dolor lectus, vehicula ac aliquam id, malesuada id justo.
-      </p>
+      <div class="avatar">
+        <img src="/media/mentors/tracy-lee.jpg" alt="Tracy" />
+      </div>
       <div class="social">
         <a href="https://twitter.com/ladyleet" target="_blank">@ladyleet</a><br>
         <a href="mailto:tracy@thisdot.co">tracy@thisdot.co</a>
@@ -80,9 +82,9 @@
     </li>
     <li class="col-md-5">
       <h3>Ben Lesh</h3>
-      <p>
-         Cras augue mauris, sagittis blandit nunc ac, consequat lacinia augue. Sed dolor lectus, vehicula ac aliquam id, malesuada id justo.
-      </p>
+      <div class="avatar">
+        <img src="/media/mentors/ben-lesh.png" alt="Ben" />
+      </div>
       <div class="social">
         <a href="https://twitter.com/BenLesh" target="_blank">@BenLesh</a><br>
         <a href="mailto:ben@thisdot.co">ben@thisdot.co</a>
@@ -90,9 +92,9 @@
     </li>
     <li class="col-md-5 push-md-1">
       <h3>Mike Auty</h3>
-      <p>
-         Cras augue mauris, sagittis blandit nunc ac, consequat lacinia augue. Sed dolor lectus, vehicula ac aliquam id, malesuada id justo.
-      </p>
+      <div class="avatar">
+        <img src="/media/mentors/mike-auty.jpg" alt="Mike" />
+      </div>
       <div class="social">
         <a href="https://twitter.com/mauty" target="_blank">@mauty</a><br>
         <a href="mailto:mike@thisdot.co">mike@thisdot.co</a>
@@ -106,30 +108,12 @@
   <ul class="row people-list">
     <li class="col-md-5">
       <h3>Jorge Lainfiesta</h3>
-      <p>
-         Cras augue mauris, sagittis blandit nunc ac, consequat lacinia augue. Sed dolor lectus, vehicula ac aliquam id, malesuada id justo.
-      </p>
-      <div class="social">
-        <a href="https://twitter.com/jorgelainfiesta" target="_blank">@jorgelainfiesta</a><br>
-      </div>
     </li>
     <li class="col-md-5">
       <h3>Wentao Shu</h3>
-      <p>
-         Cras augue mauris, sagittis blandit nunc ac, consequat lacinia augue. Sed dolor lectus, vehicula ac aliquam id, malesuada id justo.
-      </p>
-      <div class="social">
-        <a href="https://twitter.com/_jayphelps" target="_blank">@_jayphelps</a><br>
-      </div>
     </li>
     <li class="col-md-5">
       <h3>Sarah Rech</h3>
-      <p>
-         Cras augue mauris, sagittis blandit nunc ac, consequat lacinia augue. Sed dolor lectus, vehicula ac aliquam id, malesuada id justo.
-      </p>
-      <div class="social">
-        <a href="https://twitter.com/_jayphelps" target="_blank">@_jayphelps</a><br>
-      </div>
     </li>
   </ul>
 </section>

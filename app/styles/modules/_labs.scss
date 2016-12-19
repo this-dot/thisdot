@@ -85,10 +85,15 @@
     color: $main-color;
     margin-bottom: unit-space(1);
   }
-  .button {
-    background: $action-color;
-    font-size: 36px;
-    padding: unit-space(1) unit-space(3);
-    margin: unit-space(2) 0;
-  }
+}
+
+.contact-section {
+  text-align: center;
+}
+
+.button.contact-button {
+  background: $action-color;
+  font-size: 36px;
+  padding: unit-space(1) unit-space(3);
+  margin: unit-space(2) 0;
 }

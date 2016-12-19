@@ -24,6 +24,26 @@
   </header>
   <div class="row centered-cols">
     <div class="col-md">
+      {{#link-to 'media' (query-params show="thisdotjavascript")}}
+       <img src="/media/this-dot-js.svg" alt="This Dot Javascript" class="image-logo-tile">
+      {{/link-to}}
+      <h4>This.Javascript</h4>
+    </div>
+    <div class="col-md">
+      <a href="https://contributordays.com" target="_blank">
+        <img src="/media/cd-logo.svg" alt="Contributor Days logo" class="image-logo-tile">
+      </a>
+      <h4><a href="https://contributordays.com" target="_blank">Contributor Days</a></h4>
+    </div>
+    <div class="col-md">
+      <a href="https://ngcruise.com" target="_blank">
+        <img src="/media/ng-cruise-logo.svg" alt="NG Cruise Logo" class="image-logo-tile">
+      </a>
+      <h4><a href="http://ngcruise.com" target="_blank">Ng-Cruise</a></h4>
+    </div>
+  </div>
+  <div class="row centered-cols">
+    <div class="col-md">
       <a href="http://modern-web.org" target="_blank">
         <img src="media/modern-web-logo.svg" alt="Modern.Web Logo" class="image-logo-tile">
       </a>
@@ -44,26 +64,6 @@
       <h4><a href="http://www.embermeetup.com" target="_blank">The Ember Show</a></h4>
     </div>
   </div>
-  <div class="row centered-cols">
-    <div class="col-md">
-      <a href="https://ngcruise.com" target="_blank">
-        <img src="/media/ng-cruise-logo.svg" alt="NG Cruise Logo" class="image-logo-tile">
-      </a>
-      <h4><a href="http://ngcruise.com" target="_blank">Ng-Cruise</a></h4>
-    </div>
-    <div class="col-md">
-      {{#link-to 'media' (query-params show="thisdotjavascript")}}
-       <img src="/media/this-dot-js.svg" alt="This Dot Javascript" class="image-logo-tile">
-      {{/link-to}}
-      <h4>This.Javascript</h4>
-    </div>
-    <div class="col-md">
-      <a href="https://contributorsdays.com" target="_blank">
-        <img src="/media/cd-logo.svg" alt="Contributors Days logo" class="image-logo-tile">
-      </a>
-      <h4><a href="http://ngcruise.com" target="_blank">Contributors Days</a></h4>
-    </div>
-  </div>
 </section>
 
 {{#scroll-to-parameter show}}
@@ -72,18 +72,18 @@
       <h2 id="thisdotjavascript">THIS.JAVASCRIPT</h2>
     </header>
     <div class="row centered-cols">
-      {{#each (filter-by 'brand' 'this-dot-js' model.posts) as |post|}}
-        {{video-card post=post class="col-md-4" actionLabel="Live stream"}}
+      {{#each (sort-by (action 'closerDateFirst') (filter-by 'brand' 'this-dot-js' model.posts)) as |post|}}
+        {{video-card post=post class="col-md-3" actionLabel="Live stream"}}
       {{/each}}
     </div>
   </section>
 
-  <section class="content-section media-content">
+  <section class="content-section media-content contributors-days-section">
     <header>
-      <h2 id="thisdotjavascript">Contributors Days</h2>
+      <h2 id="thisdotjavascript">Contributor Days</h2>
     </header>
     <div class="row centered-cols">
-      {{#each (filter-by 'brand' 'contributors-days' model.posts) as |post|}}
+      {{#each (sort-by (action 'closerDateFirst') (filter-by 'brand' 'contributors-days' model.posts)) as |post|}}
         {{video-card post=post class="col-md-4" actionLabel="Apply"}}
       {{/each}}
     </div>

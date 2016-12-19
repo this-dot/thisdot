@@ -4,7 +4,7 @@
   margin-top: unit-space(3);
   color: #fff;
 
-  .links {
+  h3 {
     a {
       @include title-type();
       color: #fff;
@@ -12,15 +12,21 @@
       font-size: 24px;
     }
   }
-  p {
-    margin-top: unit-space(2);
-    font-size: 18px;
-    line-height: 27px;
-  }
 }
 .this-dot-dot {
   @extend .this-dot-logo;
   background-image: url(images/this-dot-o.svg);
   width: 162px;
   height: 158px;
+}
+.links {
+  @include title-type();
+  border-top: 1px solid #fff;
+  margin-top: unit-space(1);
+  a {
+    text-transform: uppercase;
+    color: #fff;
+    margin: unit-space(1);
+  }
+  font-size: 18px;
 }
