@@ -6,6 +6,7 @@
     justify-content: center;
     align-items: center;
     @include title-type();
+    font-size: 24px;
 
     .input-button {
       flex-shrink: 0;
@@ -42,12 +43,6 @@
   }
 }
 
-.image-tile-modernweb {
-  background: rgba($alt-color, 0.35);
-}
-.image-tile-gem {
-  background: rgba($bright-color-alt, 0.35);
-}
-.image-tile-rxw {
-  background: rgba($bright-color, 0.35);
+.image-logo-tile {
+  background: lighten($alt-color, 32);
 }

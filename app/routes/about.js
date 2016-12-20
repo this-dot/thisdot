@@ -43,7 +43,7 @@ export default Ember.Route.extend({
         name: 'Alexey Kureev',
         twitter: 'kureevalexey',
         image: '/media/mentors/alexey-kureev.jpg',
-        frameworks: ['react']
+        frameworks: ['react', 'react native']
       },
       {
         name: 'Balint Erdi',

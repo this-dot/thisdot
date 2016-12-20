@@ -4,4 +4,5 @@ import attr from 'ember-data/attr';
 export default Post.extend({
   brand: attr(),
   video: attr(),
+  thumbnail: attr()
 });

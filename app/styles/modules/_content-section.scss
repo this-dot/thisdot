@@ -83,6 +83,12 @@
 
   .video-card {
     margin-bottom: unit-space(2);
+    &.is-future {
+      .button {
+        margin-top: unit-space(1);
+        background: $alt-color;
+      }
+    }
   }
 
   .read-more {
@@ -96,5 +102,8 @@
     text-align: right;
     margin-top: unit-space(2);
     border: none;
+  }
+  img {
+    max-width: 100%;
   }
 }

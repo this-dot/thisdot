@@ -1,6 +1,20 @@
-<a href="{{post.video}}" target="_blank">
-  {{lazy-thumbnail url=post.video}}
-</a>
+{{#if isFuture}}
+  {{#if post.thumbnail}}
+    <img src="{{post.thumbnail}}" alt="{{post.title}}" /><br>
+  {{/if}}
+  {{moment-calendar post.date}}
+{{else}}
+  <a href="{{post.video}}" target="_blank">
+    {{#if post.thumbnail}}
+      <img src="{{post.thumbnail}}" alt="{{post.title}}" />
+    {{else}}
+      {{lazy-thumbnail url=post.video}}
+    {{/if}}
+  </a>
+{{/if}}
 <h4>
   <a href="{{post.video}}" target="_blank">{{post.title}}</a>
 </h4>
+{{#if isFuture}}
+  <a href="{{post.video}}" target="_blank" class="button">{{actionLabel}}</a>
+{{/if}}
