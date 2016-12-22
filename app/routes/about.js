@@ -50,7 +50,13 @@ export default Ember.Route.extend({
         twitter: 'baaz',
         image: '/media/mentors/ballint-erdi.jpg',
         frameworks: ['ember']
-      }
+      },
+      {
+        name: 'James Long',
+        twitter: 'jlongster',
+        image: '/media/mentors/james-long.jpg',
+        frameworks: ['react']
+      },
     ];
     return {
       mentors
