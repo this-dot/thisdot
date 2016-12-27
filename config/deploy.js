@@ -7,6 +7,7 @@ module.exports = function() {
       key: 'fastboot-release.json'
     },
     'gcloud-storage': {
+      projectId: 'this-dot',
       bucket: 'this-dot-assets'
     }
   };
