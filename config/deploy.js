@@ -8,7 +8,8 @@ module.exports = function() {
     },
     'gcloud-storage': {
       projectId: 'this-dot',
-      bucket: 'this-dot-assets'
+      bucket: 'this-dot-assets',
+      filePattern: '**/*.{js,css,png,gif,ico,jpg,map,xml,txt,svg,swf,eot,ttf,woff,woff2,json}'
     }
   };
 };
