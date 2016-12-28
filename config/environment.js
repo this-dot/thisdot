@@ -1,5 +1,7 @@
 /* jshint node: true */
 
+const storageHost = '//storage.googleapis.com';
+
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'thisdot',
@@ -21,7 +23,11 @@ module.exports = function(environment) {
 
     googleFonts: [
       'Raleway:500,500i,600,600i'
-    ]
+    ],
+
+    fastboot: {
+      hostWhitelist: [storageHost, /^localhost:\d+$/]
+    }
   };
 
   if (environment === 'development') {
@@ -44,7 +50,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.host = storageHost;
+    ENV.namespace = 'this-dot-assets/api/blog';
   }
 
   return ENV;
