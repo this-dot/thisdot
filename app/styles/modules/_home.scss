@@ -1,12 +1,14 @@
 .subscribe {
   padding-top: unit-space(4);
-
   .input-group {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     @include title-type();
     font-size: 24px;
+
+    @include tablet() {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
     .input-button {
       flex-shrink: 0;

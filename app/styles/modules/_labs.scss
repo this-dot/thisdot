@@ -42,10 +42,11 @@
   }
 
   @include tablet() {
-    background: url(images/source-left.svg) no-repeat 0 center / 15%, url(images/source-right.svg) no-repeat right center / 15%;
+    background: url(images/source-left.svg) no-repeat 0 center, url(images/source-right.svg) no-repeat right center;
+    background-size: 15%;
   }
   @include desktop {
-    background: url(images/source-left.svg) no-repeat 0 center / 20%, url(images/source-right.svg) no-repeat right center / 20%;
+    background-size: 20%;
   }
   h2 {
     color: $action-color;

@@ -5,26 +5,65 @@
   .row {
     justify-content: space-between;
   }
+
+  .this-dot-logo {
+    max-width: 100%;
+  }
+
   nav {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
+
     .subtitle {
       display: block;
       text-align: right;
+      @include mobileOnly() {
+        display: none;
+      }
     }
+
     .links {
-      a {
-        @include title-type();
-        font-size: 24px;
-        text-decoration: none;
-        color: $main-color;
-        line-height: 24px;
-        padding: 5px 0;
-        margin: 0 10px;
-        &.active {
+      margin-top: 0;
+      @include mobileOnly() {
+        text-align: right;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        height: 100%;
+        a {
+          border-right: 2px dotted $main-color;
+          padding-right: unit-space(0.5);
+          margin: 0;
+          &.active {
+            color: $action-color;
+            border-right: 2px dotted $action-color;
+            border-bottom: none !important;
+          }
+        }
+      }
+      @include tablet() {
+        display: flex;
+        justify-content: space-between;
+        a {
+          border-bottom: 2px solid transparent;
+          padding: 5px 0;
+          margin: 0 10px;
+        }
+        a.active {
           border-bottom: 2px dotted $action-color;
         }
+      }
+      @include desktop() {
+        padding-left: 25%;
+      }
+      a {
+        @include title-type();
+        display: block;
+        font-size: 24px;
+        line-height: 24px;
+        text-decoration: none;
+        color: $main-color;
       }
     }
   }
