@@ -9,6 +9,7 @@
 @import 'modules/labs';
 @import 'modules/about';
 @import 'modules/contact';
+@import 'modules/javascript';
 
 body {
   @include body-copy();
@@ -28,6 +29,16 @@ body {
   );
   &.tall {
     height: 280px;
+  }
+}
+
+.avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 250px;
+  overflow: hidden;
+  img {
+    max-width: 100%;
   }
 }
 

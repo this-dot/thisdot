@@ -14,6 +14,7 @@ Router.map(function() {
   this.route('home', { path: '/' });
   this.route('code-of-conduct');
   this.route('contact');
+  this.route('javascript');
 });
 
 export default Router;

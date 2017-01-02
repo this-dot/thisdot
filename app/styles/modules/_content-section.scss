@@ -83,6 +83,7 @@
 
   .video-card {
     margin-bottom: unit-space(2);
+    box-sizing: border-box;
     &.is-future {
       .button {
         margin-top: unit-space(1);

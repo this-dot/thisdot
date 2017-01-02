@@ -1,0 +1,89 @@
+<section class="javascript-intro">
+  <div class="container">
+    <div class="row">
+      <h2 class="col-lg-8">This.Javascript</h2>
+    </div>
+    <div class="row">
+      <p class="col-lg-5">
+        Keep up with the advancement of prominent open source frameworks, libraries, and browser standards by attending this online event.
+      </p>
+      <p class="col-lg-5 push-lg-1">
+        Core team members will discuss topics such as upcoming releases, recent milestones, and community initiatives.
+      </p>
+    </div>
+    <div class="next-event">
+      January 28th, 2017 <br>
+      9:00am PST. Online! <br>
+      <a href="http://eepurl.com/cvWBM5" class="button action-button" target="_blank">
+        Register
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="javascript-events">
+  <div class="container">
+    <ul class="row">
+      {{#each (filter-by 'featured' 'tdjs1' model.authors) as |author|}}
+        <li class="col-lg-4 col-md-6 speaker-card">
+          <strong class="framework-pop {{author.frameworks}}">{{author.frameworks}}</strong>
+          <div class="avatar">
+            <img src="{{author.image}}" alt="{{author.name}}" />
+          </div>
+          <h3>{{author.name}}</h3>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>
+
+<section class="subscribe container">
+  {{home-subscribe
+      cta="Don't miss a This.Javascript event!"
+      buttonText="Register"
+      formAction="//thisdot.us12.list-manage.com/subscribe/post?u=81e8e3fa2a6f79fe97467029a&amp;id=628b2bd88e"
+  }}
+</section>
+
+<section class="container content-section about-javascript">
+  <div class="row">
+    <div class="col-lg-5">
+      <h2>this.javascript</h2>
+      <p>
+        Keep up with the advancement of prominent open source frameworks, libraries, and browser standards by attending this online event.
+      </p>
+      <p>
+        Core team members will discuss topics such as upcoming releases, recent milestones, and community initiatives.
+      </p>
+    </div>
+    <div class="col-lg-5 push-lg-1">
+      <h2>JS.Interactive</h2>
+      <p>
+        At JS.Interactive, core team members from frameworks, libraries, and browsers follow the conversations from This.JavaScript and discuss cross collaboration and key learnings in a panel format.
+      </p>
+      <p>
+        JS.Interactive is an open forum for all to ask real-time questions to those leading JavaScript tools.
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <ul class="javascript-topics">
+      <li>Recent successes</li>
+      <li>Upcoming releases</li>
+      <li>Big announcements</li>
+      <li>Design decisions</li>
+      <li>Considerations</li>
+      <li>Intended and unintended uses</li>
+      <li>Initiatives to focus on as a community</li>
+    </ul>
+  </div>
+</section>
+
+<section class="content-section javascript-upcoming">
+  <h2>Upcoming Events</h2>
+  <div class="row centered-cols">
+    {{#each (sort-by (action 'closerDateFirst') (filter-by 'brand' 'this-dot-js' model.posts)) as |post|}}
+      {{video-card post=post class="col-lg-3 col-md-6" actionLabel="Register"}}
+    {{/each}}
+  </div>
+</section>
