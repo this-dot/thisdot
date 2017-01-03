@@ -6,7 +6,10 @@ module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     fingerprint: {
       replaceExtensions: ['html', 'js', 'css', 'json'],
-      prepend: '//storage.googleapis.com/this-dot-assets/'
+      exclude: ['assets/assetMap.json'],
+      ignore: ['assets/assetMap.json'],
+      prepend: '//storage.googleapis.com/this-dot-assets/',
+      
     },
     sassOptions: {
       includePaths: [
