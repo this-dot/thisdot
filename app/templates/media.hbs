@@ -75,7 +75,7 @@
     </header>
     <div class="row centered-cols">
       {{#each (sort-by (action 'closerDateFirst') (filter-by 'brand' 'this-dot-js' model.posts)) as |post|}}
-        {{video-card post=post class="col-md-3" actionLabel="Live stream"}}
+        {{video-card post=post class="col-md-3" actionLabel="Register"}}
       {{/each}}
     </div>
   </section>
