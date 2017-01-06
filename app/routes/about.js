@@ -57,6 +57,18 @@ export default Ember.Route.extend({
         image: '/media/mentors/james-long.jpg',
         frameworks: ['react']
       },
+      {
+        name: 'Sean Larkin',
+        twitter: 'thelarkinn',
+        image: '/media/mentors/sean-larkin.jpg',
+        frameworks: ['angular']
+      },
+      {
+        name: 'Offir Golan',
+        twitter: 'offir_golan',
+        image: '/media/mentors/offir-golan.jpg',
+        frameworks: ['ember']
+      }
     ];
     return {
       mentors
