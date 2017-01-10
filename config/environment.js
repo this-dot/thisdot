@@ -27,6 +27,10 @@ module.exports = function(environment) {
 
     fastboot: {
       hostWhitelist: [storageHost, /^localhost:\d+$/]
+    },
+
+    moment: {
+      includeTimezone: '2010-2020'
     }
   };
 
