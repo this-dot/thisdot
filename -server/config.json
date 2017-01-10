@@ -1,0 +1,7 @@
+{
+  "bucket": "this-dot-assets",
+  "key": "fastboot-release.json",
+  "redisHost": "pub-redis-15127.us-central1-1-1.gce.garantiadata.com",
+  "redisPort": "15127",
+  "redisPassword": "]BE6bDCBAHKr"
+}
