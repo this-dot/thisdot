@@ -75,11 +75,11 @@
     </header>
     <div class="row centered-cols">
       {{#each (sort-by (action 'closerDateFirst') (filter-by 'brand' 'this-dot-js' model.posts)) as |post|}}
-        
+
         <div class="video-card col-md-3 is-future">
           {{moment-calendar post.date}}
           <h4>
-            {{#link-to 'javascript'}}{{post.title}}{{/link-to}}
+            {{#link-to 'javascript.event' (moment-format post.date 'MM-YYYY')}}{{post.title}}{{/link-to}}
           </h4>
           {{#link-to 'javascript' class="button"}}Register{{/link-to}}
         </div>

@@ -116,3 +116,31 @@
     margin-bottom: unit-space(1);
   }
 }
+
+.contact-form.javascript-register {
+  .button {
+    padding: 5px 10px;
+    margin-top: unit-space(2);
+  }
+  label {
+    margin-top: unit-space(2);
+  }
+  &.success {
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 5px dotted $bright-color-alt;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+.streaming-notice {
+  margin-top: unit-space(1);
+  font-weight: bold;
+  border-top: 2px dotted $main-color;
+  border-bottom: 2px dotted $main-color;
+  color: $main-color;
+  text-align: center;
+  padding: 5px;
+  border-radius: 4px;
+}

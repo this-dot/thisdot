@@ -5,9 +5,10 @@ import moment from 'moment';
 const { computed } = Ember;
 
 export default Post.extend({
-  brand: attr(),
-  video: attr(),
-  thumbnail: attr(),
+  brand: attr('string'),
+  video: attr('string'),
+  thumbnail: attr('string'),
+  subscribe: attr('string'),
   timezoneDate: computed('date', function() {
     return moment(this.get('date')).tz('America/Los_Angeles');
   }).readOnly()

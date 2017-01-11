@@ -16,9 +16,10 @@
     <div class="next-event">
       {{moment-format model.nextEvent.date 'MMMM Do YYYY'}} <br>
       {{moment-format model.nextEvent.timezoneDate 'h:mm a zz'}}. Online! <br>
-      <a href="http://eepurl.com/cvWBM5" class="button action-button" target="_blank">
+
+      {{#link-to 'javascript.event' (moment-format model.nextEvent.date 'MM-YYYY') class="button action-button"}}
         Register
-      </a>
+      {{/link-to}}
     </div>
   </div>
 </section>

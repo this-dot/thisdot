@@ -15,7 +15,7 @@ Router.map(function() {
   this.route('code-of-conduct');
   this.route('contact');
   this.route('javascript', function() {
-    this.route('event');
+    this.route('event', { path: ':eventDate' });
   });
 });
 
