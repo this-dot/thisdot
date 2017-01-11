@@ -1,41 +1,4 @@
-<section class="javascript-intro">
-  <div class="container">
-    <div class="row">
-      <h2 class="col-lg-8">This.Javascript</h2>
-    </div>
-    <div class="row">
-      <p class="col-lg-5">
-        Keep up with the advancement of prominent open source frameworks, libraries, and browser standards by attending this online event.
-      </p>
-      <p class="col-lg-5 push-lg-1">
-        Core team members will discuss topics such as upcoming releases, recent milestones, and community initiatives.
-      </p>
-    </div>
-    <div class="next-event">
-      January 28th, 2017 <br>
-      9:00am PST. Online! <br>
-      <a href="http://eepurl.com/cvWBM5" class="button action-button" target="_blank">
-        Register
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="javascript-events">
-  <div class="container">
-    <ul class="row">
-      {{#each (filter-by 'featured' 'tdjs1' model.authors) as |author|}}
-        <li class="col-lg-4 col-md-6 speaker-card">
-          <strong class="framework-pop {{author.frameworks}}">{{author.frameworks}}</strong>
-          <div class="avatar">
-            <img src="{{author.image}}" alt="{{author.name}}" />
-          </div>
-          <h3>{{author.name}}</h3>
-        </li>
-      {{/each}}
-    </ul>
-  </div>
-</section>
+{{outlet}}
 
 <section class="subscribe container">
   {{home-subscribe
@@ -81,8 +44,14 @@
 <section class="content-section javascript-upcoming">
   <h2>Upcoming Events</h2>
   <div class="row centered-cols">
-    {{#each (sort-by (action 'closerDateFirst') (filter-by 'brand' 'this-dot-js' model.posts)) as |post|}}
-      {{video-card post=post class="col-lg-3 col-md-6" actionLabel="Register"}}
+    {{#each model.events as |event|}}
+      <div class="video-card col-md-3 is-future">
+        {{moment-calendar event.date}}
+        <h4>
+          {{#link-to 'javascript.event' (moment-format event.date 'MM-YYYY')}}{{event.title}}{{/link-to}}
+        </h4>
+        {{#link-to 'javascript.event' (moment-format event.date 'MM-YYYY') class="button"}}Register{{/link-to}}
+      </div>
     {{/each}}
   </div>
 </section>

@@ -1,0 +1,25 @@
+{{#if isSuccess}}
+  <div class="message">
+    Almost there! Please confirm the email that we just sent. We'll remind you of this event when it's time.
+  </div>
+{{else}}
+  <div class="row">
+    <div class="col-md-6">
+      <label for="">First Name</label>
+      {{one-way-input name update=(action (mut name)) class="input-text" required=true name="FNAME"}}
+    </div>
+    <div class="col-md-6">
+      <label for="">Last Name</label>
+      {{one-way-input lastName update=(action (mut lastName)) class="input-text"required=true name="LNAME"}}
+    </div>
+  </div>
+
+  <label for="">Email</label>
+  {{one-way-input value update=(action (mut value)) class="input-text" type="email" required=true name="EMAIL"}}
+
+  <button type="submit" class="button action-button">{{buttonText}}</button>
+
+  {{#if chimpSays}}
+    <div class="message">{{chimpSays}}</div>
+  {{/if}}
+{{/if}}

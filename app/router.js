@@ -14,7 +14,9 @@ Router.map(function() {
   this.route('home', { path: '/' });
   this.route('code-of-conduct');
   this.route('contact');
-  this.route('javascript');
+  this.route('javascript', function() {
+    this.route('event', { path: ':eventDate' });
+  });
 });
 
 export default Router;
