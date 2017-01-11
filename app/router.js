@@ -17,6 +17,7 @@ Router.map(function() {
   this.route('javascript', function() {
     this.route('event', { path: ':eventDate' });
   });
+  this.route('privacy-policy');
 });
 
 export default Router;
