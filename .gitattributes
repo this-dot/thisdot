@@ -1,1 +1,2 @@
-server/config.json filter=git-crypt diff=git-crypt
+-server/fastboot/config.json filter=git-crypt diff=git-crypt
+-server/slackin/slackin.yaml filter=git-crypt diff=git-crypt
