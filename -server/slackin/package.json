@@ -59,7 +59,8 @@
     "test": "mocha && eslint lib/**",
     "postinstall": "gulp",
     "build": "gulp",
-    "start": "chmod +x bin/slackin && ./bin/slackin"
+    "start": "chmod +x bin/slackin && ./bin/slackin",
+    "deploy": "gcloud app deploy --project=this-dot app.enc.yaml --no-promote"
   },
   "now": {
     "files": [
