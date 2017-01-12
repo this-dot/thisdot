@@ -1,0 +1,3 @@
+dispatch:
+    - url: "slack.thisdot.co/*"
+      module: slackin

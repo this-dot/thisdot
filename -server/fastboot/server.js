@@ -6,7 +6,7 @@ const FastBootAppServer       = require('fastboot-app-server');
 const RedisCache              = require('fastboot-redis-cache');
 const nconf                   = require('nconf');
 
-nconf.file({ file: 'config.json' });
+nconf.file({ file: 'config.enc.json' });
 
 const GCS_BUCKET = nconf.get('bucket');
 const GCS_KEY    = nconf.get('key');
@@ -36,7 +36,13 @@ let cache = new RedisCache({
 let server = new FastBootAppServer({
   downloader,
   notifier,
-  cache
+  cache,
+  beforeMiddleware(app) { 
+    // this redirect is here until GAE whitelists slack.thisdot.co
+    app.get('/slack', function(req, res) {
+      res.redirect(301, 'http://slackin.this-dot.appspot-preview.com');
+    });
+  }
 });
 
 server.start();
