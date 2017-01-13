@@ -1,5 +1,5 @@
 .nav-bar {
-  background: #fff;
+  background: transparent;
   padding: 20px 0;
 
   .row {
@@ -13,7 +13,7 @@
   nav {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-between;
+    justify-content: center;
 
     .subtitle {
       display: block;
@@ -29,8 +29,8 @@
         text-align: right;
         display: flex;
         flex-flow: column nowrap;
-        justify-content: space-between;
         height: 100%;
+        min-height: 112px;
         a {
           border-right: 2px dotted $main-color;
           padding-right: unit-space(0.5);
@@ -41,6 +41,9 @@
             border-bottom: none !important;
           }
         }
+      }
+      @include mobileOnly() {
+        justify-content: space-between;
       }
       @include tablet() {
         display: flex;
@@ -70,10 +73,18 @@
 }
 
 .this-dot-logo {
-  background: url(images/this-dot-logo.svg) center / cover no-repeat;
+  background: url(images/this-dot-logo.svg) center / 100% no-repeat;
   display: inline-block;
   width: 170px;
   height: 112px;
   text-indent: -10000px;
   overflow: hidden;
+  @include tablet() {
+    background: url(images/logo-h.svg) center / 100% no-repeat;
+    display: inline-block;
+    width: 350px;
+    height: 40px;
+    text-indent: -10000px;
+    overflow: hidden;
+  }
 }
