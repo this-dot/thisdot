@@ -16,8 +16,11 @@
 .this-dot-dot {
   @extend .this-dot-logo;
   background-image: url(images/this-dot-o.svg);
-  width: 162px;
-  height: 158px;
+  width: 142px;
+  height: 80px;
+  @include tablet() {
+    margin-top: 67px
+  }
 }
 .links {
   @include title-type();
