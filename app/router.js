@@ -1,8 +1,10 @@
 import Ember from 'ember';
 import config from './config/environment';
 import RouterScroll from 'ember-router-scroll';
+import Trackable from 'ember-cli-analytics/mixins/trackable';
 
-const Router = Ember.Router.extend(RouterScroll, {
+
+const Router = Ember.Router.extend(RouterScroll, Trackable, {
   location: config.locationType,
   rootURL: config.rootURL
 });

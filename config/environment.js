@@ -29,6 +29,8 @@ module.exports = function(environment) {
       hostWhitelist: [storageHost, /^localhost:\d+$/]
     },
 
+    // UA-87303561-3  
+
     moment: {
       includeTimezone: '2010-2020'
     }
@@ -54,6 +56,21 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+
+    ENV.analytics = {
+      integrations: [
+        {
+          name: 'GoogleAnalytics',
+          config: {
+            id: 'UA-87303561-1',
+            remarketing: true,
+            ecommerce: true,
+            enhancedEcommerce: false
+          }
+        }
+      ]
+    };
+
     ENV.host = storageHost;
     ENV.namespace = 'this-dot-assets/api/blog';
   }
