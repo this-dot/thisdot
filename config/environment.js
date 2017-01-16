@@ -29,8 +29,6 @@ module.exports = function(environment) {
       hostWhitelist: [storageHost, /^localhost:\d+$/]
     },
 
-    // UA-87303561-3  
-
     moment: {
       includeTimezone: '2010-2020'
     }
@@ -62,7 +60,7 @@ module.exports = function(environment) {
         {
           name: 'GoogleAnalytics',
           config: {
-            id: 'UA-87303561-1',
+            id: 'UA-87303561-3',
             remarketing: true,
             ecommerce: true,
             enhancedEcommerce: false
