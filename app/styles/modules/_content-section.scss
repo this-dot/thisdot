@@ -2,7 +2,7 @@
   @extend .container;
   padding-top: unit-space(2);
   margin-top: unit-space(2);
-  @include dots-footer(center);
+  // @include dots-footer(center);
 
   header {
     @include clearfix();

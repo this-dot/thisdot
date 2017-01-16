@@ -10,7 +10,6 @@
     box-sizing: border-box;
   }
   h2 {
-    color: $action-color;
     font-size: 48px;
     line-height: 56px;
     margin-bottom: unit-space(3);
@@ -25,22 +24,15 @@
 }
 
 .labs-always {
-  padding: unit-space(4) 0;
   aside {
     img {
       max-width: 100%;
-      margin-bottom: unit-space(1);
     }
   }
 }
 
 .labs-source {
   text-align: center;
-  padding: unit-space(4) 0 0 0;
-  @include dots-footer(center);
-  &:after {
-    margin-top: unit-space(4);
-  }
 
   @include tablet() {
     background: url(images/source-left.svg) no-repeat 0 center, url(images/source-right.svg) no-repeat right center;
@@ -49,37 +41,23 @@
   @include desktop {
     background-size: 20%;
   }
-  h2 {
-    color: $action-color;
-  }
+
   .row {
     justify-content: center;
   }
 }
 
-.labs-success {
-  padding: unit-space(4) 0 0 0;
-  @include dots-footer(center);
-  &:after {
-    margin-top: unit-space(4);
-  }
-}
-
 .labs-together {
-  padding: unit-space(4) 0;
   text-align: center;
-  @include dots-footer(center);
   h2 {
-    color: $action-color;
     text-align: center;
-    margin-bottom: unit-space(2);
   }
   .row {
     justify-content: center;
     text-align: left;
   }
   .service-box {
-    margin-bottom: unit-space(2);
+    margin-top: unit-space(2);
   }
   h3 {
     @include title-type();
@@ -87,6 +65,10 @@
     color: $main-color;
     margin-bottom: unit-space(1);
   }
+}
+
+.labs-title {
+  color: $action-color;
 }
 
 .contact-button-section {
