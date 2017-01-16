@@ -1,26 +1,70 @@
 .media-intro {
-  background: lighten($bright-color-alt, 10);
+  position: relative;
+  .container:after {
+    content: '';
+    display: block;
+    background: url(images/media-header.svg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+
+    @include mobileOnly() {
+      background-size: 200%;
+      order: 2;
+      height: 275px;
+      padding: 15px;
+      box-sizing: border-box;
+      margin-left: -15px;
+      margin-right: -15px;
+      box-sizing: border-box;
+    }
+    @include tablet() {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      top: -120px;
+      left: 0;
+      z-index: -1;
+      min-height: 500px;
+    }
+    @include large() {
+      top: -50px;
+    }
+  }
   .container {
-    padding-top: unit-space(2);
-    padding-bottom: unit-space(2);
-    min-height: 70vh;
-    justify-content: center;
+    justify-content: space-between;
     display: flex;
     flex-flow: column nowrap;
     box-sizing: border-box;
+    @include tablet() {
+      height: 80vh;
+    }
+    @include large() {
+      height: 87vh;
+    }
   }
   h2 {
     color: $main-color;
-    font-size: 48px;
-    line-height: 56px;
-    margin-bottom: unit-space(3);
+    font-size: 36px;
+    line-height: 48px;
+    margin: unit-space(2) auto;
+    max-width: 700px;
+    text-align: center;
+    @include mobileOnly() {
+      order: 1;
+    }
   }
-  p {
-    margin-bottom: unit-space(1);
-    border-left: 2px dotted $main-color;
-    padding-left: unit-space(1);
-    font-size: 23px;
+  h3 {
+    @include title-type();
+    font-size: 20px;
     line-height: 27px;
+    color: $action-color;
+    text-align: center;
+    padding-bottom: unit-space(1);
+    border-bottom: 2px solid $alt-color;
+    @include mobileOnly() {
+      order: 3;
+    }
   }
 }
 
