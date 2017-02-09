@@ -45,7 +45,7 @@
 <section class="javascript-events">
   <div class="container">
     <ul class="row">
-      {{#each model.speakers as |author|}}
+      {{#each (featured-in model.thisEvent.slug model.people) as |author|}}
         <li class="col-lg-4 col-md-6 speaker-card">
           <strong class="framework-pop {{author.frameworks}}">{{author.frameworks}}</strong>
           <div class="avatar">

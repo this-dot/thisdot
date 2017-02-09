@@ -45,13 +45,15 @@
   <h2>Upcoming Events</h2>
   <div class="row centered-cols">
     {{#each model.events as |event|}}
-      <div class="video-card col-md-3 is-future">
-        {{moment-calendar event.date}}
-        <h4>
-          {{#link-to 'javascript.event' (moment-format event.date 'MM-YYYY')}}{{event.title}}{{/link-to}}
-        </h4>
-        {{#link-to 'javascript.event' (moment-format event.date 'MM-YYYY') class="button"}}Register{{/link-to}}
-      </div>
+      {{#if (is-after event.date (now))}}
+        <div class="video-card col-md-4 is-future">
+          {{moment-calendar event.date}}
+          <h4>
+            {{#link-to 'javascript.event' (moment-format event.date 'MM-YYYY')}}{{event.title}}{{/link-to}}
+          </h4>
+          {{#link-to 'javascript.event' (moment-format event.date 'MM-YYYY') class="button"}}Register{{/link-to}}
+        </div>
+      {{/if}}
     {{/each}}
   </div>
 </section>
