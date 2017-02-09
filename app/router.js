@@ -18,6 +18,7 @@ Router.map(function() {
   this.route('contact');
   this.route('javascript', function() {
     this.route('event', { path: ':eventDate' });
+    this.route('video');
   });
   this.route('privacy-policy');
 });
