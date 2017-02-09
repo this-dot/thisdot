@@ -48,7 +48,7 @@
       <h2 id="thisdotjavascript">THIS.JAVASCRIPT</h2>
     </header>
     <div class="row centered-cols">
-      {{#each (sort-by (action 'closerDateFirst') (filter-by 'brand' 'this-dot-js' model.posts)) as |post|}}
+      {{#each (sort-by (action 'closerDateFirst') (filter-by 'date' (action "filterPastEvents") (filter-by 'brand' 'this-dot-js' model.posts))) as |post|}}
 
         <div class="video-card col-md-3 is-future">
           {{moment-calendar post.date}}
@@ -67,7 +67,7 @@
       <h2 id="thisdotjavascript">Contributor Days</h2>
     </header>
     <div class="row centered-cols">
-      {{#each (sort-by (action 'closerDateFirst') (filter-by 'brand' 'contributors-days' model.posts)) as |post|}}
+      {{#each (sort-by (action 'closerDateFirst') (filter-by 'date' (action "filterPastEvents") (filter-by 'brand' 'contributors-days' model.posts))) as |post|}}
         {{video-card post=post class="col-md-4" actionLabel="Apply"}}
       {{/each}}
     </div>

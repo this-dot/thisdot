@@ -7,6 +7,7 @@ export default Ember.Controller.extend({
   show: '',
   actions: {
     closerDateFirst(a, b) {
+      debugger;
       let dateA = moment(get(a, 'date'));
       let dateB = moment(get(b, 'date'));
       if (dateA.isBefore(dateB)) {
@@ -16,6 +17,14 @@ export default Ember.Controller.extend({
         return 1;
       }
       return 0;
+    },
+    filterPastEvents(a){
+      let dateNow = moment();
+      let dateA = moment(a);
+      return dateNow.isBefore(dateA)
+      // if(dateNow.isBefore(dateA)){
+      //   return a;
+      // }
     }
   }
 });
