@@ -42,6 +42,21 @@
 </section>
 
 <section class="content-section javascript-upcoming">
+  <h2>Previous Events</h2>
+  <div class="row centered-cols">
+    {{#each (sort-by (action 'closerDateFirst') (filter-by 'date' (action "filterFutureEvents") model.events)) as |event|}}
+      <div class="video-card col-md-3 is-future">
+        {{moment-calendar event.date}}
+        <h4>
+          {{#link-to 'javascript.event' (moment-format event.date 'MM-YYYY')}}{{event.title}}{{/link-to}}
+        </h4>
+        {{#link-to 'javascript.event' (moment-format event.date 'MM-YYYY') class="button"}}Watch{{/link-to}}
+      </div>
+    {{/each}}
+  </div>
+</section>
+
+<section class="content-section javascript-upcoming">
   <h2>Upcoming Events</h2>
   <div class="row centered-cols">
     {{#each model.events as |event|}}
