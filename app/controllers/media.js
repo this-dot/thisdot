@@ -16,11 +16,6 @@ export default Ember.Controller.extend({
         return 1;
       }
       return 0;
-    },
-    filterPastEvents(a){
-      let dateNow = moment();
-      let dateA = moment(a);
-      return dateNow.isBefore(dateA);
     }
   }
 });
