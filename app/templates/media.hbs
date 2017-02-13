@@ -71,6 +71,8 @@
       {{#each (sort-by (action 'closerDateFirst') (filter-by 'brand' 'contributors-days' model.posts)) as |post|}}
         {{#if (is-after post.date (now))}}
           {{video-card post=post class="col-md-4" actionLabel="Apply"}}
+          {{else}}
+          {{video-card post=post class="col-md-4" actionLabel="Watch"}}
         {{/if}}
       {{/each}}
     </div>

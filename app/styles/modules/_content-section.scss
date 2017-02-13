@@ -90,6 +90,11 @@
         background: $alt-color;
       }
     }
+     &.is-past {
+      .button {
+        margin-top: unit-space(1);
+      }
+    }
   }
 
   .read-more {

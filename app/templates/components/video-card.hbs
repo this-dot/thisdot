@@ -2,19 +2,21 @@
   {{#if post.thumbnail}}
     <img src="{{post.thumbnail}}" alt="{{post.title}}" /><br>
   {{/if}}
-  {{moment-calendar post.date}}
 {{else}}
   <a href="{{post.video}}" target="_blank">
     {{#if post.thumbnail}}
-      <img src="{{post.thumbnail}}" alt="{{post.title}}" />
+      <img src="{{post.thumbnail}}" alt="{{post.title}}" /><br>
     {{else}}
-      {{lazy-thumbnail url=post.video}}
+      {{lazy-thumbnail url=post.video}}<br>
     {{/if}}
   </a>
 {{/if}}
+  {{moment-calendar post.date}}
 <h4>
   <a href="{{post.video}}" target="_blank">{{post.title}}</a>
 </h4>
 {{#if isFuture}}
+  <a href="{{post.video}}" target="_blank" class="button">{{actionLabel}}</a>
+  {{else}}
   <a href="{{post.video}}" target="_blank" class="button">{{actionLabel}}</a>
 {{/if}}
