@@ -11,12 +11,11 @@
     {{/if}}
   </a>
 {{/if}}
-  {{moment-calendar post.date}}
 <h4>
   <a href="{{post.video}}" target="_blank">{{post.title}}</a>
 </h4>
-{{#if isFuture}}
-  <a href="{{post.video}}" target="_blank" class="button">{{actionLabel}}</a>
-  {{else}}
-  <a href="{{post.video}}" target="_blank" class="button">{{actionLabel}}</a>
+
+{{#if actionLabel}}
+ {{moment-calendar post.date}}<br>
+ <a href="{{post.video}}" target="_blank" class="button">{{actionLabel}}</a>
 {{/if}}

@@ -42,23 +42,6 @@
 </section>
 
 <section class="content-section javascript-upcoming">
-  <h2>Previous Events</h2>
-  <div class="row centered-cols">
-    {{#each model.events as |event|}}
-        {{#if (is-before event.date (now))}}
-        <div class="video-card col-md-3 is-future">
-          {{moment-calendar event.date}}
-          <h4>
-            {{#link-to 'javascript.video'}}{{event.title}}{{/link-to}}
-          </h4>
-          {{#link-to 'javascript.video' class="button"}}Watch{{/link-to}}
-        </div>
-        {{/if}}
-    {{/each}}
-  </div>
-</section>
-
-<section class="content-section javascript-upcoming">
   <h2>Upcoming Events</h2>
   <div class="row centered-cols">
     {{#each model.events as |event|}}

@@ -51,10 +51,10 @@
       {{#each (sort-by (action 'closerDateFirst') (filter-by 'brand' 'this-dot-js' model.posts)) as |post|}}
         {{#if (is-after post.date (now))}}
           <div class="video-card col-md-3 is-future">
-            {{moment-calendar post.date}}
             <h4>
               {{#link-to 'javascript.event' (moment-format post.date 'MM-YYYY')}}{{post.title}}{{/link-to}}
             </h4>
+            {{moment-calendar post.date}}
             {{#link-to 'javascript' class="button"}}Register{{/link-to}}
           </div>
         {{/if}}
