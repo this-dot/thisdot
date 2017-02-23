@@ -4,7 +4,8 @@ const { computed } = Ember;
 
 export default Ember.Component.extend({
   classNames: ['video-card'],
-  classNameBindings: ['isFuture'],
+  classNameBindings: ['isFuture', 'isPast'],
+  isPast: computed.not('isFuture'),
   isFuture: computed('post.date', function() {
     let today = moment();
     let eventDate = moment(this.get('post.date'));
