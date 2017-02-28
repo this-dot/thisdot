@@ -41,17 +41,36 @@
   </div>
 </section>
 
-<section class="content-section javascript-upcoming">
-  <h2>Upcoming Events</h2>
-  <div class="row centered-cols">
+<div class="javascript-events-list javascript-upcoming">
+  <section class="content-section">
+    <h2>Upcoming Events</h2>
+    <div class="row">
+      {{#each model.events as |event|}}
+        {{#if (is-after event.date (now))}}
+          <div class="video-card col-md-4 is-future">
+            {{moment-calendar event.date}}
+            <h4>
+              {{#link-to 'javascript.event' (moment-format event.date 'MM-YYYY')}}{{event.title}}{{/link-to}}
+            </h4>
+            {{#link-to 'javascript.event' (moment-format event.date 'MM-YYYY') class="button"}}Register{{/link-to}}
+          </div>
+        {{/if}}
+      {{/each}}
+    </div>
+  </section>
+</div>
+
+<section class="javascript-events-list content-section">
+  <h2>Previous Events</h2>
+  <div class="row">
     {{#each model.events as |event|}}
-      {{#if (is-after event.date (now))}}
+      {{#if (is-before event.date (now))}}
         <div class="video-card col-md-4 is-future">
           {{moment-calendar event.date}}
           <h4>
             {{#link-to 'javascript.event' (moment-format event.date 'MM-YYYY')}}{{event.title}}{{/link-to}}
           </h4>
-          {{#link-to 'javascript.event' (moment-format event.date 'MM-YYYY') class="button"}}Register{{/link-to}}
+          {{#link-to 'javascript.event' (moment-format event.date 'MM-YYYY') class="button"}}Watch{{/link-to}}
         </div>
       {{/if}}
     {{/each}}

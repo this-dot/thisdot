@@ -9,6 +9,8 @@ export default Post.extend({
   video: attr('string'),
   thumbnail: attr('string'),
   subscribe: attr('string'),
+  speakers: attr(),
+
   timezoneDate: computed('date', function() {
     return moment(this.get('date')).tz('America/Los_Angeles');
   }).readOnly()

@@ -1,5 +1,7 @@
+$js-color: lighten(saturate($alt-color, 20), 32);
+
 .javascript-intro {
-  background: lighten($alt-color, 30);
+  background: $js-color;
   font-size: 20px;
   line-height: 34px;
 
@@ -34,7 +36,7 @@
 }
 
 .javascript-events {
-  background: lighten($alt-color, 30);
+  background: $js-color;
   .speaker-card {
     text-align: center;
     position: relative;
@@ -108,13 +110,16 @@
   }
 }
 
-.javascript-upcoming {
+.javascript-events-list {
   h2 {
     color: $action-color;
     font-size: 24px;
-    text-align: center;
     margin-bottom: unit-space(1);
   }
+}
+
+.javascript-upcoming {
+  background: lighten($js-color, 2);
 }
 
 .contact-form.javascript-register {
