@@ -20,6 +20,10 @@ $js-color: lighten(saturate($alt-color, 20), 32);
       font-size: 30px;
       line-height: 30px;
     }
+    strong {
+      font-size: 30px;
+      color: $alt-color;
+    }
   }
   .next-event {
     text-align: center;
@@ -37,6 +41,7 @@ $js-color: lighten(saturate($alt-color, 20), 32);
 
 .javascript-events {
   background: $js-color;
+
   .speaker-card {
     text-align: center;
     position: relative;
@@ -50,6 +55,7 @@ $js-color: lighten(saturate($alt-color, 20), 32);
       position: absolute;
       top: 0;
       right: 0;
+      z-index: 1000;
       background: #fff;
       width: 100px;
       height: 100px;
@@ -76,6 +82,26 @@ $js-color: lighten(saturate($alt-color, 20), 32);
       @include title-type();
       margin-top: unit-space(1);
       font-size: 23px;
+    }
+
+    &.is-video {
+      &:nth-child(even) {
+        @extend .push-md-1;
+      }
+      .framework-pop {
+        right: inherit;
+        left: 0;
+      }
+      .description {
+        padding-left: 100px;
+        text-align: left;
+        margin-bottom: 40px;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+      .lazyLoad-container {
+        height: 280px;
+      }
     }
   }
 }
