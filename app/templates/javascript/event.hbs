@@ -1,43 +1,68 @@
 <section class="javascript-intro">
   <div class="container">
     <div class="row">
-      <h2 class="col-lg-8">
-        {{model.thisEvent.title}}
-      </h2>
+      <header class="col-lg-8">
+        <h2>
+          {{model.thisEvent.title}}
+          {{#if model.isPrevious}}
+            <br>
+            <strong>{{moment-format model.thisEvent.date 'MMMM Do YYYY'}}</strong>
+          {{/if}}
+        </h2>
+      </header>
     </div>
     <div class="row">
-      <aside class="col-lg-5">
+      {{#if model.isPrevious}}
         {{#if model.isInteractive}}
-          <p>
+          <p class="col-lg-5">
             At JS.Interactive, core team members from frameworks, libraries, and browsers follow the conversations from This.JavaScript and discuss cross collaboration and key learnings in a panel format.
           </p>
-          <p>
+          <p class="col-lg-5 push-lg-1">
             JS.Interactive is an open forum for all to ask real-time questions to those leading JavaScript tools.
           </p>
         {{else}}
-          <p>
+          <p class="col-lg-5">
             Keep up with the advancement of prominent open source frameworks, libraries, and browser standards by attending this online event.
           </p>
-          <p>
+          <p class="col-lg-5 push-lg-1">
             Core team members will discuss topics such as upcoming releases, recent milestones, and community initiatives.
           </p>
         {{/if}}
-        <div class="streaming-notice">
-          <a href="{{model.thisEvent.video}}" class="button straming-button" target="_blank">
-            Go to Livestream
-          </a>
+
+      {{else}}
+        <aside class="col-lg-5">
+          {{#if model.isInteractive}}
+            <p>
+              At JS.Interactive, core team members from frameworks, libraries, and browsers follow the conversations from This.JavaScript and discuss cross collaboration and key learnings in a panel format.
+            </p>
+            <p>
+              JS.Interactive is an open forum for all to ask real-time questions to those leading JavaScript tools.
+            </p>
+          {{else}}
+            <p>
+              Keep up with the advancement of prominent open source frameworks, libraries, and browser standards by attending this online event.
+            </p>
+            <p>
+              Core team members will discuss topics such as upcoming releases, recent milestones, and community initiatives.
+            </p>
+          {{/if}}
+          <div class="streaming-notice">
+            <a href="{{model.thisEvent.video}}" class="button straming-button" target="_blank">
+              Go to Livestream
+            </a>
+          </div>
+        </aside>
+        <div class="col-lg-5 push-lg-1">
+          <div class="next-event">
+            {{moment-format model.thisEvent.date 'MMMM Do YYYY'}} <br>
+            {{moment-format model.thisEvent.timezoneDate 'h:mm a zz'}}. Online! <br>
+          </div>
+          {{event-subscribe
+              class="contact-form javascript-register"
+              formAction=model.thisEvent.subscribe
+          }}
         </div>
-      </aside>
-      <div class="col-lg-5 push-lg-1">
-        <div class="next-event">
-          {{moment-format model.thisEvent.date 'MMMM Do YYYY'}} <br>
-          {{moment-format model.thisEvent.timezoneDate 'h:mm a zz'}}. Online! <br>
-        </div>
-        {{event-subscribe
-            class="contact-form javascript-register"
-            formAction=model.thisEvent.subscribe
-        }}
-      </div>
+      {{/if}}
     </div>
   </div>
 </section>
@@ -45,14 +70,25 @@
 <section class="javascript-events">
   <div class="container">
     <ul class="row">
-      {{#each (featured-in model.thisEvent.slug model.people) as |author|}}
-        <li class="col-lg-4 col-md-6 speaker-card">
-          <strong class="framework-pop {{author.frameworks}}">{{author.frameworks}}</strong>
-          <div class="avatar">
-            <img src="{{author.image}}" alt="{{author.name}}" />
-          </div>
-          <h3>{{author.name}}</h3>
-        </li>
+      {{#each speakers as |author|}}
+        {{#if author.video}}
+          <li class="col-md-5 speaker-card is-video">
+            <strong class="framework-pop {{author.frameworks}}">{{author.framework}}</strong>
+            <p class="description">
+              {{author.description}}
+            </p>
+            {{lazy-video url=author.video}}
+
+          </li>
+        {{else}}
+          <li class="col-lg-4 col-md-6 speaker-card">
+            <strong class="framework-pop {{author.frameworks}}">{{author.framework}}</strong>
+            <div class="avatar">
+              <img src="{{author.image}}" alt="{{author.name}}" />
+            </div>
+            <h3>{{author.name}}</h3>
+          </li>
+        {{/if}}
       {{/each}}
     </ul>
   </div>

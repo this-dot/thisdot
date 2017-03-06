@@ -11,11 +11,13 @@ export default Ember.Route.extend({
       return moment(get(item, 'date')).isSame(thisDate, 'month');
     });
     let isInteractive = get(thisEvent, 'title').toUpperCase() === 'JS.INTERACTIVE';
+    let isPrevious = moment(get(thisEvent, 'date')).isBefore(moment());
 
     return {
       thisEvent,
       people,
-      isInteractive
+      isInteractive,
+      isPrevious
     };
   }
 });
