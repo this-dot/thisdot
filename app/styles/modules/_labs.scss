@@ -33,7 +33,6 @@
 
 .labs-source {
   text-align: center;
-
   @include tablet() {
     background: url(images/source-left.svg) no-repeat 0 center, url(images/source-right.svg) no-repeat right center;
     background-size: 15%;
@@ -41,7 +40,6 @@
   @include desktop {
     background-size: 20%;
   }
-
   .row {
     justify-content: center;
   }
@@ -80,4 +78,34 @@
   font-size: 36px;
   padding: unit-space(1) unit-space(3);
   margin: unit-space(2) 0;
+}
+
+.labs-clients {
+  text-align: center;
+  margin-bottom: 2em;
+  h2 {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  img {
+    max-width: 100%;
+  }
+  .logo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .logo-grid-item {
+    float: left;
+    display: inline-block;
+    width: 23.23176%;
+    height: 50%;
+    margin-left: 6.39735%;
+    margin-right: 2.35765%;
+    margin-bottom: 2em;
+  }
 }
