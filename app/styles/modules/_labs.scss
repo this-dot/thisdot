@@ -47,6 +47,9 @@
 
 .labs-together {
   text-align: center;
+  background: saturate(lighten($alt-color, 30), 15);
+  padding-bottom: unit-space(1);
+
   h2 {
     text-align: center;
   }
@@ -90,22 +93,20 @@
   img {
     max-width: 100%;
   }
-  .logo-grid {
-    display: flex;
-    flex-wrap: wrap;
+  .logo-list {
     justify-content: space-around;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  }
-  .logo-grid-item {
-    float: left;
-    display: inline-block;
-    width: 23.23176%;
-    height: 50%;
-    margin-left: 6.39735%;
-    margin-right: 2.35765%;
-    margin-bottom: 2em;
+    align-items: center;
+    li {
+      padding: unit-space(1) unit-space(2);
+      @include desktop() {
+        padding: unit-space(1) unit-space(4);
+      }
+    }
+    img {
+      max-width: 100%;
+    }
+    p {
+      display: none;
+    }
   }
 }
