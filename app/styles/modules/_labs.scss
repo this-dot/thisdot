@@ -33,7 +33,6 @@
 
 .labs-source {
   text-align: center;
-
   @include tablet() {
     background: url(images/source-left.svg) no-repeat 0 center, url(images/source-right.svg) no-repeat right center;
     background-size: 15%;
@@ -41,7 +40,6 @@
   @include desktop {
     background-size: 20%;
   }
-
   .row {
     justify-content: center;
   }
@@ -49,6 +47,9 @@
 
 .labs-together {
   text-align: center;
+  background: saturate(lighten($alt-color, 30), 15);
+  padding-bottom: unit-space(1);
+
   h2 {
     text-align: center;
   }
@@ -80,4 +81,32 @@
   font-size: 36px;
   padding: unit-space(1) unit-space(3);
   margin: unit-space(2) 0;
+}
+
+.labs-clients {
+  text-align: center;
+  margin-bottom: 2em;
+  h2 {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  img {
+    max-width: 100%;
+  }
+  .logo-list {
+    justify-content: space-around;
+    align-items: center;
+    li {
+      padding: unit-space(1) unit-space(2);
+      @include desktop() {
+        padding: unit-space(1) unit-space(4);
+      }
+    }
+    img {
+      max-width: 100%;
+    }
+    p {
+      display: none;
+    }
+  }
 }
