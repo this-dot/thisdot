@@ -20,6 +20,7 @@ Router.map(function() {
     this.route('event', { path: ':eventDate' });
   });
   this.route('privacy-policy');
+  this.route('consulting');
 });
 
 export default Router;
