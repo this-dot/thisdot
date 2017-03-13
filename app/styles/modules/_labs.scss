@@ -1,25 +1,44 @@
 .labs-challenges {
-  background: lighten($calm-color, 10);
-  .container {
-    padding-top: unit-space(2);
-    padding-bottom: unit-space(2);
-    min-height: 70vh;
-    justify-content: center;
-    display: flex;
-    flex-flow: column nowrap;
-    box-sizing: border-box;
+  display: flex;
+  flex-flow: column nowrap;
+  &:before {
+    content: '';
+    background: url(images/labs-header.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    width: 100%;
+    height: 150px;
+    order: 2;
+    @include tablet() {
+      height: 300px;
+    }
+    @include desktop() {
+      height: 500px;
+    }
+    @include large() {
+      height: 70vh;
+    }
   }
   h2 {
-    font-size: 48px;
-    line-height: 56px;
-    margin-bottom: unit-space(3);
+    color: $main-color;
+    font-size: 36px;
+    line-height: 48px;
+    margin: unit-space(2) auto 0 auto;
+    max-width: 700px;
+    text-align: center;
+    order: 1;
   }
-  p {
-    margin-bottom: unit-space(1);
-    border-left: 2px dotted $action-color;
-    padding-left: unit-space(1);
-    font-size: 23px;
+  h3 {
+    @include title-type();
+    font-size: 20px;
     line-height: 27px;
+    color: $action-color;
+    text-align: center;
+    padding-bottom: unit-space(1);
+    margin-top: unit-space(1);
+    border-bottom: 2px solid $alt-color;
+    order: 3;
   }
 }
 
@@ -49,7 +68,6 @@
   text-align: center;
   background: saturate(lighten($alt-color, 30), 15);
   padding-bottom: unit-space(1);
-
   h2 {
     text-align: center;
   }
