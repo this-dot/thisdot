@@ -10,12 +10,6 @@
     max-width: 100%;
   }
 
-  &.hide-logo {
-    .this-dot-logo {
-      display: none;
-    }
-  }
-
   nav {
     display: flex;
     flex-flow: column nowrap;
@@ -93,12 +87,4 @@
     text-indent: -10000px;
     overflow: hidden;
   }
-}
-.this-dot-logo-square {
-  background: url(images/this-dot-logo.svg) center / 100% no-repeat;
-  display: inline-block;
-  width: 170px;
-  height: 112px;
-  text-indent: -10000px;
-  overflow: hidden;
 }
