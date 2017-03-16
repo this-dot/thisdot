@@ -1,10 +1,8 @@
 $js-color: lighten(saturate($alt-color, 20), 32);
-
 .javascript-intro {
   background: $js-color;
   font-size: 20px;
   line-height: 34px;
-
   .container {
     padding-top: unit-space(2);
     padding-bottom: unit-space(2);
@@ -41,7 +39,6 @@ $js-color: lighten(saturate($alt-color, 20), 32);
 
 .javascript-events {
   background: $js-color;
-
   .speaker-card {
     text-align: center;
     position: relative;
@@ -65,25 +62,23 @@ $js-color: lighten(saturate($alt-color, 20), 32);
       &:before {
         content: '';
         display: block;
-        background-repeat: none;
+        background-repeat: no-repeat;
         background-size: contain;
         width: 100px;
         height: 100px;
       }
-      $frameworks: "angular" "react" "ember" "rxjs" "vue" "polymer";
+      $frameworks: "angular" "react" "ember" "rxjs" "vue" "polymer" "webpack" "chrome" "graphql" "mozilla" "pouchdb";
       @each $framework in $frameworks {
         &.#{$framework}:before {
           background-image: url(images/frameworks/#{$framework}.svg);
         }
       }
     }
-
     h3 {
       @include title-type();
       margin-top: unit-space(1);
       font-size: 23px;
     }
-
     &.is-video {
       &:nth-child(even) {
         @extend .push-md-1;
