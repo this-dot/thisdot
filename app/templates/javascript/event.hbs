@@ -3,8 +3,8 @@
     <div class="row">
       <header class="col-lg-8">
         <h2>
-          {{model.thisEvent.title}}
-          {{#if model.isPrevious}}
+          {{model.title}}
+          {{#if isPrevious}}
             <br>
             <strong>{{moment-format model.thisEvent.date 'MMMM Do YYYY'}}</strong>
           {{/if}}
@@ -12,8 +12,8 @@
       </header>
     </div>
     <div class="row">
-      {{#if model.isPrevious}}
-        {{#if model.isInteractive}}
+      {{#if isPrevious}}
+        {{#if isInteractive}}
           <p class="col-lg-5">
             At JS.Interactive, core team members from frameworks, libraries, and browsers follow the conversations from This.JavaScript and discuss cross collaboration and key learnings in a panel format.
           </p>
@@ -31,7 +31,7 @@
 
       {{else}}
         <aside class="col-lg-5">
-          {{#if model.isInteractive}}
+          {{#if isInteractive}}
             <p>
               At JS.Interactive, core team members from frameworks, libraries, and browsers follow the conversations from This.JavaScript and discuss cross collaboration and key learnings in a panel format.
             </p>
@@ -47,19 +47,19 @@
             </p>
           {{/if}}
           <div class="streaming-notice">
-            <a href="{{model.thisEvent.video}}" class="button straming-button" target="_blank">
+            <a href="{{model.video}}" class="button straming-button" target="_blank">
               Go to Livestream
             </a>
           </div>
         </aside>
         <div class="col-lg-5 push-lg-1">
           <div class="next-event">
-            {{moment-format model.thisEvent.date 'MMMM Do YYYY'}} <br>
-            {{moment-format model.thisEvent.timezoneDate 'h:mm a zz'}}. Online! <br>
+            {{moment-format model.date 'MMMM Do YYYY'}} <br>
+            {{moment-format model.timezoneDate 'h:mm a zz'}}. Online! <br>
           </div>
           {{event-subscribe
               class="contact-form javascript-register"
-              formAction=model.thisEvent.subscribe
+              formAction=model.subscribe
           }}
         </div>
       {{/if}}
@@ -70,26 +70,7 @@
 <section class="javascript-events">
   <div class="container">
     <ul class="row">
-      {{#each speakers as |author|}}
-        {{#if author.video}}
-          <li class="col-md-5 speaker-card is-video">
-            <strong class="framework-pop {{author.frameworks}}">{{author.framework}}</strong>
-            <p class="description">
-              {{author.description}}
-            </p>
-            {{lazy-video url=author.video}}
-
-          </li>
-        {{else}}
-          <li class="col-lg-4 col-md-6 speaker-card">
-            <strong class="framework-pop {{author.frameworks}}">{{author.framework}}</strong>
-            <div class="avatar">
-              <img src="{{author.image}}" alt="{{author.name}}" />
-            </div>
-            <h3>{{author.name}}</h3>
-          </li>
-        {{/if}}
-      {{/each}}
+      {{event-speakers event=model}}
     </ul>
   </div>
 </section>

@@ -1,17 +1,23 @@
 import Ember from 'ember';
-const { assign, computed, get, isEmpty } = Ember;
+import moment from 'moment';
+
+const {
+  computed,
+  computed: { equal }
+} = Ember;
 
 export default Ember.Controller.extend({
-    speakers: computed('model.thisEvent.id', 'model.thisEvent.speakers', function() {
-      let speakers = this.get('model.thisEvent.speakers');
+  uppercaseTitle: computed('event.title', function() {
+    let title = this.get('event.title') || '';
+    return title.toUpperCase();
+  }),
+  
+  isInteractive: equal('uppercaseTitle', 'JS.INTERACTIVE'),
 
-      if (isEmpty(speakers)) {
-        return [];
-      }
+  isPrevious: computed('model.date', function() {
+    let date = this.get('model.date');
 
-      return speakers.map((person) => {
-        let speaker = this.store.peekRecord('author', get(person, 'id')).getProperties('image', 'name', 'frameworks');
-        return assign({ }, person, speaker);
-      });
-    })
+    let now = moment();
+    return moment(date).isBefore(now);
+  })
 });
