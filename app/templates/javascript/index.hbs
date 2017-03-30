@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <h2 class="col-lg-8">
-        {{model.nextEvent.title}}
+        {{model.title}}
       </h2>
     </div>
     <div class="row">
@@ -14,10 +14,10 @@
       </p>
     </div>
     <div class="next-event">
-      {{moment-format model.nextEvent.date 'MMMM Do YYYY'}} <br>
-      {{moment-format model.nextEvent.timezoneDate 'h:mm a zz'}}. Online! <br>
+      {{moment-format model.date 'MMMM Do YYYY'}} <br>
+      {{moment-format model.timezoneDate 'h:mm a zz'}}. Online! <br>
 
-      {{#link-to 'javascript.event' (moment-format model.nextEvent.date 'MM-YYYY') class="button action-button"}}
+      {{#link-to 'javascript.event' (moment-format model.date 'MM-YYYY') class="button action-button"}}
         Register
       {{/link-to}}
     </div>
@@ -27,15 +27,7 @@
 <section class="javascript-events">
   <div class="container">
     <ul class="row">
-      {{#each (featured-in model.nextEvent.slug model.people) as |author|}}
-        <li class="col-lg-4 col-md-6 speaker-card">
-          <strong class="framework-pop {{author.frameworks}}">{{author.frameworks}}</strong>
-          <div class="avatar">
-            <img src="{{author.image}}" alt="{{author.name}}" />
-          </div>
-          <h3>{{author.name}}</h3>
-        </li>
-      {{/each}}
+      {{event-speakers event=model}}
     </ul>
   </div>
 </section>

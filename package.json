@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "ember build",
-    "start": "ember server",
+    "start": "ember fastboot",
     "test": "ember test",
     "deploy": "GCLOUD_PROJECT=this-dot ember deploy production"
   },
@@ -47,7 +47,7 @@
     "ember-cli-test-loader": "^1.1.0",
     "ember-cli-uglify": "^1.2.0",
     "ember-composable-helpers": "1.1.2",
-    "ember-data": "^2.8.0",
+    "ember-data": "~2.8.0",
     "ember-data-fastboot": "0.0.2",
     "ember-engines": "0.3.4",
     "ember-export-application-global": "^1.0.5",

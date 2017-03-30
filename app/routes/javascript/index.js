@@ -2,13 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    let { events } = this.modelFor('javascript');
-    let people = this.store.peekAll('author');
-    let nextEvent = events[2];
+    /* 
+      TODO: getting featured event should not be done by index - we need a better way
+    */
+    let { events: [, , event] } = this.modelFor('javascript');
 
-    return {
-      nextEvent,
-      people
-    };
+    return event;
   }
 });
