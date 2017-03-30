@@ -2,16 +2,18 @@ import Ember from 'ember';
 
 const {
   inject: { service },
-  computed: { mapBy, map }
+  computed: { map },
+  assign
 } = Ember;
 
 export default Ember.Component.extend({
   tagName: '',
   store: service(),
 
-  speakerIds: mapBy('event.speakers', 'id'),
-
-  speakers: map('speakerIds', function(id) {
-    return this.get('store').peekRecord('author', id);
+  speakers: map('event.speakers', function(speaker) {
+    let author = this.get('store').peekRecord('author', speaker.id).getProperties([
+      'image', 'frameworks', 'name'
+    ]);
+    return assign({}, author, speaker);
   })
 });
