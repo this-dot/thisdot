@@ -17,6 +17,7 @@
       }
       .button {
         background: $action-color;
+        margin: 0;
       }
       @include tablet() {
         margin-left: unit-space(2);
