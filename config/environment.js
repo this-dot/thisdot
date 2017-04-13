@@ -31,6 +31,11 @@ module.exports = function(environment) {
 
     moment: {
       includeTimezone: '2010-2020'
+    },
+
+    intercom: {
+      appId: 'o8q1jqm4',
+      enabled: false
     }
   };
 
@@ -54,7 +59,6 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
     ENV.analytics = {
       integrations: [
         {
@@ -69,6 +73,7 @@ module.exports = function(environment) {
       ]
     };
 
+    ENV.intercom.enabled = true;
     ENV.host = storageHost;
     ENV.namespace = 'this-dot-assets/api/blog';
   }
