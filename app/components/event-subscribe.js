@@ -16,23 +16,25 @@ let Validations = buildValidations({
 export default Ember.Component.extend(Validations, {
   ajax: service(),
   email: null,
-  action: 'https://formkeep.com/f/20eb12accb28',
+  action: 'https://us-central1-this-dot.cloudfunctions.net/subscribe',
   
   submitTask: task(function *() {
     let validation = yield this.validate();
     let action = this.get('action');
 
-    if (validation.get('isValid')) {
+    if (validation.validations.get('isValid')) {
       yield timeout(1000);
 
-      return yield this.get('ajax').post(action, {
+      yield this.get('ajax').post(action, {
         data: {
-          utf8: '✓',
           name: this.get('name'),
           lastName: this.get('lastName'),
-          email: this.get('email')
+          email: this.get('email'),
+          event: this.get('event')
         }
-      });
+      }).catch(error => this.set('error', error));
+
+      this.set('isRegistered', true);
     }
   })
 });

@@ -1,7 +1,7 @@
 <form {{action (perform submitTask) on="submit"}}>
-{{#if submitTask.isSuccessful}}
-  <div class="message">
-    You're in! We'll remind you of this event when it's time.
+{{#if isRegistered}}
+  <div class="message success-message">
+    You're registered! We'll remind you of this event when it's time.
   </div>
 {{else}}
   <div class="row">
@@ -11,7 +11,6 @@
         update=(action (mut name)) 
         id="subscribe-firstname" 
         class="input-text" 
-        required=true 
         name="name"
       }}
     </div>
@@ -20,7 +19,6 @@
       {{one-way-input lastName 
         id="subscribe-lastname" 
         class="input-text"
-        required=true 
         name="lastName"
         update=(action (mut lastName))
       }}
@@ -43,6 +41,8 @@
     {{#if (v-get this "email" "isInvalid")}}
       <div class="message">Please provide a valid email address.</div>
     {{/if}}
+  {{else if error}}
+    <div class="error">{{error.message}}</div>
   {{/if}}
 
   <button type="submit" class="button action-button">Register</button>

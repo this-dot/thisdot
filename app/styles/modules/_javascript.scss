@@ -199,3 +199,7 @@ $js-color: lighten(saturate($alt-color, 20), 32);
   padding: unit-space(2) 0;
   border-radius: 4px;
 }
+
+.success-message {
+  margin-top: 20px;
+}
