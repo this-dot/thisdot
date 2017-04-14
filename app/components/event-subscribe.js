@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import { task, timeout } from 'ember-concurrency';
+import { task } from 'ember-concurrency';
 import { validator, buildValidations } from 'ember-cp-validations';
 
 const {
@@ -23,8 +23,6 @@ export default Ember.Component.extend(Validations, {
     let action = this.get('action');
 
     if (validation.validations.get('isValid')) {
-      yield timeout(1000);
-
       yield this.get('ajax').post(action, {
         data: {
           name: this.get('name'),
