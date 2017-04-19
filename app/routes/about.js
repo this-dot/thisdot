@@ -2,8 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    let mentors = [
-      {
+    let mentors = [{
         name: 'Jeff Cross',
         twitter: 'jeffbcross',
         image: '/media/mentors/jeff-cross.jpg',
@@ -68,6 +67,24 @@ export default Ember.Route.extend({
         twitter: 'offir_golan',
         image: '/media/mentors/offir-golan.jpg',
         frameworks: ['ember']
+      },
+      {
+        name: 'Sani Yusuf',
+        twitter: 'saniyusuf',
+        image: '/media/mentors/sani-yusuf.jpg',
+        frameworks: ['Ionic', 'Angular']
+      },
+      {
+        name: 'Nic Raboy',
+        twitter: 'nraboy',
+        image: '/media/mentors/nic-raboy.jpg',
+        frameworks: ['Node', 'Angular', 'NativeScript']
+      },
+      {
+        name: 'Sergio Cruz',
+        twitter: 'hashtagserg',
+        image: '/media/mentors/sergio-cruz.jpg',
+        frameworks: ['Angular']
       }
     ];
     return {
