@@ -17,9 +17,13 @@
       {{moment-format model.date 'MMMM Do YYYY'}} <br>
       {{moment-format model.timezoneDate 'h:mm a zz'}}. Online! <br>
 
-      {{#link-to 'javascript.event' (moment-format model.date 'MM-YYYY') class="button action-button"}}
-        Register
-      {{/link-to}}
+      {{#if (is-same model.date (moment) precision='day')}}
+        <div class="streaming-notice" style="width: 100%">
+          <a href="{{model.video}}" class="button straming-button" target="_blank">
+            Go to Livestream
+          </a>
+        </div>
+      {{/if}}
     </div>
   </div>
 </section>
