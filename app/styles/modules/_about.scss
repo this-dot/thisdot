@@ -38,9 +38,10 @@
     max-width: 100%;
   }
   h3 {
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 0;
-    color: $action-color;
+    color: $main-color;
+    text-transform: none
   }
   .avatar {
     float: right;

@@ -63,3 +63,30 @@ p {
     background-image: url(images/twitter-icon.svg);
   }
 }
+
+h3 {
+  font-size: 18px;
+  color: $action-color;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin: unit-space(1) 0;
+}
+
+ol {
+  counter-reset: ol-counter;
+  li {
+    padding-left: unit-space(1);
+    margin-bottom: unit-space(1);
+    &:before {
+      display: block;
+      content: counter(ol-counter);
+	    counter-increment: ol-counter;
+      font-size: 18px;
+      font-weight: bold;
+      color: $dark-alt-color;
+      margin-left: unit-space(1) * -1;
+      float: left;
+    }
+  }
+}
