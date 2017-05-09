@@ -1,0 +1,71 @@
+.large-header {
+  font-size: 48px;
+  line-height: 55px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin-top: unit-space(2);
+  margin-bottom: unit-space(2);
+}
+
+.logo-list {
+  justify-content: space-around;
+  align-items: center;
+  li {
+    padding: unit-space(1) unit-space(2);
+    @include desktop() {
+      padding: unit-space(1) unit-space(4);
+    }
+  }
+  img {
+    max-width: 100%;
+  }
+  p {
+    display: none;
+  }
+}
+
+.landing-section {
+  margin-top: unit-space(2);
+  margin-bottom: unit-space(2);
+  @include desktop() {
+    margin-top: unit-space(4);
+    margin-bottom: unit-space(4);
+  }
+}
+
+.landing-contact {
+  .contact-form {
+    margin: unit-space(1) 0;
+    padding: unit-space(1);
+    background: lighten($alt-color, 30);
+    border-radius: 5px;
+  }
+  .input-text {
+    border: none;
+  }
+  label {
+    display: block;
+    width: 100%;
+    margin: unit-space(1) 0 unit-space(0.5) 0;
+    font-weight: bold;
+  }
+  .button {
+    background: $action-color;
+    margin-top: unit-space(1);
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-size: 18px;
+    padding: 0 unit-space(1);
+  }
+}
+
+.clients-section {
+  border-top: 2px solid lighten($alt-color, 20);
+  border-bottom: 2px solid lighten($alt-color, 20);
+  padding: unit-space(2) 0;
+  text-align: center;
+  h3 {
+    color: $alt-color;
+  }
+}
