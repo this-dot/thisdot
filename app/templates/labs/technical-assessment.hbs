@@ -1,0 +1,100 @@
+<section class="container large-header landing-section">
+  <div class="row">
+    <div class="col-md-8">
+      Review the Modernization of your Technology Stack
+    </div>
+  </div>
+</section>
+
+<section class="container landing-section">
+  <div class="row">
+    <div class="col-md-5">
+      <p>Applications like Facebook, Gmail and Slack are changing what users expect from the web.</p>
+      <p>
+        Businesses expected to see more data, faster, available anytime and anywhere. Choosing the right tools requires understanding of available technical resources and how modern tools match company’s needs.
+      </p>
+      <p>
+        We help companies select the right tool to match their dev teams, business goals and existing technology stack.
+      </p>
+    </div>
+    <div class="col-md-5 push-md-1 landing-contact">
+      <div class="contact-form">
+        <strong>Let us guide your through your next upgrade</strong>
+        {{contact-form}}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container landing-section clients-section">
+  <h3>We’ve helped upgrading corporate apps from</h3>
+  <ul class="logo-list row">
+    {{#each model.clients as |client|}}
+      <li class="col-md-4">
+        <img src="{{client.image}}" alt="{{client.name}}">
+        <p>{{client.name}}</p>
+      </li>
+    {{/each}}
+  </ul>
+</section>
+
+<section class="container landing-section">
+  <div class="row">
+    <div class="col-md-5">
+      <h3>How does it work</h3>
+      <ol>
+        <li>
+          Collect a profile of applications maintained by your organization.
+        </li>
+        <li>
+          Interview developers to understand team background and experiences.
+        </li>
+        <li>
+          Interview your product managers understand where users would like to see improvements.
+        </li>
+        <li>
+          Create a report that describes our findings.
+        </li>
+        <li>
+          Make recommendations on what tools are right for your organization.
+        </li>
+        <li>
+          Our report will include information about obstacles that you might encounter, training that will be necessary and recommendations on how to easily adopt new tools
+        </li>
+      </ol>
+    </div>
+    <div class="col-md-5 push-md-1">
+      <h3>What can you expect?</h3>
+      <ol>
+        <li>
+          Our team consists of experts in popular open source technologies. We make recommendations to match your needs without framework bias.
+        </li>
+        <li>
+          We will recommend tools and learning strategies that’ll be easiest for your team to adopt.
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="container landing-section">
+  <h3>Our thought leaders will guide your team</h3>
+  <ul class="row people-list">
+    {{#each model.mentors as |mentor|}}
+      <li class="col-md-5">
+        <div class="avatar">
+          <img src="{{mentor.image}}" alt="{{mentor.name}}" />
+        </div>
+        <h3>{{mentor.name}}</h3>
+        <p>
+           {{#each mentor.frameworks as |framework|}}
+            <span class="framework">{{framework}}</span>
+           {{/each}}
+        </p>
+        <div class="social">
+          <a href="https://twitter.com/{{mentor.twitter}}" target="_blank">@{{mentor.twitter}}</a><br>
+        </div>
+      </li>
+    {{/each}}
+  </ul>
+</section>

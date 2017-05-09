@@ -1,0 +1,114 @@
+<section class="container large-header landing-section">
+  <div class="row">
+    <div class="col-md-8">
+      Education for modern web app development
+    </div>
+  </div>
+</section>
+
+<section class="container landing-section">
+  <div class="row">
+    <div class="col-md-5">
+      <p>
+        We take ownership of your team’s learning to instill best practices, increase productivity and reduce the cost of maintaining modern web apps.
+      </p>
+      <p>
+        Whether your team is migrating an existing application or building something new, we can help ensure that it’s done correctly the first time or help guide through a refactor.
+      </p>
+      <p>
+        Programs range from 3-6 months.
+      </p>
+    </div>
+    <div class="col-md-5 push-md-1 landing-contact">
+      <div class="contact-form">
+        <strong>Take your team to the next level</strong>
+        {{contact-form}}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container landing-section clients-section">
+  <h3>We’ve helped upgrading corporate apps from</h3>
+  <ul class="logo-list row">
+    {{#each model.clients as |client|}}
+      <li class="col-md-4">
+        <img src="{{client.image}}" alt="{{client.name}}">
+        <p>{{client.name}}</p>
+      </li>
+    {{/each}}
+  </ul>
+</section>
+
+<section class="container landing-section">
+  <div class="row">
+    <div class="col-md-5">
+      <h3>How does it work</h3>
+      <ol>
+        <li>
+          Work with your team to understand priorities over the next 6 months.
+        </li>
+        <li>
+          Assess your team based on their past experiences and existing code.
+        </li>
+        <li>
+          Identify gaps in knowledge of chosen framework, technologies, and tooling.
+        </li>
+        <li>
+          Create a custom designed training plan using feature development as a foundation for learning.
+        </li>
+        <li>
+          Provide mentorship to teach team as they are developing new features.
+        </li>
+        <li>
+          Conduct code reviews to ensure best practices are followed and use pair programming to train developers.
+        </li>
+      </ol>
+    </div>
+    <div class="col-md-5 push-md-1">
+      <h3>What can you expect?</h3>
+      <ol>
+        <li>
+          We build new, stronger technical leaders within your org.
+        </li>
+        <li>
+          Increase business team’s confidence in the development org.
+        </li>
+        <li>
+          Increase team’s confidence in abilities to overcome challenges.
+        </li>
+        <li>
+          Reduce time to market for new features.
+        </li>
+        <li>
+          Increase productivity with same or fewer developers.
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="container landing-section">
+  <h3>Let's work together</h3>
+  <p>
+    20+ mentors | Remote or onsite in North America, Europe, India and Asia
+  </p>
+  <ul class="row people-list">
+    {{#each model.mentors as |mentor|}}
+      <li class="col-md-5">
+        <div class="avatar">
+          <img src="{{mentor.image}}" alt="{{mentor.name}}" />
+        </div>
+        <h3>{{mentor.name}}</h3>
+        <p>
+           {{#each mentor.frameworks as |framework|}}
+            <span class="framework">{{framework}}</span>
+           {{/each}}
+        </p>
+        <div class="social">
+          <a href="https://twitter.com/{{mentor.twitter}}" target="_blank">@{{mentor.twitter}}</a><br>
+        </div>
+      </li>
+    {{/each}}
+  </ul>
+</section>

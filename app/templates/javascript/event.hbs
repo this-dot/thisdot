@@ -74,7 +74,11 @@
 </section>
 
 <section class="javascript-events">
+
   <div class="container">
+    {{#if (is-after (now) model.date precision='day')}}
+        {{lazy-video url=model.video class="video-wrapper" width="560" height="315"}}
+    {{/if}}
     <ul class="row">
       {{event-speakers event=model}}
     </ul>
