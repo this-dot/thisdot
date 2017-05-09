@@ -9,7 +9,8 @@
   <div class="row">
     <div class="col-md-5">
       <p>
-        We are an education and news focused organisation that facilitates the idea of learning through four main principles: Watch, Engage, Listen, and Learn.
+        We are an education and news focused organisation that facilitates the idea of learning through four main principles: Watch,
+        Engage, Listen, and Learn.
       </p>
       <p>
         We bring you a wealth of modern web knowledge through our various brands.
@@ -24,12 +25,15 @@
   <div class="row">
     <div class="col-md-5">
       <p>
-        We are a framework agnostic agency that believes in enabling teams to become better developers. We are focused on working with companies to build ambitious web applications with modern web techniques and strategies.
+        We are a framework agnostic agency that believes in enabling teams to become better developers. We are focused on working
+        with companies to build ambitious web applications with modern web techniques and strategies.
       </p>
     </div>
     <div class="col-md-5 push-md-1">
       <p>
-        This.Labs is a set of open source contributors that believe in mentoring and building the next generation of developers. With experience across various JavaScript frameworks, we accomplish our mission of teaching by mentoring apprentices and helping large companies scale their teams.
+        This.Labs is a set of open source contributors that believe in mentoring and building the next generation of developers.
+        With experience across various JavaScript frameworks, we accomplish our mission of teaching by mentoring apprentices
+        and helping large companies scale their teams.
       </p>
     </div>
   </div>
@@ -39,20 +43,19 @@
   <h2>Mentors</h2>
   <ul class="row people-list">
     {{#each model.mentors as |mentor|}}
-      <li class="col-md-5">
-        <div class="avatar">
-          <img src="{{mentor.image}}" alt="{{mentor.name}}" />
-        </div>
-        <h3>{{mentor.name}}</h3>
-        <p>
-           {{#each mentor.frameworks as |framework|}}
-            <span class="framework">{{framework}}</span>
-           {{/each}}
-        </p>
-        <div class="social">
-          <a href="https://twitter.com/{{mentor.twitter}}" target="_blank">@{{mentor.twitter}}</a><br>
-        </div>
-      </li>
+    <li class="col-md-5">
+      <div class="avatar">
+        <img src="{{mentor.image}}" alt="{{mentor.name}}" />
+      </div>
+      <h3>{{mentor.name}}</h3>
+      <p>
+        {{#each mentor.frameworks as |framework|}}
+        <span class="framework">{{framework}}</span> {{/each}}
+      </p>
+      <div class="social">
+        <a href="https://twitter.com/{{mentor.twitter}}" target="_blank">@{{mentor.twitter}}</a><br>
+      </div>
+    </li>
     {{/each}}
   </ul>
 </section>
@@ -126,7 +129,7 @@
         <a href="mailto:sarah@thisdot.co">sarah@thisdot.co</a>
       </div>
     </li>
-        <li class="col-md-5">
+    <li class="col-md-5">
       <h3>Jorge Lainfiesta</h3>
       <div class="avatar">
         <img src="/media/team/jorge_lainfiesta.jpg" alt="Jorge" />
@@ -143,7 +146,8 @@
   <div class="col-md-6">
     <h2>We're hiring</h2>
     <p>
-      Want to work with us? Whether you have 10 hours to spare or want to do awesome things with us full time, email your info <a href="#">here</a>.
+      Want to work with us? Whether you have 10 hours to spare or want to do awesome things with us full time, email your info
+      <a href="mailto:hi@thisdot.co">here</a>.
     </p>
   </div>
 </section>
