@@ -1,5 +1,16 @@
 import Ember from 'ember';
-const { inject: { service }, isBlank } = Ember;
+const {
+  inject: {
+    service
+  },
+  isBlank
+} = Ember;
+import {
+  task
+} from 'ember-concurrency';
+
+const action =
+  'https://us-central1-this-dot.cloudfunctions.net/thisDotLabsSubscribe';
 
 export default Ember.Component.extend({
   tagName: 'form',
@@ -8,6 +19,7 @@ export default Ember.Component.extend({
   init() {
     this._super(...arguments);
     this.setProperties({
+      title: '',
       name: '',
       email: '',
       message: '',
@@ -16,34 +28,34 @@ export default Ember.Component.extend({
       error: false
     });
   },
-  submit(event) {
-    event.preventDefault();
 
-    let fields = this.getProperties('name', 'email', 'message');
-    if (isBlank(fields.name) || isBlank(fields.email) || isBlank(fields.message)) {
-      return this.set('error', true);
-    }
-    this.setProperties({
-      loading: true,
-      error: false
-    });
-
-    this.get('ajax').request('https://formkeep.com/f/0a3764031358', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/javascript',
-      },
-      data: fields
-    })
-    .then(() => {
-      this.set('sent', true);
-    })
-    .catch(() => {
-      this.set('error', true);
-    })
-    .finally(() => {
+  submitTask: task(function* (data) {
+    return yield this.get('ajax').post(action, {
+      data
+    }).then(() => {
       this.set('loading', false);
+    }).catch(() => {
+      this.setProperties({
+        error: true,
+        loading: false
+      });
     });
-    return false;
+  }).restartable(),
+
+  actions: {
+    submit() {
+      let data = this.getProperties(['title', 'name', 'email', 'message', 'page']);
+
+      if (isBlank(data.title) || isBlank(data.name) || isBlank(data.email) || isBlank(data.message)) {
+        return this.set('error', true);
+      }
+
+      this.setProperties({
+        error: false,
+        loading: true
+      });
+
+      this.get('submitTask').perform(data);
+    }
   }
 });
