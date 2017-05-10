@@ -10,10 +10,12 @@
   <div class="row">
     <div class="col-md-5">
       <p>
-        We take ownership of your team’s learning to instill best practices, increase productivity and reduce the cost of maintaining modern web apps.
+        We take ownership of your team’s learning to instill best practices, increase productivity and reduce the cost of maintaining
+        modern web apps.
       </p>
       <p>
-        Whether your team is migrating an existing application or building something new, we can help ensure that it’s done correctly the first time or help guide through a refactor.
+        Whether your team is migrating an existing application or building something new, we can help ensure that it’s done correctly
+        the first time or help guide through a refactor.
       </p>
       <p>
         Programs range from 3-6 months.
@@ -21,8 +23,7 @@
     </div>
     <div class="col-md-5 push-md-1 landing-contact">
       <div class="contact-form">
-        <strong>Take your team to the next level</strong>
-        {{contact-form}}
+        <strong>Take your team to the next level</strong> {{contact-form page="Technical Training"}}
       </div>
     </div>
   </div>
@@ -32,10 +33,10 @@
   <h3>We’ve helped upgrading corporate apps from</h3>
   <ul class="logo-list row">
     {{#each model.clients as |client|}}
-      <li class="col-md-4">
-        <img src="{{client.image}}" alt="{{client.name}}">
-        <p>{{client.name}}</p>
-      </li>
+    <li class="col-md-4">
+      <img src="{{client.image}}" alt="{{client.name}}">
+      <p>{{client.name}}</p>
+    </li>
     {{/each}}
   </ul>
 </section>
@@ -95,20 +96,19 @@
   </p>
   <ul class="row people-list">
     {{#each model.mentors as |mentor|}}
-      <li class="col-md-5">
-        <div class="avatar">
-          <img src="{{mentor.image}}" alt="{{mentor.name}}" />
-        </div>
-        <h3>{{mentor.name}}</h3>
-        <p>
-           {{#each mentor.frameworks as |framework|}}
-            <span class="framework">{{framework}}</span>
-           {{/each}}
-        </p>
-        <div class="social">
-          <a href="https://twitter.com/{{mentor.twitter}}" target="_blank">@{{mentor.twitter}}</a><br>
-        </div>
-      </li>
+    <li class="col-md-5">
+      <div class="avatar">
+        <img src="{{mentor.image}}" alt="{{mentor.name}}" />
+      </div>
+      <h3>{{mentor.name}}</h3>
+      <p>
+        {{#each mentor.frameworks as |framework|}}
+        <span class="framework">{{framework}}</span> {{/each}}
+      </p>
+      <div class="social">
+        <a href="https://twitter.com/{{mentor.twitter}}" target="_blank">@{{mentor.twitter}}</a><br>
+      </div>
+    </li>
     {{/each}}
   </ul>
 </section>
