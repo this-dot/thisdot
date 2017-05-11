@@ -37,17 +37,4 @@
       }
     }
   }
-
-  .this-dot-publication {
-    @include makeLogo('images/logos/thisdot-publication.svg', 280px, 35px);
-  }
-  .contributor-days {
-    @include makeLogo('images/logos/contributor-days.svg', 264px, 65px);
-  }
-  .thisdotjs {
-    @include makeLogo('images/logos/thisdotjs.svg', 307px, 21px);
-  }
-  .moderndotweb {
-    @include makeLogo('images/logos/modern-web.svg', 267px, 26px);
-  }
 }
