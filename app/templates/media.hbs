@@ -1,103 +1,65 @@
-<section class="media-intro">
-  <div class="container">
-    <h2>A unifying voice in the modern web technologies</h2>
-    <h3>Celebrating the evolution of the frontend technology stack</h3>
-  </div>
-</section>
-
-<section class="content-section media-brands container">
-  <div class="row centered-cols">
-    <div class="col-md">
-      {{#link-to 'javascript'}}
-       <img src="/media/this-dot-js.svg" alt="This Dot Javascript" class="image-logo-tile">
-      {{/link-to}}
-    </div>
-    <div class="col-md">
-      <a href="https://contributordays.com" target="_blank">
-        <img src="/media/cd-logo.svg" alt="Contributor Days logo" class="image-logo-tile">
-      </a>
-    </div>
-    <div class="col-md">
-      <a href="https://ngcruise.com" target="_blank">
-        <img src="/media/ng-cruise-logo.svg" alt="NG Cruise Logo" class="image-logo-tile">
-      </a>
-    </div>
-  </div>
-  <div class="row centered-cols">
-    <div class="col-md">
-      <a href="http://modern-web.org" target="_blank">
-        <img src="/media/modern-web-logo.svg" alt="Modern.Web Logo" class="image-logo-tile">
-      </a>
-    </div>
-    <div class="col-md">
-      <a href="https://www.rxworkshop.com" target="_blank">
-      <img src="/media/rx-workshop-logo.svg" alt="Rx Workshop Logo" class="image-logo-tile">
-      </a>
-    </div>
-    <div class="col-md">
-      <a href="https://www.embermeetup.com" target="_blank">
-        <img src="/media/the-ember-show.svg" alt="The Ember Show Logo" class="image-logo-tile">
-      </a>
+<img src="/assets/images/media-art.svg" alt="This Dot Media">
+<section class="container section-description">
+  <div class="row">
+    <div class="col-md-5">
+      <p>
+        Strengthening the modern web platform through events and education.
+      </p>
     </div>
   </div>
 </section>
 
-{{#scroll-to-parameter show}}
-  <section class="content-section alt media-content">
-    <header>
-      <h2 id="thisdotjavascript">THIS.JAVASCRIPT</h2>
-    </header>
-    <div class="row centered-cols">
-      {{#each (sort-by (action 'closerDateFirst') (filter-by 'brand' 'this-dot-js' model.posts)) as |post|}}
-        {{#if (is-after post.date (now))}}
-          <div class="video-card col-md-3 is-future">
-            <h4>
-              {{#link-to 'javascript.event' (moment-format post.date (t 'event.date.format'))}}{{post.title}}{{/link-to}}
-            </h4>
-            {{moment-calendar post.date}}
-            {{#link-to 'javascript' class="button"}}Register{{/link-to}}
-          </div>
-        {{/if}}
-      {{/each}}
-
+<section class="container section-properties">
+  <div class="row">
+    <div class="col-md-4 property">
+      <h3>
+        <a href="https://thisdot.co">
+          <span class="thisdot-publication">
+            This Dot Publication
+          </span>
+        </a>
+      </h3>
+      <p>
+        Bringing  Bringing makers of frameworks, browser and libraries together.makers of frameworks, browser and libraries together.
+      </p>
     </div>
-  </section>
-
-  <section class="content-section media-content contributors-days-section">
-    <header>
-      <h2 id="thisdotjavascript">Contributor Days</h2>
-    </header>
-    <div class="row centered-cols">
-      {{#each (sort-by (action 'closerDateFirst') (filter-by 'brand' 'contributors-days' model.posts)) as |post|}}
-        {{#if (is-after post.date (now))}}
-          {{video-card post=post class="col-md-4" actionLabel="Apply"}}
-          {{else}}
-          {{video-card post=post class="col-md-4" actionLabel="Watch"}}
-        {{/if}}
-      {{/each}}
+    <div class="col-md-4 property">
+      <h3>
+        <a href="https://contributordays.com">
+          <span class="contributor-days">
+            Contributor Days
+          </span>
+        </a>
+      </h3>
+      <p>
+        Bringing  Bringing makers of frameworks, browser and libraries together.makers of frameworks, browser and libraries together.
+      </p>
     </div>
-  </section>
-
-  <section class="content-section alt media-content">
-    <header>
-      <h2 id="moderndotweb">Modern.Web</h2>
-    </header>
-    <div class="row centered-cols">
-      {{#each (filter-by 'brand' 'modern-web' model.posts) as |post|}}
-        {{video-card post=post class="col-md-4"}}
-      {{/each}}
+  </div>
+  <div class="row">
+    <div class="col-md-4 property">
+      <h3>
+        <a href="https://contributordays.com">
+          <span class="thisdotjs">
+            This Dot Javascript
+          </span>
+        </a>
+      </h3>
+      <p>
+        Bringing  Bringing makers of frameworks, browser and libraries together.makers of frameworks, browser and libraries together.
+      </p>
     </div>
-  </section>
-
-  <section class="content-section media-content">
-    <header>
-      <h2 id="the-ember-show">The ember show</h2>
-    </header>
-    <div class="row centered-cols">
-      {{#each (filter-by 'brand' 'the-ember-show' model.posts) as |post|}}
-        {{video-card post=post class="col-md-4"}}
-      {{/each}}
+    <div class="col-md-4 property">
+      <h3>
+        <a href="https://moderndotweb.com">
+          <span class="moderndotweb">
+            Modern Dot Web
+          </span>
+        </a>
+      </h3>
+      <p>
+        Bringing  Bringing makers of frameworks, browser and libraries together.makers of frameworks, browser and libraries together.
+      </p>
     </div>
-  </section>
-
-{{/scroll-to-parameter}}
+  </div>
+</section>

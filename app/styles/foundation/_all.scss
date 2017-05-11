@@ -6,6 +6,7 @@
 @import 'breakpoints';
 @import 'layout';
 @import 'forms';
+@import 'mixins';
 
 @mixin dots-footer($xAlignment) {
   &:after {
