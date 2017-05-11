@@ -1,4 +1,9 @@
-<section class="javascript-intro">
+<section class="javascript-intro 
+  {{if isPrevious "is-previous"}} 
+  {{if isInteractive "is-interactive"}} 
+  {{if model.video 'has-video' 'has-no-video'}}
+  {{if model.hasSpeakerVideos 'has-speaker-videos' 'has-no-speaker-videos'}}
+  ">
   <div class="container">
     <div class="row">
       <header class="col-lg-8">
@@ -6,7 +11,7 @@
           {{model.title}}
           {{#if isPrevious}}
             <br>
-            <strong>{{moment-format model.date 'MMMM Do YYYY'}}</strong>
+            <strong>Recorded on {{moment-format model.date 'MMMM Do YYYY'}}</strong>
           {{/if}}
         </h2>
       </header>
@@ -14,19 +19,50 @@
     <div class="row">
       {{#if isPrevious}}
         {{#if isInteractive}}
-          <p class="col-lg-5">
-            At JS.Interactive, core team members from frameworks, libraries, and browsers follow the conversations from This.JavaScript and discuss cross collaboration and key learnings in a panel format.
-          </p>
-          <p class="col-lg-5 push-lg-1">
-            JS.Interactive is an open forum for all to ask real-time questions to those leading JavaScript tools.
-          </p>
+          <div class="container">
+            <div class="main-video row">
+              <div class="col-md-6">
+                <div class="video-wrapper">
+                  {{lazy-video url=model.video}}
+                </div>
+              </div>
+              <div class="col-md-6 text-column">
+                <p>
+                  At JS.Interactive, core team members from frameworks, libraries, and browsers follow the conversations from This.JavaScript and discuss cross collaboration and key learnings in a panel format.
+                </p>
+                <p>
+                  JS.Interactive is an open forum for all to ask real-time questions to those leading JavaScript tools.
+                </p>
+              </div>
+            </div>
+          </div>
         {{else}}
-          <p class="col-lg-5">
-            Keep up with the advancement of prominent open source frameworks, libraries, and browser standards by attending this online event.
-          </p>
-          <p class="col-lg-5 push-lg-1">
-            Core team members will discuss topics such as upcoming releases, recent milestones, and community initiatives.
-          </p>
+          {{#if model.hasSpeakerVideos}}
+            <p class="col-lg-5">
+              Keep up with the advancement of prominent open source frameworks, libraries, and browser standards by attending this online event.
+            </p>
+            <p class="col-lg-5 push-lg-1">
+              Core team members will discuss topics such as upcoming releases, recent milestones, and community initiatives.
+            </p>
+          {{else}}            
+            <div class="container">
+              <div class="main-video row">
+                <div class="col-md-6">
+                  <div class="video-wrapper">
+                    {{lazy-video url=model.video}}
+                  </div>
+                </div>
+                <div class="col-md-6 text-column">
+                  <p>
+                    Keep up with the advancement of prominent open source frameworks, libraries, and browser standards by attending this online event.
+                  </p>
+                  <p>
+                    Core team members will discuss topics such as upcoming releases, recent milestones, and community initiatives.
+                  </p>
+                </div>
+              </div>
+            </div>
+          {{/if}}
         {{/if}}
         {{#if (is-same model.date (moment) precision='day')}}
           <div class="streaming-notice" style="width: 100%">
@@ -73,15 +109,8 @@
   </div>
 </section>
 
-<section class="javascript-events">
+<section class="javascript-events {{if isPrevious "is-previous"}} {{if isInteractive "is-interactive"}}">
   <div class="container">
-    <div class="main-video row">
-      <div class="col-md-10 push-md-1">
-        <div class="video-wrapper">
-          {{lazy-video url=model.video}}
-        </div>
-      </div>
-    </div>
     <ul class="row">
       {{event-speakers event=model}}
     </ul>

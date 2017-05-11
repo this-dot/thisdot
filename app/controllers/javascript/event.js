@@ -7,8 +7,8 @@ const {
 } = Ember;
 
 export default Ember.Controller.extend({
-  uppercaseTitle: computed('event.title', function() {
-    let title = this.get('event.title') || '';
+  uppercaseTitle: computed('model.title', function() {
+    let title = this.get('model.title') || '';
     return title.toUpperCase();
   }),
   

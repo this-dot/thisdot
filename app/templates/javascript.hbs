@@ -48,7 +48,7 @@
       {{#each model.events as |event|}}
         {{#if (is-after event.date (now))}}
           <div class="video-card col-md-4 is-future">
-            {{moment-calendar event.date}}
+            {{our-calendar event.date}}
             <h4>
               {{#link-to 'javascript.event' (moment-format event.date 'MM-YYYY')}}{{event.title}}{{/link-to}}
             </h4>
@@ -63,10 +63,10 @@
 <section class="javascript-events-list content-section">
   <h2>Previous Events</h2>
   <div class="row">
-    {{#each model.events as |event|}}
+    {{#each (reverse model.events) as |event|}}
       {{#if (is-before event.date (now))}}
         <div class="video-card col-md-4 is-future">
-          {{moment-calendar event.date}}
+          {{our-calendar event.date}}
           <h4>
             {{#link-to 'javascript.event' (moment-format event.date 'MM-YYYY')}}{{event.title}}{{/link-to}}
           </h4>

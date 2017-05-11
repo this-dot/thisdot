@@ -11,5 +11,12 @@ export default Ember.Route.extend({
     return events.find((item) => {
       return moment(get(item, 'date')).isSame(date, 'month');
     });
+  },
+  serialize(model) {
+    let date = get(model, 'date');
+
+    return {
+      eventDate: moment(date).format('MM-YYYY')
+    };
   }
 });

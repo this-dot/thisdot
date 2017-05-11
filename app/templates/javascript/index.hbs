@@ -23,6 +23,12 @@
             Go to Livestream
           </a>
         </div>
+      {{else}}
+        <div class="streaming-notice" style="width: 100%">
+          {{#link-to "javascript.event" model classNames="button straming-button"}}
+            Go to event page
+          {{/link-to}}
+        </div>
       {{/if}}
     </div>
   </div>

@@ -12,7 +12,6 @@ $js-color: lighten(saturate($alt-color, 20), 32);
     color: $action-color;
     font-size: 48px;
     line-height: 56px;
-    margin-bottom: unit-space(2);
     word-break: break-all;
     @include mobileOnly() {
       font-size: 30px;
@@ -119,6 +118,15 @@ $js-color: lighten(saturate($alt-color, 20), 32);
     	width: 100%;
     	height: 100%;
     }
+  }
+}
+
+.is-previous.has-no-speaker-videos {
+  .text-column > p:first-of-type {
+    margin-top: 0;
+  }
+  iframe {
+    min-height: 300px;
   }
 }
 

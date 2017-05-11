@@ -1,12 +1,14 @@
 import Ember from 'ember';
+import moment from 'moment';
+const { get } = Ember;
 
 export default Ember.Route.extend({
   model() {
-    /* 
-      TODO: getting featured event should not be done by index - we need a better way
-    */
-    let { events: [, , event] } = this.modelFor('javascript');
+    let { events } = this.modelFor('javascript');
 
-    return event;
+    return events.find(event => {
+      let date = moment(get(event, 'date'));
+      return date.isAfter(moment());
+    });
   }
 });

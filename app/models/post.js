@@ -13,5 +13,10 @@ export default Post.extend({
 
   timezoneDate: computed('date', function() {
     return moment(this.get('date')).tz('America/Los_Angeles');
-  }).readOnly()
+  }).readOnly(),
+
+  hasSpeakerVideos: computed('speakers.@each.video', function() {
+    let speakers = this.get('speakers') || [];
+    return speakers.mapBy('video').reduce((result, value) => value ? result : false, true);
+  })
 });
