@@ -3,7 +3,12 @@ const {
   inject: {
     service
   },
-  isBlank
+  computed: {
+    empty,
+    and
+  },
+  isBlank,
+  set
 } = Ember;
 import {
   task
@@ -15,6 +20,16 @@ const action =
 export default Ember.Component.extend({
   tagName: 'form',
   ajax: service(),
+
+  titleEmpty: empty('title'),
+  nameEmpty: empty('name'),
+  emailEmpty: empty('email'),
+  messageEmpty: empty('message'),
+
+  hasTitleError: and('titleEmpty', 'titleError'),
+  hasNameError: and('nameEmpty', 'nameError'),
+  hasEmailError: and('emailEmpty', 'emailError'),
+  hasMessageError: and('messageEmpty', 'messageError'),
 
   init() {
     this._super(...arguments);
@@ -33,7 +48,10 @@ export default Ember.Component.extend({
     return yield this.get('ajax').post(action, {
       data
     }).then(() => {
-      this.set('loading', false);
+      this.setProperties({
+        sent: true,
+        loading: false
+      });
     }).catch(() => {
       this.setProperties({
         error: true,
@@ -46,8 +64,24 @@ export default Ember.Component.extend({
     submit() {
       let data = this.getProperties(['title', 'name', 'email', 'message', 'page']);
 
-      if (isBlank(data.title) || isBlank(data.name) || isBlank(data.email) || isBlank(data.message)) {
-        return this.set('error', true);
+      if (isBlank(data.title)) {
+        set(this, 'titleError', true);
+        return this.$("#title").focus();
+      }
+
+      if (isBlank(data.name)) {
+        set(this, 'nameError', true);
+        return this.$("#name").focus();
+      }
+
+      if (isBlank(data.email)) {
+        set(this, 'emailError', true);
+        return this.$("#email").focus();
+      }
+
+      if (isBlank(data.message)) {
+        set(this, 'messageError', true);
+        return this.$("#message").focus();
       }
 
       this.setProperties({
