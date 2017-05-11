@@ -5,9 +5,13 @@
   color: #fff;
 
   .row {
-    border-top: 2px solid lighten($main-color, 10);
+    border-top: 2px solid lighten($main-color, 5);
     padding-top: unit-space(1);
     padding-bottom: unit-space(1);
+    @include desktop() {
+      padding-top: unit-space(2);
+      padding-bottom: unit-space(2);
+    }
     p {
       margin: 0;
     }
