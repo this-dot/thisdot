@@ -1,0 +1,23 @@
+.thisdot-publication {
+  @include makeLogo('images/logos/thisdot-publication.svg', 280px, 35px);
+}
+.thisdot-contrast {
+  @include makeLogo('images/logos/thisdot-contrast.svg', 280px, 35px);
+}
+.contributor-days {
+  @include makeLogo('images/logos/contributor-days.svg', 264px, 65px);
+}
+.thisdotjs {
+  @include makeLogo('images/logos/thisdotjs.svg', 307px, 21px);
+}
+.moderndotweb {
+  @include makeLogo('images/logos/modern-web.svg', 267px, 26px);
+}
+
+.thisdot-media {
+  @include makeLogo('images/logos/thisdot-media.svg', 182px, 35px);
+}
+
+.thisdot-labs {
+  @include makeLogo('images/logos/thisdot-labs.svg', 138px, 35px);
+}
