@@ -1,14 +1,34 @@
-<label for="">Title</label> {{one-way-input title update=(action (mut title)) class="input-text" disabled=sent required=true}}
+<label for="">Title</label> 
+{{one-way-input title update=(action (mut title)) id="title" class="input-text" disabled=sent required=true}} 
 
-<label for="">Full Name</label> {{one-way-input name update=(action (mut name)) class="input-text" disabled=sent required=true}}
+{{#if hasTitleError}}
+  <span class="error-message">Title can not be empty</span> 
+{{/if}}
 
-<label for="">Email</label> {{one-way-input email update=(action (mut email)) class="input-text" type="email" disabled=sent
-required=true}}
+<label for="">Full Name</label> 
+{{one-way-input name update=(action (mut name)) id="name" class="input-text" disabled=sent required=true}} 
 
-<label for="">Message</label> {{one-way-textarea message update=(action (mut message)) class="input-text" rows=6 disabled=sent
-required=true}} {{#if error}}
+{{#if hasNameError}}
+  <span class="error-message">Name can not be empty</span> 
+{{/if}}
+
+<label for="">Email</label> 
+{{one-way-input email update=(action (mut email)) id="email" class="input-text" type="email" disabled=sent required=true}} 
+
+{{#if hasEmailError}}
+  <span class="error-message">Email can not be empty</span> 
+{{/if}}
+
+<label for="">Message</label> 
+{{one-way-textarea message update=(action (mut message)) id="message" class="input-text" rows=6 disabled=sent required=true}} 
+
+{{#if hasMessageError}}
+  <span class="error-message">Message can not be empty</span> 
+{{/if}} 
+
+{{#if error}}
 <p class="error-message">
-  An error occurred, please try again.
+  Saving failed, please try again.
 </p>
 {{/if}}
 
