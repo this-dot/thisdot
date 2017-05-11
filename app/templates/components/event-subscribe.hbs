@@ -45,7 +45,13 @@
     <div class="error">{{error.message}}</div>
   {{/if}}
 
-  <button type="submit" class="button action-button">Register</button>
+  <button type="submit" class="button action-button" disabled={{submitTask.isRunning}}>
+    {{#if submitTask.isRunning}}
+      {{fa-icon "spinner" spin=true}} Submitting
+    {{else}}
+      Register
+    {{/if}}
+  </button>
 
 {{/if}}
 </form>

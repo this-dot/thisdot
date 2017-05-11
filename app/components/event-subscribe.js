@@ -16,23 +16,26 @@ let Validations = buildValidations({
 export default Ember.Component.extend(Validations, {
   ajax: service(),
   email: null,
-  action: 'https://us-central1-this-dot.cloudfunctions.net/subscribe',
+  action: 'https://us-central1-this-dot.cloudfunctions.net/thisDotSubscribe',
   
   submitTask: task(function *() {
     let validation = yield this.validate();
     let action = this.get('action');
 
     if (validation.validations.get('isValid')) {
-      yield this.get('ajax').post(action, {
-        data: {
-          name: this.get('name'),
-          lastName: this.get('lastName'),
-          email: this.get('email'),
-          event: this.get('event')
-        }
-      }).catch(error => this.set('error', error));
-
-      this.set('isRegistered', true);
+      try {
+        yield this.get('ajax').post(action, {
+          data: {
+            name: this.get('name'),
+            lastName: this.get('lastName'),
+            email: this.get('email'),
+            event: this.get('event')
+          }
+        });
+        this.set('isRegistered', true);
+      } catch (error) {
+        this.set('error', error);
+      }
     }
   })
 });

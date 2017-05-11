@@ -69,6 +69,7 @@
     "loader.js": "^4.0.1"
   },
   "dependencies": {
-    "ember-cli-fastboot": "1.0.0-beta.13"
+    "ember-cli-fastboot": "1.0.0-beta.13",
+    "ember-font-awesome": "3.0.5"
   }
 }
