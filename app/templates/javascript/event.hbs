@@ -99,9 +99,9 @@
             {{moment-format model.date 'MMMM Do YYYY'}} <br>
             {{moment-format model.timezoneDate 'h:mm a zz'}}. Online! <br>
           </div>
-          {{event-subscribe
-              class="contact-form javascript-register"
-              formAction=model.subscribe
+          {{event-subscribe 
+            event=model.id
+            class="contact-form javascript-register"
           }}
         </div>
       {{/if}}

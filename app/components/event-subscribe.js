@@ -1,26 +1,41 @@
 import Ember from 'ember';
-import EmberChimp from 'ember-chimp/components/ember-chimp';
-const { computed, get, isPresent } = Ember;
+import { task } from 'ember-concurrency';
+import { validator, buildValidations } from 'ember-cp-validations';
 
-export default EmberChimp.extend({
-  formAction: "//thisdot.us12.list-manage.com/subscribe/post?u=81e8e3fa2a6f79fe97467029a&amp;id=9f8c1ada95",
-  buttonText: "Register",
-  loadingText: "Loading",
-  isSuccess: computed.equal('chimpState', 'success'),
+const {
+  inject: { service }
+} = Ember;
 
-  handleResponse(response) {
-    this._super(response);
-    let errorMsg = get(response, 'msg');
-    if (response.result === 'error' && isPresent(errorMsg)) {
-      this.set('chimpSays', errorMsg);
+let Validations = buildValidations({
+  email: [
+    validator('presence', true),
+    validator('format', { type: 'email' })
+  ]
+});
+
+export default Ember.Component.extend(Validations, {
+  ajax: service(),
+  email: null,
+  action: 'https://us-central1-this-dot.cloudfunctions.net/thisDotSubscribe',
+  
+  submitTask: task(function *() {
+    let validation = yield this.validate();
+    let action = this.get('action');
+
+    if (validation.validations.get('isValid')) {
+      try {
+        yield this.get('ajax').post(action, {
+          data: {
+            name: this.get('name'),
+            lastName: this.get('lastName'),
+            email: this.get('email'),
+            event: this.get('event')
+          }
+        });
+        this.set('isRegistered', true);
+      } catch (error) {
+        this.set('error', error);
+      }
     }
-  },
-
-  didUpdateAttrs() {
-    this._super(...arguments);
-    this.setProperties({
-      chimpSays: '',
-      chimpState: ''
-    });
-  }
+  })
 });

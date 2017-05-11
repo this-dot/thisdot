@@ -1,25 +1,57 @@
-{{#if isSuccess}}
-  <div class="message">
-    Almost there! Please confirm the email that we just sent. We'll remind you of this event when it's time.
+<form {{action (perform submitTask) on="submit"}}>
+{{#if isRegistered}}
+  <div class="message success-message">
+    You're registered! We'll remind you of this event when it's time.
   </div>
 {{else}}
   <div class="row">
     <div class="col-md-6">
-      <label for="">First Name</label>
-      {{one-way-input name update=(action (mut name)) class="input-text" required=true name="FNAME"}}
+      <label for="subscribe-firstname">First Name</label>
+      {{one-way-input name 
+        update=(action (mut name)) 
+        id="subscribe-firstname" 
+        class="input-text" 
+        name="name"
+      }}
     </div>
     <div class="col-md-6">
-      <label for="">Last Name</label>
-      {{one-way-input lastName update=(action (mut lastName)) class="input-text"required=true name="LNAME"}}
+      <label for="subscribe-lastname">Last Name</label>
+      {{one-way-input lastName 
+        id="subscribe-lastname" 
+        class="input-text"
+        name="lastName"
+        update=(action (mut lastName))
+      }}
     </div>
   </div>
 
-  <label for="">Email</label>
-  {{one-way-input value update=(action (mut value)) class="input-text" type="email" required=true name="EMAIL"}}
+  <label for="subscribe-email">Email</label>
+  {{one-way-input email 
+    id="subscribe-email" 
+    class="input-text" 
+    type="email" 
+    required=true 
+    name="email"
+    update=(action (mut email))
+    focusIn=(action (mut showEmailError) false)
+    focusOut=(action (mut showEmailError) true)
+  }}
 
-  <button type="submit" class="button action-button">{{buttonText}}</button>
-
-  {{#if chimpSays}}
-    <div class="message">{{{chimpSays}}}</div>
+  {{#if showEmailError}}
+    {{#if (v-get this "email" "isInvalid")}}
+      <div class="message">Please provide a valid email address.</div>
+    {{/if}}
+  {{else if error}}
+    <div class="error">{{error.message}}</div>
   {{/if}}
+
+  <button type="submit" class="button action-button" disabled={{submitTask.isRunning}}>
+    {{#if submitTask.isRunning}}
+      {{fa-icon "spinner" spin=true}} Submitting
+    {{else}}
+      Register
+    {{/if}}
+  </button>
+
 {{/if}}
+</form>

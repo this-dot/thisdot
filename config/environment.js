@@ -31,11 +31,6 @@ module.exports = function(environment) {
 
     moment: {
       includeTimezone: '2010-2020'
-    },
-
-    intercom: {
-      appId: 'o8q1jqm4',
-      enabled: false
     }
   };
 
@@ -45,6 +40,10 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+
+    ENV['ember-cli-mirage'] = {
+      enabled: false
+    }
   }
 
   if (environment === 'test') {
@@ -73,7 +72,11 @@ module.exports = function(environment) {
       ]
     };
 
-    ENV.intercom.enabled = true;
+    ENV.intercom = {
+      appId: 'o8q1jqm4',
+      enabled: true
+    };
+
     ENV.host = storageHost;
     ENV.namespace = 'this-dot-assets/api/blog';
   }
