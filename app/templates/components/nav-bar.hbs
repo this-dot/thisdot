@@ -1,7 +1,23 @@
 <div class="container">
   <div class="row">
     <h1 class="col-xs-6 col-md-3">
-      {{#link-to 'home' class="this-dot-logo"}}This Dot{{/link-to}}
+      {{#if isMedia}}
+        {{#link-to 'media' class="thisdot-media"}}
+          This Dot Media
+        {{/link-to}}
+      {{/if}}
+
+      {{#if isLabs}}
+        {{#link-to 'labs' class="thisdot-labs"}}
+          This Dot Labs
+        {{/link-to}}
+      {{/if}}
+
+      {{#if isOther}}
+        <a href="https://thisdot.co" class="thisdot-publication">
+          This Dot
+        </a>
+      {{/if}}
     </h1>
     <nav class="col-xs-5 col-md-6 col-lg-8">
       <div class="links">

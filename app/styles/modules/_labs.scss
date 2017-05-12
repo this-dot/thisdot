@@ -1,47 +1,3 @@
-.labs-challenges {
-  display: flex;
-  flex-flow: column nowrap;
-  &:before {
-    content: '';
-    background: url(images/labs-header.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top;
-    width: 100%;
-    height: 150px;
-    order: 2;
-    @include tablet() {
-      height: 300px;
-    }
-    @include desktop() {
-      height: 500px;
-    }
-    @include large() {
-      height: 70vh;
-    }
-  }
-  h2 {
-    color: $main-color;
-    font-size: 36px;
-    line-height: 48px;
-    margin: unit-space(2) auto 0 auto;
-    max-width: 700px;
-    text-align: center;
-    order: 1;
-  }
-  h3 {
-    @include title-type();
-    font-size: 20px;
-    line-height: 27px;
-    color: $action-color;
-    text-align: center;
-    padding-bottom: unit-space(1);
-    margin-top: unit-space(1);
-    border-bottom: 2px solid $alt-color;
-    order: 3;
-  }
-}
-
 .labs-always {
   aside {
     img {
@@ -88,6 +44,9 @@
 
 .labs-title {
   color: $action-color;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
 }
 
 .contact-button-section {

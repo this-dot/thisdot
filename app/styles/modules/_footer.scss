@@ -1,42 +1,47 @@
 .app-footer {
   background: $main-color;
-  padding: unit-space(4) 0;
+  padding: unit-space(3) 0 unit-space(1) 0;
   margin-top: unit-space(3);
   color: #fff;
 
-  h3 {
-    a {
-      @include title-type();
-      color: #fff;
-      text-decoration: none;
-      font-size: 24px;
+  .row {
+    border-top: 2px solid lighten($main-color, 5);
+    padding-top: unit-space(1);
+    padding-bottom: unit-space(1);
+    @include desktop() {
+      padding-top: unit-space(2);
+      padding-bottom: unit-space(2);
+    }
+    p {
+      margin: 0;
+    }
+    &:first-child {
+      padding-top: 0;
+      border-top: none;
     }
   }
-}
-.this-dot-dot {
-  @extend .this-dot-logo;
-  background-image: url(images/this-dot-o.svg);
-  width: 142px;
-  height: 80px;
-  @include tablet() {
-    margin-top: 67px
+  .logo-column {
+    margin: unit-space(1) 0;
+    @include tablet() {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      margin-bottom: 0;
+    }
   }
-}
-.links {
-  @include title-type();
-  border-top: 1px solid #fff;
-  margin-top: unit-space(1);
-  line-height: 30px;
-  font-size: 18px;
-  a {
-    text-transform: uppercase;
-    color: #fff;
-    margin: unit-space(1);
-  }
-  .hashtag {
-    font-weight: normal;
-    line-height: 30px;
-    display: inline-block;
-    margin-top: 20px;
+
+  .links {
+    a {
+      color: #fff;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 unit-space(0.5);
+    }
+    .social {
+      @include tablet() {
+        float: right;
+      }
+    }
   }
 }
