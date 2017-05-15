@@ -21,3 +21,15 @@
 .thisdot-labs {
   @include makeLogo('images/logos/thisdot-labs.svg', 138px, 35px);
 }
+
+.thisdot-youtube {
+  @include makeLogo('images/logos/thisdot-youtube.svg', 188px, 56px);
+}
+
+.ng-cruise {
+  @include makeLogo('images/logos/ng-cruise.svg', 235px, 55px);
+}
+
+.rxworkshop {
+  @include makeLogo('images/logos/rxworkshop.svg', 280px, 36px);
+}

@@ -29,7 +29,7 @@
     "ember-cli-app-version": "^1.0.0",
     "ember-cli-babel": "^5.1.6",
     "ember-cli-dependency-checker": "^1.2.0",
-    "ember-cli-deploy": "1.0.0-beta.1",
+    "ember-cli-deploy": "0.5.1",
     "ember-cli-deploy-build": "0.1.1",
     "ember-cli-deploy-gcloud": "0.3.3",
     "ember-cli-deploy-gcloud-storage": "taras/ember-cli-deploy-gcloud-storage#upload-metadata",
