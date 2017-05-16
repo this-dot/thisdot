@@ -34,7 +34,11 @@
 }
 
 h2 {
-  @include title-type;
+  color: $action-color;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 p {

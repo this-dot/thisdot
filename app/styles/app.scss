@@ -12,6 +12,7 @@
 @import 'modules/javascript';
 @import 'modules/privacy';
 @import 'modules/landing-page';
+@import 'modules/people-list';
 
 body {
   @include body-copy();
@@ -31,16 +32,6 @@ body {
   );
   &.tall {
     height: 280px;
-  }
-}
-
-.avatar {
-  width: 250px;
-  height: 250px;
-  border-radius: 250px;
-  overflow: hidden;
-  img {
-    max-width: 100%;
   }
 }
 

@@ -1,52 +1,5 @@
-.labs-always {
-  aside {
-    img {
-      max-width: 100%;
-    }
-  }
-}
-
-.labs-source {
-  text-align: center;
-  @include tablet() {
-    background: url(images/source-left.svg) no-repeat 0 center, url(images/source-right.svg) no-repeat right center;
-    background-size: 15%;
-  }
-  @include desktop {
-    background-size: 20%;
-  }
-  .row {
-    justify-content: center;
-  }
-}
-
-.labs-together {
-  text-align: center;
-  background: saturate(lighten($alt-color, 30), 15);
-  padding-bottom: unit-space(1);
-  h2 {
-    text-align: center;
-  }
-  .row {
-    justify-content: center;
-    text-align: left;
-  }
-  .service-box {
-    margin-top: unit-space(2);
-  }
-  h3 {
-    @include title-type();
-    font-size: 24px;
-    color: $main-color;
-    margin-bottom: unit-space(1);
-  }
-}
-
-.labs-title {
-  color: $action-color;
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: bold;
+.labs-description {
+  margin-top: unit-space(1);
 }
 
 .contact-button-section {
@@ -55,8 +8,8 @@
 
 .button.contact-button {
   background: $action-color;
-  font-size: 36px;
-  padding: unit-space(1) unit-space(3);
+  font-size: 21px;
+  padding: 10px unit-space(1);
   margin: unit-space(2) 0;
 }
 
@@ -84,6 +37,27 @@
     }
     p {
       display: none;
+    }
+  }
+}
+
+.labs-services {
+  li {
+    margin: 10px 0;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    a {
+      color: #626D8E;
+      border-radius: 20px;
+      padding: 5px 0;
+      display: block;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    &:after {
+      content: '';
+      @include makeLogo('images/arrow-right.svg', 10px, 30px);
     }
   }
 }
