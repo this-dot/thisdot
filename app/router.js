@@ -15,6 +15,7 @@ Router.map(function() {
     this.route('upgrade-service');
     this.route('technical-assessment');
     this.route('technical-training');
+    this.route('info-page', { path: ':slug' });
   });
   this.route('media');
   this.route('home', { path: '/' });

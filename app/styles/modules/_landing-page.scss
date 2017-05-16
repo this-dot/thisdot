@@ -33,12 +33,34 @@
   }
 }
 
+.landing-body {
+  ul {
+    padding-left: unit-space(1);
+    li {
+      margin: unit-space(0.5) 0;
+      &:before {
+        content: '';
+        width: 4px;
+        height: 4px;
+        display: block;
+        background: $dark-alt-color;
+        float: left;
+        margin-left: -15px;
+        margin-top: 12px;
+      }
+    }
+  }
+}
+
 .landing-contact {
   .contact-form {
     margin: unit-space(1) 0;
     padding: unit-space(1);
     background: lighten($alt-color, 30);
     border-radius: 5px;
+    p {
+      margin-top: 0;
+    }
   }
   .input-text {
     border: none;
