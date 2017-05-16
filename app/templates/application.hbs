@@ -1,4 +1,5 @@
 {{nav-bar}}
+
 {{outlet}}
 
 <footer class="app-footer">
@@ -21,20 +22,23 @@
       </div>
       <div class="col-md-9">
         <p>
-          We are an education and news focused organisation that facilitates the idea of learning through four main principles: Watch, Engage, Listen, and Learn.
+          We host events, produce videos and write articles that help
+          developers keep up with the evolution of the web platform.
         </p>
       </div>
     </div>
 
     <div class="row">
       <div class="col-md-3 logo-column">
-        {{#link-to 'labs' class="thisdot-labs"}}
+        {{#link-to "labs" class="thisdot-labs"}}
           Labs
         {{/link-to}}
       </div>
       <div class="col-md-9">
         <p>
-          We are a framework agnostic agency that believes in enabling teams to become better developers. Focused on working with companies to build ambitious web applications with modern web techniques and strategies.
+          We provide web platform expertice to teams through mentoring, training
+          and apprenticeship services. Our mentors are makers of modern web
+          frameworks like React, Angular and Polymer.
         </p>
       </div>
     </div>
@@ -52,6 +56,13 @@
             <i class="icon fb-icon">Facebook</i>
           </a>
         </div>
+      </div>
+    </div>
+    <div class="row legal">
+      <div class="col-md-9 push-md-3">
+        <p>
+          &copy; {{moment-format (now) 'YYYY'}} This Dot, Inc. All Rights Reserved
+        </p>
       </div>
     </div>
   </div>

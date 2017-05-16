@@ -50,14 +50,9 @@
   }
 
   h3 {
-    @include title-type();
-    font-size: 32px;
-    color: $title-color;
-    margin-bottom: unit-space(2);
-    a {
-      color: $title-color;
-    }
+    color: $main-color;
   }
+
   h4 {
     @include title-type();
     line-height: 30px;
