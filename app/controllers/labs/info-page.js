@@ -1,14 +1,22 @@
 import Ember from 'ember';
 import mentorsList from 'thisdot/utils/mentors';
 import clientsList from 'thisdot/utils/clients';
-const { computed } = Ember;
+const { computed, isPresent } = Ember;
 
 export default Ember.Controller.extend({
   pageClients: computed('model.filterClients', function() {
-    return clientsList.filterBy(this.get('model.filterClients'));
+    let filter =  this.get('model.filterClients');
+    if (isPresent(filter)) {
+      return clientsList.filterBy(filter);
+    }
+    return clientsList;
   }),
 
   pageMentors: computed('model.filterMentors', function() {
-    return mentorsList.filterBy(this.get('model.filterMentors'));
+    let filter = this.get('model.filterMentors');
+    if (isPresent(filter)) {
+      return mentorsList.filterBy(filter);
+    }
+    return mentorsList;
   })
 });
