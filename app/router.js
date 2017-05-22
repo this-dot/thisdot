@@ -23,6 +23,7 @@ Router.map(function() {
     this.route('event', { path: ':eventDate' });
   });
   this.route('privacy-policy');
+  this.route('sponsors');
 });
 
 export default Router;
