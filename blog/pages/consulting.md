@@ -1,5 +1,5 @@
 ---
-title: Upgrading Your Application? Eliminate Risk.
+title: Consulting
 author: thisdot
 filter-clients: didUpgrade
 filter-mentors: doesUpgrade

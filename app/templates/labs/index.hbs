@@ -52,9 +52,21 @@
         Services we offer
       </h2>
       <ul class="labs-services">
-        <li><a href="#">Mentoring</a></li>
-        <li><a href="#">Consulting</a></li>
-        <li><a href="#">Training</a></li>
+        <li>
+          {{#link-to 'labs.info-page' 'mentoring'}}
+            Mentoring
+          {{/link-to}}
+        </li>
+        <li>
+          {{#link-to 'labs.info-page' 'consulting'}}
+            Consulting
+          {{/link-to}}
+        </li>
+        <li>
+          {{#link-to 'labs.info-page' 'training'}}
+            Training
+          {{/link-to}}
+        </li>
         <li>
           {{#link-to 'labs.info-page' 'application-upgrade'}}
             Application Upgrades

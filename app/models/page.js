@@ -1,6 +1,5 @@
 import Page from 'ember-writer/models/page';
 import attr from 'ember-data/attr';
-import Ember from 'ember';
 
 // const { computed } = Ember;
 

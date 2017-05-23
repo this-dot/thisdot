@@ -12,7 +12,6 @@ const Router = Ember.Router.extend(RouterScroll, Trackable, {
 Router.map(function() {
   this.route('about', { path: 'team' });
   this.route('labs', function() {
-    // this.route('technical-training');
     this.route('info-page', { path: ':slug' });
   });
   this.route('media');
