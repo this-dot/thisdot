@@ -8,9 +8,10 @@ export default Page.extend({
   filterMentors: attr('string'),
   showContactForm: attr('boolean'),
   contactLegend: attr('string'),
-  clientsLenged: attr('string'),
+  clientsLegend: attr('string'),
   mentorsLegend: attr('string'),
   mentorsParagraph: attr('string'),
   howItWorks: attr(),
-  whatToExpect: attr()
+  whatToExpect: attr(),
+  subTitle: attr('string')
 });

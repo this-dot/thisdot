@@ -5,6 +5,17 @@
   font-weight: bold;
   margin-top: unit-space(2);
   margin-bottom: unit-space(2);
+  text-align: center;
+  
+  .sub-title {
+    margin-top: unit-space(0.5);
+    font-size: 24px;
+    color: #F46663;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    line-height: 32px;
+  }
 }
 
 .logo-list {

@@ -5,7 +5,7 @@ filter-clients: didAssessment
 filter-mentors: doesAssessment
 show-contact-form: true
 contact-legend: Let us guide your through your next upgrade
-clients-lenged: We’ve upgraded many corporate apps
+clients-legend: We’ve upgraded many corporate apps
 mentors-legend: Our community leaders will guide your team
 how-it-works:
 - We collect a profile of applications maintained by your organization.

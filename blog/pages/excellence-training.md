@@ -3,7 +3,7 @@ title: Modern Web Development Education & Training
 author: thisdot
 show-contact-form: true
 contact-legend: Take your team to the next level
-clients-lenged: We’ve educated many corporate teams
+clients-legend: We’ve educated many corporate teams
 mentors-legend: Let's work together
 mentors-paragraph: 20+ Mentors | Remote or On-Site in North America, Europe, India and Asia
 how-it-works:

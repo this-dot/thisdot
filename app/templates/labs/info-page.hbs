@@ -1,7 +1,10 @@
 <section class="container large-header landing-section">
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-12">
       {{model.title}}
+      <div class="sub-title">
+        {{model.subTitle}}
+      </div>
     </div>
   </div>
 </section>
@@ -24,7 +27,7 @@
 
 <section class="container landing-section clients-section">
   <h3>
-    {{model.clientsLenged}}
+    {{model.clientsLegend}}
   </h3>
   <ul class="logo-list row">
     {{#each pageClients as |client|}}
@@ -36,30 +39,36 @@
   </ul>
 </section>
 
-<section class="container landing-section">
-  <div class="row">
-    <div class="col-md-5">
-      <h3>How does it work?</h3>
-      <ol>
-        {{#each model.howItWorks as |step|}}
-          <li>
-            {{step}}
-          </li>
-        {{/each}}
-      </ol>
+{{#if (and model.howItWorks model.whatToExpect)}}
+  <section class="container landing-section">
+    <div class="row">
+      {{#if model.howItWorks}}
+        <div class="col-md-5">
+          <h3>How does it work?</h3>
+          <ol>
+            {{#each model.howItWorks as |step|}}
+              <li>
+                {{step}}
+              </li>
+            {{/each}}
+          </ol>
+        </div>
+      {{/if}}
+      {{#if model.whatToExpect}}
+        <div class="col-md-5 push-md-1">
+          <h3>What can you expect?</h3>
+          <ol>
+            {{#each model.whatToExpect as |step|}}
+              <li>
+                {{step}}
+              </li>
+            {{/each}}
+          </ol>
+        </div>
+      {{/if}}
     </div>
-    <div class="col-md-5 push-md-1">
-      <h3>What can you expect?</h3>
-      <ol>
-        {{#each model.whatToExpect as |step|}}
-          <li>
-            {{step}}
-          </li>
-        {{/each}}
-      </ol>
-    </div>
-  </div>
-</section>
+  </section>
+{{/if}}
 
 <section class="container landing-section">
   <h3>Our technology leaders will guide your team</h3>

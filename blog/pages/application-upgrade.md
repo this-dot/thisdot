@@ -5,9 +5,9 @@ filter-clients: didUpgrade
 filter-mentors: doesUpgrade
 show-contact-form: true
 contact-legend: Let Us Guide You Through Your Next Upgrade.
-clients-lenged: We’ve educated many corporate teams
+clients-legend: We’ve educated many corporate teams
 mentors-legend: Let's work together
-mentorsParagraph: 20+ Mentors | Remote or On-Site in North America, Europe, India and Asia
+mentors-paragraph: 20+ Mentors | Remote or On-Site in North America, Europe, India and Asia
 how-it-works:
 - We will work with your team to understand upcoming priorities.
 - Assess team based on past experiences and existing code.
