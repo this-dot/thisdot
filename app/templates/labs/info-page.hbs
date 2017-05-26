@@ -19,7 +19,11 @@
         <p>
           {{model.contactLegend}}
         </p>
-        {{contact-form}}
+        {{contact-form 
+          page=model.id 
+          buttonText="Submit"
+          confirmationText="We received your submission"
+        }}
       </div>
     </div>
   </div>

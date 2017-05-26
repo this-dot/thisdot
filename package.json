@@ -55,6 +55,7 @@
     "ember-data-fastboot": "0.0.2",
     "ember-engines": "0.3.4",
     "ember-export-application-global": "^1.0.5",
+    "ember-font-awesome": "3.0.5",
     "ember-i18n": "5.0.0",
     "ember-lazy-video": "0.3.0",
     "ember-let": "0.5.3",

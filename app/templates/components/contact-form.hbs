@@ -1,25 +1,18 @@
-<label for="">Title</label> 
-{{one-way-input title update=(action (mut title)) id="title" class="input-text" disabled=sent required=true}} 
-
-{{#if hasTitleError}}
-  <span class="error-message">Title can not be empty</span> 
-{{/if}}
-
-<label for="">Full Name</label> 
+<label for="name">Full Name</label> 
 {{one-way-input name update=(action (mut name)) id="name" class="input-text" disabled=sent required=true}} 
 
 {{#if hasNameError}}
   <span class="error-message">Name can not be empty</span> 
 {{/if}}
 
-<label for="">Email</label> 
+<label for="email">Email</label> 
 {{one-way-input email update=(action (mut email)) id="email" class="input-text" type="email" disabled=sent required=true}} 
 
 {{#if hasEmailError}}
   <span class="error-message">Email can not be empty</span> 
 {{/if}}
 
-<label for="">Message</label> 
+<label for="message">Message</label> 
 {{one-way-textarea message update=(action (mut message)) id="message" class="input-text" rows=6 disabled=sent required=true}} 
 
 {{#if hasMessageError}}
@@ -32,6 +25,9 @@
 </p>
 {{/if}}
 
-<button {{action "submit"}} name="button" class="button {{if loading 'loading'}}" disabled={{sent}}>
-  {{if sent "Thanks, we'll get back to you soon!" "Say hi!"}}
+<button {{action "submit"}} name="button" class="button {{if loading 'loading'}}" disabled={{or sent loading}}>
+  {{#if loading}}
+    {{fa-icon "spinner" spin=true}}
+  {{/if}}
+  {{if sent confirmationText buttonText}}
 </button>

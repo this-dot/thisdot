@@ -21,12 +21,13 @@ export default Ember.Component.extend({
   tagName: 'form',
   ajax: service(),
 
-  titleEmpty: empty('title'),
+  buttonText: "Say hi!",
+  confirmationText: "Thanks, we'll get back to you soon!",
+
   nameEmpty: empty('name'),
   emailEmpty: empty('email'),
   messageEmpty: empty('message'),
 
-  hasTitleError: and('titleEmpty', 'titleError'),
   hasNameError: and('nameEmpty', 'nameError'),
   hasEmailError: and('emailEmpty', 'emailError'),
   hasMessageError: and('messageEmpty', 'messageError'),
@@ -34,7 +35,6 @@ export default Ember.Component.extend({
   init() {
     this._super(...arguments);
     this.setProperties({
-      title: '',
       name: '',
       email: '',
       message: '',
@@ -45,29 +45,25 @@ export default Ember.Component.extend({
   },
 
   submitTask: task(function* (data) {
-    return yield this.get('ajax').post(action, {
-      data
-    }).then(() => {
+    try {
+      yield this.get('ajax').post(action, {
+        data
+      });
       this.setProperties({
         sent: true,
         loading: false
       });
-    }).catch(() => {
+    } catch (e) {
       this.setProperties({
         error: true,
         loading: false
       });
-    });
+    }
   }).restartable(),
 
   actions: {
     submit() {
-      let data = this.getProperties(['title', 'name', 'email', 'message', 'page']);
-
-      if (isBlank(data.title)) {
-        set(this, 'titleError', true);
-        return this.$("#title").focus();
-      }
+      let data = this.getProperties(['name', 'email', 'message', 'page']);
 
       if (isBlank(data.name)) {
         set(this, 'nameError', true);
