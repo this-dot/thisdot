@@ -19,6 +19,10 @@
   p {
     margin: 0;
   }
+  header {
+    align-items: center;
+    margin-bottom: unit-space(1);
+  }
   .avatar {
     float: left;
     margin-right: unit-space(1);
@@ -38,6 +42,10 @@
     border-radius: 4px;
     margin-bottom: unit-space(0.5);
     font-size: 15px;
+  }
+  .mentor-bio {
+    color: #7b7b7b;
+    font-size: 16px;
   }
 }
 
