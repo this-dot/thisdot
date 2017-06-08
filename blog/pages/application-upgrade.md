@@ -1,8 +1,6 @@
 ---
 title: Upgrading Your Application? Eliminate Risk.
 author: thisdot
-filter-clients: didUpgrade
-filter-mentors: doesUpgrade
 show-contact-form: true
 contact-legend: Let Us Guide You Through Your Next Upgrade.
 clients-legend: We’ve educated many corporate teams
@@ -20,6 +18,19 @@ what-to-expect:
 - Increase test coverage at every stage to increase confidence before upgrade.
 - Upgrade will be successful on first attempt.
 - Team will acquire skills necessary to perform future upgrades.
+mentors:
+- Ben Lesh
+- Jay Phelps
+- Jeff Cross
+- Victor Savkin
+- Sergio Cruz
+- Mike Brocchi
+- Balint Erdi
+- Sean Larkin
+clients:
+- Standard Chartered
+- Deloitte
+- Locus Energy
 ---
 ### Find a technical leader to guide you through your upgrade
 

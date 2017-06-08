@@ -63,6 +63,7 @@
     "ember-router-scroll": "jorgelainfiesta/ember-router-scroll#remove-polyfill",
     "ember-scroll-to": "0.5.4",
     "ember-source": "~2.13.0",
+    "ember-truth-helpers": "^1.3.0",
     "ember-writer": "this-dot/ember-writer#659a566fcb536d2902d4b315ee9671c2c6d46da6",
     "loader.js": "^4.0.1"
   },

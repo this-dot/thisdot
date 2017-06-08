@@ -1,8 +1,6 @@
 ---
 title: Modernize Your Technology Stack, Review
 author: thisdot
-filter-clients: didAssessment
-filter-mentors: doesAssessment
 show-contact-form: true
 contact-legend: Let us guide your through your next upgrade
 clients-legend: We’ve upgraded many corporate apps
@@ -18,6 +16,19 @@ what-to-expect:
 - Expert resources - our team consists of experts in widely adopted open source technologies.
 - Unbiased recommendations - we make recommendations to match your needs without framework bias.
 - Easy adoption - we will recommend tools and learning strategies easiest for your team to adopt.
+mentors:
+- Ben Lesh
+- Jay Phelps
+- Jeff Cross
+- Victor Savkin
+- Sergio Cruz
+- Mike Brocchi
+- Balint Erdi
+- Sean Larkin
+clients:
+- Standard Chartered
+- Deloitte
+- Locus Energy
 ---
 ###Facebook, Gmail and Slack are changing what users expect from the web.###
 

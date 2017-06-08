@@ -17,16 +17,13 @@ export default [{
     twitter: 'BenLesh',
     image: '/media/mentors/ben-lesh.png',
     frameworks: ['rxjs', 'react', 'redux'],
-    doesAssessment: true,
     bio: 'Author and project lead for RxJS 5+, founder of RxWorkshop, software engineer at Google, Netflix alum. OSS contributor including Redux, Angular.js, and Angular. Conference speaker.'
   },
   {
     name: 'Taras Mankovski',
-    twitter: 'embersherpa',
+    twitter: 'tarasm',
     image: '/media/mentors/taras-mankovski.jpg',
     frameworks: ['ember'],
-    doesUpgrade: true,
-    doesAssessment: true,
     bio: 'OSS contributor, Ember.js mentor, technical lead for framework agnostic projects in Angular, React, Ember, and GraphQL. Founded EmberSherpa and Global Ember Meetup. Co-founder at This Dot, Inc. Conference speaker.'
   },
   {
@@ -41,8 +38,6 @@ export default [{
     twitter: '_jayphelps',
     image: '/media/mentors/jay-phelps.jpg',
     frameworks: ['rxjs', 'react', 'redux'],
-    doesUpgrade: true,
-    doesAssessment: true,
     bio: 'RxJS core team alum, co-author of Redux-Observable, Web Assembly and compiler aficionado, Ember and React expert, Senior Software Engineer at Netflix. Conference speaker.'
   },
   {
@@ -98,7 +93,6 @@ export default [{
     twitter: 'hashtagserg',
     image: '/media/mentors/sergio-cruz.jpg',
     frameworks: ['Angular'],
-    doesUpgrade: true,
     bio: 'Angular expert, JavaScript instructor, Lead UI Engineer, and conference speaker. '
   }
 ];
