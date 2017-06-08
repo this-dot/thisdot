@@ -12,11 +12,10 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember test",
-    "deploy": "GCLOUD_PROJECT=this-dot ember deploy production"
+    "test": "ember test"
   },
   "devDependencies": {
-    "broccoli-asset-rev": "^2.4.5",
+    "broccoli-asset-rev": "~2.5.0",
     "ember-ajax": "^3.0.0",
     "ember-background-video": "1.0.0",
     "ember-chimp": "0.1.0",
