@@ -13,7 +13,6 @@
   <h2>Always improve,<br> always succeed.</h2>
   <div class="row">
     <div class="col-lg-5">
-
       <p>
         Whether your company is revolutionizing your industry or
         modernizing your technology, you don't have to trade technical
@@ -90,38 +89,42 @@
 <section class="content-section labs-clients">
   <h2>Our Clients</h2>
   <ul class="logo-list row">
-    <li class="col-md-4">
-      <img src="/media/clients/standard-chartered.png" alt="Standard Chartered" />
-      <p>Standard Chartered</p>
-    </li>
-    <li class="col-md-4">
-      <img src="/media/clients/deloitte.png" alt="Deloitte" />
-      <p>Deloitte</p>
-    </li>
-    <li class="col-md-4">
-      <img src="/media/clients/freshbooks.png" alt="Freshbooks" />
-      <p>Freshbooks</p>
-    </li>
-    <li class="col-md-4">
-      <img src="/media/clients/cvs-health.png" alt="CVS Health" />
-      <p>CVS Health</p>
-    </li>
-    <li class="col-md-4">
-      <img src="/media/clients/hedgeserv.png" alt="hedgeserv" />
-      <p>hedgeserv</p>
-    </li>
-    <li class="col-md-4">
-      <img src="/media/clients/drg.png" alt="DRG" />
-      <p>DRG</p>
-    </li>
+    {{#each allClients as |client|}}
+      <li class="col-md-4">
+        <img src="{{client.image}}" alt="{{client.name}}">
+        <p>{{client.name}}</p>
+      </li>
+    {{/each}}
+  </ul>
+</section>
 
-    <li class="col-md-4">
-      <img src="/media/clients/wintac.jpg" alt="Wintac" />
-      <p>Wintac</p>
-    </li>
-    <li class="col-md-4">
-      <img src="/media/clients/locus-energy.png" alt="Locus Energy" />
-      <p>Locus Energy</p>
-    </li>
+<section class="container landing-section">
+  <h3>Our technology leaders will guide your team</h3>
+  <ul class="row people-list">
+    {{#each allMentors as |mentor|}}
+      <li class="col-md-5">
+        <header class="row">
+          <div class="col-md-4">
+            <div class="avatar">
+              <img src="{{mentor.image}}" alt="{{mentor.name}}" />
+            </div>
+          </div>
+          <div class="col-md-8">
+            <h3>{{mentor.name}}</h3>
+            <p>
+              {{#each mentor.frameworks as |framework|}}
+                <span class="framework">{{framework}}</span>
+              {{/each}}
+            </p>
+            <div class="social">
+              <a href="https://twitter.com/{{mentor.twitter}}" target="_blank">@{{mentor.twitter}}</a><br>
+            </div>
+          </div>
+        </header>
+        <p class="mentor-bio">
+          {{mentor.bio}}
+        </p>
+      </li>
+    {{/each}}
   </ul>
 </section>
