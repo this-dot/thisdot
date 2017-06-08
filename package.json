@@ -44,12 +44,15 @@
     "ember-cli-sri": "^2.1.0",
     "ember-cli-test-loader": "^2.1.0",
     "ember-cli-uglify": "^1.2.0",
+    "ember-composable-helpers": "2.0.1",
     "ember-concurrency": "0.8.5",
     "ember-cp-validations": "3.3.2",
     "ember-data": "~2.12.0",
     "ember-data-fastboot": "simonihmig/ember-data-fastboot#fastboot-1.0",
     "ember-export-application-global": "^2.0.0",
+    "ember-font-awesome": "3.0.5",
     "ember-i18n": "5.0.1",
+    "ember-inflector": "2.0.1",
     "ember-intercom-io": "0.1.4",
     "ember-lazy-video": "0.3.0",
     "ember-let": "0.6.0",
@@ -58,16 +61,14 @@
     "ember-one-way-controls": "2.0.0",
     "ember-resolver": "^4.0.0",
     "ember-router-scroll": "jorgelainfiesta/ember-router-scroll#remove-polyfill",
-    "ember-scroll-to": "0.6.4",
+    "ember-scroll-to": "0.5.4",
     "ember-source": "~2.13.0",
+    "ember-truth-helpers": "^1.3.0",
     "ember-writer": "this-dot/ember-writer#659a566fcb536d2902d4b315ee9671c2c6d46da6",
-    "loader.js": "^4.2.3"
+    "loader.js": "^4.0.1"
   },
   "dependencies": {
-    "ember-cli-fastboot": "1.0.0-rc.2",
-    "ember-composable-helpers": "2.0.1",
-    "ember-font-awesome": "3.0.5",
-    "ember-inflector": "2.0.1"
+    "ember-cli-fastboot": "1.0.0-rc.2"
   },
   "engines": {
     "node": ">= 7"

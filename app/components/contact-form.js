@@ -1,9 +1,36 @@
 import Ember from 'ember';
-const { inject: { service }, isBlank } = Ember;
+const {
+  inject: {
+    service
+  },
+  computed: {
+    empty,
+    and
+  },
+  isBlank,
+  set
+} = Ember;
+import {
+  task
+} from 'ember-concurrency';
+
+const action =
+  'https://us-central1-this-dot.cloudfunctions.net/thisDotLabsSubscribe';
 
 export default Ember.Component.extend({
   tagName: 'form',
   ajax: service(),
+
+  buttonText: "Say hi!",
+  confirmationText: "Thanks, we'll get back to you soon!",
+
+  nameEmpty: empty('name'),
+  emailEmpty: empty('email'),
+  messageEmpty: empty('message'),
+
+  hasNameError: and('nameEmpty', 'nameError'),
+  hasEmailError: and('emailEmpty', 'emailError'),
+  hasMessageError: and('messageEmpty', 'messageError'),
 
   init() {
     this._super(...arguments);
@@ -16,34 +43,49 @@ export default Ember.Component.extend({
       error: false
     });
   },
-  submit(event) {
-    event.preventDefault();
 
-    let fields = this.getProperties('name', 'email', 'message');
-    if (isBlank(fields.name) || isBlank(fields.email) || isBlank(fields.message)) {
-      return this.set('error', true);
+  submitTask: task(function* (data) {
+    try {
+      yield this.get('ajax').post(action, {
+        data
+      });
+      this.setProperties({
+        sent: true,
+        loading: false
+      });
+    } catch (e) {
+      this.setProperties({
+        error: true,
+        loading: false
+      });
     }
-    this.setProperties({
-      loading: true,
-      error: false
-    });
+  }).restartable(),
 
-    this.get('ajax').request('https://formkeep.com/f/0a3764031358', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/javascript',
-      },
-      data: fields
-    })
-    .then(() => {
-      this.set('sent', true);
-    })
-    .catch(() => {
-      this.set('error', true);
-    })
-    .finally(() => {
-      this.set('loading', false);
-    });
-    return false;
+  actions: {
+    submit() {
+      let data = this.getProperties(['name', 'email', 'message', 'page']);
+
+      if (isBlank(data.name)) {
+        set(this, 'nameError', true);
+        return this.$("#name").focus();
+      }
+
+      if (isBlank(data.email)) {
+        set(this, 'emailError', true);
+        return this.$("#email").focus();
+      }
+
+      if (isBlank(data.message)) {
+        set(this, 'messageError', true);
+        return this.$("#message").focus();
+      }
+
+      this.setProperties({
+        error: false,
+        loading: true
+      });
+
+      this.get('submitTask').perform(data);
+    }
   }
 });

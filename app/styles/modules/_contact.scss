@@ -7,6 +7,18 @@
 
 .contact-section {
   margin-top: 0;
+  h3 {
+    margin-bottom: unit-space(1);
+    color: $dark-alt-color;
+    margin: unit-space(1) 0;
+  }
+  .phone-card {
+    margin-top: unit-space(1);
+  }
+  a {
+    color: $main-color;
+    border-bottom: 1px solid $main-color;
+  }
 }
 
 .contact-form {
@@ -44,8 +56,8 @@
     display: block;
     text-align: center;
     width: 100%;
-    font-size: 24px;
-    padding: unit-space(1) unit-space(1);
+    font-size: 18px;
+    padding: 5px 10px;
 
     -webkit-transition: background 0.5s;
     transition: background 0.5s;

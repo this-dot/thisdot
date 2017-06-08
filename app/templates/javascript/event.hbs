@@ -1,6 +1,6 @@
-<section class="javascript-intro 
-  {{if isPrevious "is-previous"}} 
-  {{if isInteractive "is-interactive"}} 
+<section class="javascript-intro
+  {{if isPrevious "is-previous"}}
+  {{if isInteractive "is-interactive"}}
   {{if model.video 'has-video' 'has-no-video'}}
   {{if model.hasSpeakerVideos 'has-speaker-videos' 'has-no-speaker-videos'}}
   ">
@@ -44,7 +44,7 @@
             <p class="col-lg-5 push-lg-1">
               Core team members will discuss topics such as upcoming releases, recent milestones, and community initiatives.
             </p>
-          {{else}}            
+          {{else}}
             <div class="container">
               <div class="main-video row">
                 <div class="col-md-6">
@@ -99,7 +99,7 @@
             {{moment-format model.date 'MMMM Do YYYY'}} <br>
             {{moment-format model.timezoneDate 'h:mm a zz'}}. Online! <br>
           </div>
-          {{event-subscribe 
+          {{event-subscribe
             event=model.id
             class="contact-form javascript-register"
           }}
@@ -111,6 +111,9 @@
 
 <section class="javascript-events {{if isPrevious "is-previous"}} {{if isInteractive "is-interactive"}}">
   <div class="container">
+    {{#if (is-after (now) model.date precision='day')}}
+        {{lazy-video url=model.video class="video-wrapper" width="560" height="315"}}
+    {{/if}}
     <ul class="row">
       {{event-speakers event=model}}
     </ul>

@@ -1,18 +1,33 @@
-<label for="">Full Name</label>
-{{one-way-input name update=(action (mut name)) class="input-text" disabled=sent required=true}}
+<label for="name">Full Name</label> 
+{{one-way-input name update=(action (mut name)) id="name" class="input-text" disabled=sent required=true}} 
 
-<label for="">Email</label>
-{{one-way-input email update=(action (mut email)) class="input-text" type="email" disabled=sent required=true}}
-
-<label for="">Message</label>
-{{one-way-textarea message update=(action (mut message)) class="input-text" rows=6 disabled=sent required=true}}
-
-{{#if error}}
-  <p class="error-message">
-    An error occurred, please try again.
-  </p>
+{{#if hasNameError}}
+  <span class="error-message">Name can not be empty</span> 
 {{/if}}
 
-<button type="submit" name="button" class="button {{if loading 'loading'}}" disabled={{sent}}>
-  {{if sent "Thanks, we'll get back to you soon!" "Say hi!"}}
+<label for="email">Email</label> 
+{{one-way-input email update=(action (mut email)) id="email" class="input-text" type="email" disabled=sent required=true}} 
+
+{{#if hasEmailError}}
+  <span class="error-message">Email can not be empty</span> 
+{{/if}}
+
+<label for="message">Message</label> 
+{{one-way-textarea message update=(action (mut message)) id="message" class="input-text" rows=6 disabled=sent required=true}} 
+
+{{#if hasMessageError}}
+  <span class="error-message">Message can not be empty</span> 
+{{/if}} 
+
+{{#if error}}
+<p class="error-message">
+  Saving failed, please try again.
+</p>
+{{/if}}
+
+<button {{action "submit"}} name="button" class="button {{if loading 'loading'}}" disabled={{or sent loading}}>
+  {{#if loading}}
+    {{fa-icon "spinner" spin=true}}
+  {{/if}}
+  {{if sent confirmationText buttonText}}
 </button>

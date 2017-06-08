@@ -34,7 +34,11 @@
 }
 
 h2 {
-  @include title-type;
+  color: $action-color;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 p {
@@ -61,5 +65,32 @@ p {
   }
   &.twitter-icon {
     background-image: url(images/twitter-icon.svg);
+  }
+}
+
+h3 {
+  font-size: 18px;
+  color: $action-color;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 3px;
+  line-height: 22px;
+}
+
+ol {
+  counter-reset: ol-counter;
+  li {
+    padding-left: unit-space(1);
+    margin-bottom: unit-space(1);
+    &:before {
+      display: block;
+      content: counter(ol-counter);
+	    counter-increment: ol-counter;
+      font-size: 18px;
+      font-weight: bold;
+      color: $dark-alt-color;
+      margin-left: unit-space(1) * -1;
+      float: left;
+    }
   }
 }

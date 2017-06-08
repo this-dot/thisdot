@@ -18,3 +18,5 @@ testem.log
 
 .DS_Store
 .vscode
+
+.env.deploy.*

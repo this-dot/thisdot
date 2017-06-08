@@ -1,0 +1,60 @@
+.people-list {
+  li {
+    margin-top: unit-space(2);
+    &:nth-child(even) {
+      @extend .push-md-1;
+    }
+  }
+  img {
+    max-width: 100%;
+  }
+  h3 {
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 10px;
+    color: $main-color;
+    text-transform: none;
+    font-weight: bold;
+  }
+  p {
+    margin: 0;
+  }
+  header {
+    align-items: center;
+    margin-bottom: unit-space(1);
+  }
+  .avatar {
+    float: left;
+    margin-right: unit-space(1);
+  }
+  .social {
+    a {
+      color: $title-color;
+      border-bottom: 2px dotted $alt-color;
+    }
+  }
+  .framework {
+    display: inline-block;
+    padding: 3px 10px;
+    text-transform: uppercase;
+    border: 1px solid $alt-color;
+    color: $alt-color;
+    border-radius: 4px;
+    margin-bottom: unit-space(0.5);
+    font-size: 15px;
+  }
+  .mentor-bio {
+    color: #7b7b7b;
+    font-size: 16px;
+  }
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 250px;
+  overflow: hidden;
+  img {
+    max-width: 100%;
+  }
+}

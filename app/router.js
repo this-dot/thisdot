@@ -10,8 +10,10 @@ const Router = Ember.Router.extend(RouterScroll, Trackable, {
 });
 
 Router.map(function() {
-  this.route('about');
-  this.route('labs');
+  this.route('about', { path: 'team' });
+  this.route('labs', function() {
+    this.route('info-page', { path: ':slug' });
+  });
   this.route('media');
   this.route('home', { path: '/' });
   this.route('code-of-conduct');
@@ -20,6 +22,7 @@ Router.map(function() {
     this.route('event', { path: ':eventDate' });
   });
   this.route('privacy-policy');
+  this.route('sponsors');
 });
 
 export default Router;

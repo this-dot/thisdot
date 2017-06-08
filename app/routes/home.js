@@ -5,7 +5,8 @@ export default Ember.Route.extend({
   headData: service(),
   model() {
     return {
-      featured: this.store.findRecord('post', 'mw-thinking-reactively-with-rx-js-5')
+      featured: this.store.findRecord('post', 'mw-thinking-reactively-with-rx-js-5'),
+      posts: this.store.findAll('post')
     };
   },
   afterModel() {
