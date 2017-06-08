@@ -19,6 +19,20 @@ what-to-expect:
 - Increase team’s confidence in abilities to overcome challenges.
 - Reduce time to market for new features.
 - Increase productivity with same or fewer developers.
+mentors:
+- Taras Mankovski
+- Ben Lesh
+- Jay Phelps
+- Jeff Cross
+- Victor Savkin
+- Sergio Cruz
+- Mike Brocchi
+- Balint Erdi
+- Sean Larkin
+clients:
+- Standard Chartered
+- Deloitte
+- Locus Energy
 ---
 ###Get guidance from modern web leaders###
 
