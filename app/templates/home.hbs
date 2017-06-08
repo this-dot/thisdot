@@ -1,0 +1,107 @@
+<section class="slider home-slider">
+  <div class="slide">
+      {{#background-video
+        classNames="dark-background"
+        mp4="media/ben-reative-programming.mp4"
+        ogv="media/ben-reative-programming.ogv"
+        webm="media/ben-reative-programming.webm"
+        poster="media/ben-reative-programming.jpg"
+      }}
+        <div class="content container">
+        {{#let "https://medium.com/@thisdotmedia/reactive-programming-is-not-a-trend-why-the-time-to-adopt-is-now-b3954ea44aa3#.hasbvlol1" as |link|}}
+          <h2>
+            <a href="{{link}}" target="_blank">Reactive Programming is not a Trend</a>
+          </h2>
+          <p>
+            Trends come and go, as do frameworks, but there is one trend that looks like it’s here to stay. That trend is reactive programming.
+          </p>
+          <p>
+            <a href="{{link}}" target="_blank" class="read-more">Read more</a>
+          </p>
+        {{/let}}
+        </div>
+      {{/background-video}}
+  </div>
+</section>
+
+<section class="subscribe container">
+  {{home-subscribe}}
+</section>
+
+<section class="content-section">
+  <header>
+    <h2>Featured Video</h2>
+    <p class="subtitle">
+      Your resource for modern web technologies
+    </p>
+  </header>
+  <div class="row">
+    <div class="col-md">
+      {{lazy-video url=model.featured.video}}
+    </div>
+    <div class="col-md">
+      <h3>{{model.featured.title}}</h3>
+      {{{model.featured.summary}}}
+      <a href="{{model.featured.video}}" class="read-more">Watch on YouTube</a>
+    </div>
+  </div>
+
+</section>
+
+<section class="content-section">
+
+  <div class="row centered-cols">
+    <div class="col-md-4">
+      {{#link-to 'media' (query-params show="moderndotweb")}}
+        <img src="/media/modern-web-logo.svg" alt="Modern.Web Logo">
+      {{/link-to}}
+      <h4>
+        {{#link-to 'media' (query-params show="moderndotweb")}}
+          Modern.Web
+        {{/link-to}}
+      </h4>
+      <p>
+        The Modern.Web podcast, monthly JavaScript meetups, and a focus on frameworks, browsers and reactive programming.
+      </p>
+    </div>
+    <div class="col-md-4">
+      {{#link-to 'media' (query-params show="the-ember-show")}}
+        <img src="/media/the-ember-show.svg" alt="The Ember Show Logo">
+      {{/link-to}}
+      <h4>
+        {{#link-to 'media' (query-params show="the-ember-show")}}
+          The Ember Show
+        {{/link-to}}
+      </h4>
+      <p>A monthly show about the latest developments in the Ember.js community presented by addon and framework creators.</p>
+    </div>
+    <div class="col-md-4">
+      {{#link-to 'javascript'}}
+       <img src="/media/this-dot-js.svg" alt="This Dot Javascript">
+      {{/link-to}}
+      <h4>This.Javascript</h4>
+      <p>
+        Quarterly state of the union from JavaScript authors to encourage cross collaboration, learning, and conversation from the community.
+      </p>
+    </div>
+    <div class="col-md-4 push-md-2">
+      {{#link-to 'media' (query-params show="contributors-days")}}
+       <img src="/media/cd-logo.svg" alt="Contributors Days">
+      {{/link-to}}
+      <h4>Contributor Days</h4>
+      <p>
+        Contributor days are one day focused on advancing a specific open source framework / library.  20-40 highly active open source contributors will be hand selected to participate.
+      </p>
+    </div>
+    <div class="col-md-4 push-md-2">
+      {{#link-to 'media' (query-params show="rx-workshop")}}
+       <img src="/media/rx-workshop-logo.svg" alt="Rx Workshop">
+      {{/link-to}}
+      <h4>Rx Workshop</h4>
+      <p>
+        Learn cutting edge reactive programming techniques with RxJS in this framework agnostic course taught by author of RxJS, Ben Lesh.
+      </p>
+    </div>
+  </div>
+
+</section>
