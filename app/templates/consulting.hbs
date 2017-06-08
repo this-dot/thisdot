@@ -1,8 +1,65 @@
-<h1>Consulting</h1>
+<section class="landing-consulting">
+  <header class="container">
+    <div class="row">
+      <div class="col-lg-2 col-md-3">
+        <h1 class="this-dot-logo-square">This Dot</h1>
+      </div>
+      <div class="col-lg-6 col-md-9">
+        <h2>Level up your team through mentorship</h2>
+      </div>
+    </div>
+  </header>
 
-<h2>Receive unbiased feedback on how you are building your application because we are framework agnostic. We advise companies based on their projects and what is best for them versus the technology stack</h2>
-<h2>Other Services</h2>
-
-<h3>{{#link-to 'mentorship'}}Mentorship{{/link-to}} | {{#link-to 'consulting'}}Consulting{{/link-to}}</h3>
-
-<h2>Client List</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 content-column">
+        <h3>Some one line title</h3>
+        <p>
+          This Dot brings technical leaders, engineering culture transformation.
+        </p>
+        <p>
+          This Dot brings technical leaders, engineering culture transformation.
+        </p>
+        <p>
+          This Dot brings technical leaders, engineering culture transformation.
+        </p>
+        <form class="landing-contact contact-form" action="index.html" method="post">
+          <h3>Let's make a great team</h3>
+          <label for="">Message</label>
+          {{one-way-textarea message update=(action (mut message)) class="input-text" rows=3 disabled=sent required=true}}
+          <label for="">Your email</label>
+          {{one-way-input message update=(action (mut message)) class="input-text" rows=6 disabled=sent required=true}}
+          <button type="submit" name="button" class="button {{if loading 'loading'}}" disabled={{sent}}>
+            {{if sent "Thanks, we'll get back to you soon!" "Say hi!"}}
+          </button>
+        </form>
+        <blockquote>
+          <p>ThisDot provided us with the senior level mentorship we needed for the junior developers on our team.</p>
+        </blockquote>
+        <blockquote>
+          <p>ThisDot provided us with the senior level mentorship we needed for the junior developers on our team.</p>
+        </blockquote>
+        <blockquote>
+          <p>ThisDot provided us with the senior level mentorship we needed for the junior developers on our team.</p>
+        </blockquote>
+      </div>
+      <aside class="col-md-5 push-md-1">
+        <h3>Our Experts</h3>
+        <ul class="people-list row">
+          {{#each model as |mentor|}}
+            <li class="col-md-5">
+              <div class="avatar">
+                <img src="{{mentor.image}}" alt="{{mentor.name}}" />
+              </div>
+              <h3>{{mentor.name}}</h3>
+              <p class="title">{{mentor.title}}</p>
+              <div class="social">
+                <a href="https://twitter.com/{{mentor.twitter}}" target="_blank">@{{mentor.twitter}}</a><br>
+              </div>
+            </li>
+          {{/each}}
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
