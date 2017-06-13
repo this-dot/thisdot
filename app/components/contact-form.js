@@ -63,7 +63,8 @@ export default Ember.Component.extend({
 
   actions: {
     submit() {
-      let data = this.getProperties(['name', 'email', 'message', 'page']);
+      let data = this.getProperties(['name', 'email', 'message', 'page', 'ad']);
+      debugger;
 
       if (isBlank(data.name)) {
         set(this, 'nameError', true);
