@@ -4,6 +4,8 @@ import clientsList from 'thisdot/utils/clients';
 const { computed, isPresent } = Ember;
 
 export default Ember.Controller.extend({
+  queryParams: ['ad'],
+  ad: null,
   
   pageClients: computed('model.clients.[]', function() {
     return this.get('model.clients')
