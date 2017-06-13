@@ -26,7 +26,7 @@ module.exports = function(environment) {
     ],
 
     fastboot: {
-      hostWhitelist: [storageHost, /^localhost:\d+$/]
+      hostWhitelist: [storageHost, /^localhost:\d+$/, /(www\.)?thisdot\.co$/]
     },
 
     moment: {
