@@ -39,7 +39,7 @@
           <h4>
             {{#link-to 'javascript.event' (moment-format post.date (t 'event.date.format'))}}{{post.title}}{{/link-to}}
           </h4>
-          {{moment-calendar post.date}}
+          {{moment-calendar post.date}} <br> 
           {{#link-to 'javascript' class="button"}}Register{{/link-to}}
         </div>
       {{/if}}

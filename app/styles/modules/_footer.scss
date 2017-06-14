@@ -38,6 +38,12 @@
       font-weight: bold;
       margin: 0 unit-space(0.5);
     }
+    @include mobileOnly() {
+      a {
+        display: block;
+        margin-top: 5px;
+      }
+    }
     .social {
       @include tablet() {
         float: right;

@@ -1,11 +1,13 @@
 .large-header {
   font-size: 48px;
-  line-height: 55px;
+  line-height: 64px;
   letter-spacing: 1px;
   font-weight: bold;
   margin-top: unit-space(2);
   margin-bottom: unit-space(2);
   text-align: center;
+  text-transform: none;
+  color: $main-color;
   
   .sub-title {
     margin-top: unit-space(0.5);

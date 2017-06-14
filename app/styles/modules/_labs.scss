@@ -13,6 +13,15 @@
   margin: unit-space(2) 0;
 }
 
+.labs-always {
+  .row {
+    justify-content: center;
+    @include desktop() {
+      justify-content: flex-start;
+    }
+  }
+}
+
 .labs-clients {
   text-align: center;
   margin-bottom: 2em;
@@ -42,11 +51,15 @@
 }
 
 .labs-services {
+  h2 {
+    text-align: left;
+  }
   li {
     margin: 10px 0;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+    text-align: left;
     a {
       color: #626D8E;
       border-radius: 20px;

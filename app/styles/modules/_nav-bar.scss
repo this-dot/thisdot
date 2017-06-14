@@ -4,10 +4,16 @@
 
   .row {
     justify-content: space-between;
+    @include mobileOnly() {
+      flex-flow: column nowrap;
+    }
   }
 
-  .this-dot-logo {
-    max-width: 100%;
+  @include mobileOnly() {
+    .thisdot-publication {
+      width: 100%;
+      margin-bottom: unit-space(1);
+    }
   }
 
   @include desktop() {
@@ -47,9 +53,8 @@
       @include mobileOnly() {
         text-align: right;
         display: flex;
-        flex-flow: column nowrap;
-        height: 100%;
-        min-height: 112px;
+        flex-flow: row nowrap;
+        justify-content: space-between;
         a {
           margin-bottom: 2px;
           text-align: center;
