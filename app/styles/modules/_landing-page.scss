@@ -1,6 +1,6 @@
 .large-header {
-  font-size: 48px;
-  line-height: 64px;
+  font-size: 26px;
+  line-height: 34px;
   letter-spacing: 1px;
   font-weight: bold;
   margin-top: unit-space(2);
@@ -8,15 +8,25 @@
   text-align: center;
   text-transform: none;
   color: $main-color;
+
+  @include tablet() {
+    font-size: 40px;
+    line-height: 62px;
+  }
   
   .sub-title {
     margin-top: unit-space(0.5);
-    font-size: 24px;
     color: #F46663;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 3px;
-    line-height: 32px;
+    font-size: 20px;
+    line-height: 28px;
+    
+    @include tablet() {
+      font-size: 24px;
+      line-height: 32px;
+    }
   }
 }
 
@@ -27,6 +37,10 @@
     padding: unit-space(1) unit-space(2);
     @include desktop() {
       padding: unit-space(1) unit-space(4);
+    }
+    @include mobileOnly() {
+      max-width: 50%;
+      padding: 20px;
     }
   }
   img {

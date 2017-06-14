@@ -4,6 +4,7 @@
     color: $main-color;
     font-weight: bold;
     text-align: center;
+    
 
     @include tablet() {
       display: flex;
@@ -14,7 +15,10 @@
 
     .input-button {
       flex-shrink: 0;
-      margin-top: unit-space(1);
+      margin-top: unit-space(1); 
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
       .input-text {
         border-color: $action-color;
       }

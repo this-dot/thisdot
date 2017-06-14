@@ -6,7 +6,10 @@
 
   header {
     @include clearfix();
-    margin-bottom: unit-space(4);
+    margin-bottom: unit-space(1);
+    @include tablet() {
+      margin-bottom: unit-space(2);
+    }
     h2 {
       border-bottom: 2px solid $alt-color;
       color: $action-color;
