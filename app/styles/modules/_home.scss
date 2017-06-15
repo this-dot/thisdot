@@ -1,17 +1,24 @@
 .subscribe {
-  padding-top: unit-space(4);
+  padding-top: unit-space(2);
   .input-group {
-    @include title-type();
-    font-size: 24px;
+    color: $main-color;
+    font-weight: bold;
+    text-align: center;
+    
 
     @include tablet() {
       display: flex;
       justify-content: center;
       align-items: center;
+      text-align: left;
     }
 
     .input-button {
       flex-shrink: 0;
+      margin-top: unit-space(1); 
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
       .input-text {
         border-color: $action-color;
       }
@@ -20,6 +27,7 @@
         margin: 0;
       }
       @include tablet() {
+        margin-top: 0;
         margin-left: unit-space(2);
         .input-text {
           min-width: 250px;

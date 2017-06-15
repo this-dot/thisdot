@@ -1,34 +1,26 @@
 .content-section {
   @extend .container;
-  padding-top: unit-space(2);
-  margin-top: unit-space(2);
-  // @include dots-footer(center);
+  padding-top: unit-space(1);
+  margin-top: unit-space(1);
+  text-align: center;
 
   header {
     @include clearfix();
-    margin-bottom: unit-space(4);
-    &:before {
-      content: '';
-      background: $bright-color;
-      height: 40px;
-      width: 40px;
-      border-radius: 100px;
-      display: inline-block;
-      float: left;
-      margin-right: unit-space(1);
+    margin-bottom: unit-space(1);
+    @include tablet() {
+      margin-bottom: unit-space(2);
     }
     h2 {
-      background: $bright-color;
-      border-radius: 100px;
-      color: #fff;
-      padding: 0 unit-space(2);
+      border-bottom: 2px solid $alt-color;
+      color: $action-color;
+      text-transform: none;
       display: inline-block;
-      height: 40px;
       box-sizing: border-box;
-      font-size: 24px;
-      line-height: 40px;
+      font-size: 18px;
+      padding-bottom: 5px;
+      margin: 0 auto;
       a {
-        color: #fff;
+        color: $main-color;
       }
     }
     p {
@@ -38,26 +30,16 @@
     }
   }
 
-  &.alt {
-    header {
-      h2 {
-        background-color: $bright-color-alt;
-      }
-      &:before {
-        background-color: $bright-color-alt;
-      }
-    }
-  }
-
   h3 {
     color: $main-color;
   }
 
   h4 {
     @include title-type();
-    line-height: 30px;
+    text-transform: none;
+    line-height: 24px;
     color: $title-color;
-    font-size: 24px;
+    font-size: 20px;
     a {
       color: $title-color;
     }

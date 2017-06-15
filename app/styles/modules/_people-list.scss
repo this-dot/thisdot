@@ -1,9 +1,6 @@
 .people-list {
   li {
     margin-top: unit-space(2);
-    &:nth-child(even) {
-      @extend .push-md-1;
-    }
   }
   img {
     max-width: 100%;
@@ -22,10 +19,18 @@
   header {
     align-items: center;
     margin-bottom: unit-space(1);
+    text-align: center;
+    @include desktop() {
+      text-align: left;
+    }
   }
   .avatar {
-    float: left;
-    margin-right: unit-space(1);
+    margin-left: auto;
+    margin-right: auto;
+    @include desktop() {
+      margin-right: unit-space(1);
+      margin-left: 0;
+    }
   }
   .social {
     a {

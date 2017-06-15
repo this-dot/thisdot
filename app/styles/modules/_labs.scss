@@ -13,6 +13,20 @@
   margin: unit-space(2) 0;
 }
 
+.labs-always {
+  .row {
+    justify-content: center;
+    @include desktop() {
+      justify-content: flex-start;
+    }
+    @include mobileOnly() {
+      img {
+        margin-top: unit-space(1);
+      }
+    }
+  }
+}
+
 .labs-clients {
   text-align: center;
   margin-bottom: 2em;
@@ -31,6 +45,10 @@
       @include desktop() {
         padding: unit-space(1) unit-space(4);
       }
+      @include mobileOnly() {
+        max-width: 50%;
+        padding: 20px;
+      }
     }
     img {
       max-width: 100%;
@@ -41,12 +59,26 @@
   }
 }
 
+.labs-makers {
+  @include tablet() {
+    text-align: left;
+  }
+}
+
 .labs-services {
+  margin-top: unit-space(2);
+  @include tablet() {
+    margin-top: 0;
+    h2 {
+      text-align: left;
+    }
+  }
   li {
     margin: 10px 0;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+    text-align: left;
     a {
       color: #626D8E;
       border-radius: 20px;

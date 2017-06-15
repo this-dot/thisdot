@@ -15,7 +15,7 @@
 
 .section-properties {
   .row {
-    justify-content: space-around;
+    // justify-content: space-around;
     @include tablet() {
       margin-top: unit-space(2);
     }
@@ -26,12 +26,12 @@
       padding: unit-space(1) 0;
       a {
         display: flex;
-        height: 66px;
+        // height: 66px;
         flex-flow: column nowrap;
         justify-content: center;
         background: url(images/arrow-right.svg) no-repeat;
         background-position: right center;
-        padding-right: 20px;
+        padding: 20px 20px 0 0;
         box-sizing: border-box;
         background-size: 17px 33px;
       }

@@ -1,5 +1,5 @@
 .thisdot-publication {
-  @include makeLogo('images/logos/thisdot-publication.svg', 100%, 35px);
+  @include makeLogo('images/logos/thisdot-publication.svg', 300px, 35px);
 }
 .thisdot-contrast {
   @include makeLogo('images/logos/thisdot-contrast.svg', 280px, 35px);

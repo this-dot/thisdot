@@ -4,6 +4,16 @@
   margin-top: unit-space(3);
   color: #fff;
 
+  @include mobileOnly() {
+    text-align: center;
+    .thisdot-contrast, .thisdot-media, .thisdot-labs {
+      display: inline-block;
+    }
+    .links a {
+      margin-bottom: 10px;
+    }
+  }
+
   .row {
     border-top: 2px solid lighten($main-color, 5);
     padding-top: unit-space(1);
@@ -37,6 +47,12 @@
       text-decoration: none;
       font-weight: bold;
       margin: 0 unit-space(0.5);
+    }
+    @include mobileOnly() {
+      a {
+        display: block;
+        margin-top: 5px;
+      }
     }
     .social {
       @include tablet() {

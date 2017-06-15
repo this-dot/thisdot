@@ -21,6 +21,19 @@
       line-height: 38px;
       max-width: 600px;
     }
+    @include mobileOnly() {
+      h2 {
+        font-size: 30px;
+        line-height: 36px;
+        text-align: center;
+      }
+      p {
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: bold;
+        text-align: center;
+      }
+    }
   }
 
   .dark-background {

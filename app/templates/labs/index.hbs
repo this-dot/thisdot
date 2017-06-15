@@ -10,9 +10,9 @@
 </section>
 
 <section class="content-section labs-always">
-  <h2>Always improve,<br> always succeed.</h2>
   <div class="row">
-    <div class="col-lg-5">
+    <div class="col-md-8 push-lg-0 col-lg-5">
+      <h2>Always improve,<br> always succeed.</h2>
       <p>
         Whether your company is revolutionizing your industry or
         modernizing your technology, you don't have to trade technical
@@ -26,7 +26,7 @@
         Delight your customers and, without trial and error, get it right the first time.
       </p>
     </div>
-    <aside class="col-lg-6 push-md-1">
+    <aside class="col-lg-6 push-lg-1">
       <img src="/media/ben-tracy.png" alt="Ben and Tracy on stage at Netflix" />
     </aside>
   </div>
@@ -34,7 +34,7 @@
 
 <section class="content-section labs-source">
   <div class="row">
-    <div class="col-md-12 col-lg-5">
+    <div class="col-md-6 col-lg-5 labs-makers">
       <h2>The makers</h2>
       <p>
         We connect enterprise with leaders building the web platform.
@@ -46,7 +46,7 @@
         Have confidence in working with a team who is leading the evolution of the web platform.
       </p>
     </div>
-    <div class="col-md-12 col-lg-5 push-lg-1">
+    <div class="col-md-6 col-lg-5 push-lg-1 labs-services">
       <h2 class="labs-title">
         Services we offer
       </h2>
@@ -102,14 +102,14 @@
   <h3>Our technology leaders will guide your team</h3>
   <ul class="row people-list">
     {{#each allMentors as |mentor|}}
-      <li class="col-md-5">
+      <li class="col-md-6">
         <header class="row">
-          <div class="col-md-4">
+          <div class="col-lg-4">
             <div class="avatar">
               <img src="{{mentor.image}}" alt="{{mentor.name}}" />
             </div>
           </div>
-          <div class="col-md-8">
+          <div class="col-lg-8">
             <h3>{{mentor.name}}</h3>
             <p>
               {{#each mentor.frameworks as |framework|}}
