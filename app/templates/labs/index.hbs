@@ -102,29 +102,7 @@
   <h3>Our technology leaders will guide your team</h3>
   <ul class="row people-list">
     {{#each allMentors as |mentor|}}
-      <li class="col-md-6">
-        <header class="row">
-          <div class="col-lg-4">
-            <div class="avatar">
-              <img src="{{mentor.image}}" alt="{{mentor.name}}" />
-            </div>
-          </div>
-          <div class="col-lg-8">
-            <h3>{{mentor.name}}</h3>
-            <p>
-              {{#each mentor.frameworks as |framework|}}
-                <span class="framework">{{framework}}</span>
-              {{/each}}
-            </p>
-            <div class="social">
-              <a href="https://twitter.com/{{mentor.twitter}}" target="_blank">@{{mentor.twitter}}</a><br>
-            </div>
-          </div>
-        </header>
-        <p class="mentor-bio">
-          {{mentor.bio}}
-        </p>
-      </li>
+      {{mentor-card mentor=mentor tagName="li" class="col-md-6"}}
     {{/each}}
   </ul>
 </section>

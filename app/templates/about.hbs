@@ -1,107 +1,37 @@
-<section class="content-section">
+<section class="section-description">
+  <p>
+  This Dot Team
+  </p>
+</section>
+<section class="container about-section">
+
   <h2>Mentors</h2>
   <ul class="row people-list">
     {{#each model.mentors as |mentor|}}
-    <li class="col-md-5">
-      <div class="avatar">
-        <img src="{{mentor.image}}" alt="{{mentor.name}}" />
-      </div>
-      <h3>{{mentor.name}}</h3>
-      <p>
-        {{#each mentor.frameworks as |framework|}}
-        <span class="framework">{{framework}}</span> {{/each}}
-      </p>
-      <div class="social">
-        <a href="https://twitter.com/{{mentor.twitter}}" target="_blank">@{{mentor.twitter}}</a><br>
-      </div>
-    </li>
+      {{mentor-card mentor=mentor tagName="li" class="col-md-6"}}
     {{/each}}
   </ul>
 </section>
 
-<section class="content-section">
+<section class="container about-section">
   <h2>Co-Founders</h2>
   <ul class="row people-list">
-    <li class="col-md-5">
-      <div class="avatar">
-        <img src="/media/mentors/taras-mankovski.jpg" alt="Taras" />
-      </div>
-      <h3>Taras Mankovski</h3>
-      <div class="social">
-        <a href="https://twitter.com/embersherpa" target="_blank">@EmberSherpa</a><br>
-        <a href="mailto:taras@thisdot.co">taras@thisdot.co</a>
-      </div>
-    </li>
-    <li class="col-md-5 push-md-1">
-      <div class="avatar">
-        <img src="/media/mentors/tracy-lee.jpg" alt="Tracy" />
-      </div>
-      <h3>Tracy Lee</h3>
-      <div class="social">
-        <a href="https://twitter.com/ladyleet" target="_blank">@ladyleet</a><br>
-        <a href="mailto:tracy@thisdot.co">tracy@thisdot.co</a>
-      </div>
-    </li>
-    <li class="col-md-5">
-      <div class="avatar">
-        <img src="/media/mentors/ben-lesh.png" alt="Ben" />
-      </div>
-      <h3>Ben Lesh</h3>
-      <div class="social">
-        <a href="https://twitter.com/BenLesh" target="_blank">@BenLesh</a><br>
-        <a href="mailto:ben@thisdot.co">ben@thisdot.co</a>
-      </div>
-    </li>
-    <li class="col-md-5 push-md-1">
-      <div class="avatar">
-        <img src="/media/mentors/mike-auty.jpg" alt="Mike" />
-      </div>
-      <h3>Mike Auty</h3>
-      <div class="social">
-        <a href="https://twitter.com/mauty" target="_blank">@mauty</a><br>
-        <a href="mailto:mike@thisdot.co">mike@thisdot.co</a>
-      </div>
-    </li>
+    {{#each model.founders as |founder|}}
+      {{mentor-card mentor=founder tagName="li" class="col-md-6"}}
+    {{/each}}
   </ul>
 </section>
 
-<section class="content-section">
+<section class="container about-section">
   <h2>Founding team</h2>
   <ul class="row people-list">
-    <li class="col-md-5">
-      <div class="avatar">
-        <img src="/media/team/wentao_shu.jpg" alt="Wentao" />
-      </div>
-      <h3>Wentao Shu</h3>
-      <div class="social">
-        <p>Operations Manager</p>
-        <a href="mailto:wentao@thisdot.co">wentao@thisdot.co</a>
-      </div>
-    </li>
-    <li class="col-md-5 push-md-1">
-      <div class="avatar">
-        <img src="/media/team/sarah_rech.jpg" alt="Sarah" />
-      </div>
-      <h3>Sarah Rech</h3>
-      <div class="social">
-        <p>Marketing & Operations</p>
-        <a href="mailto:sarah@thisdot.co">sarah@thisdot.co</a>
-      </div>
-    </li>
-    <li class="col-md-5">
-      <div class="avatar">
-        <img src="/media/team/jorge_lainfiesta.jpg" alt="Jorge" />
-      </div>
-      <h3>Jorge Lainfiesta</h3>
-      <div class="social">
-        <p>Resident Mentor</p>
-        <a href="mailto:jorge@thisdot.co">jorge@thisdot.co</a>
-      </div>
-    </li>
+    {{#each model.team as |person|}}
+      {{mentor-card mentor=person tagName="li" class="col-md-6"}}
+    {{/each}}
   </ul>
 </section>
 
-<section class="content-section">
+<section class="container about-section">
   <div class="col-md-6">
     <h2>We're hiring</h2>
     <p>
