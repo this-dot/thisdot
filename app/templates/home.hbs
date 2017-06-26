@@ -37,10 +37,10 @@
       {{#if (is-after post.date (now))}}
         <div class="video-card col-md-3 is-future">
           <h4>
-            {{#link-to 'javascript.event' (moment-format post.date (t 'event.date.format'))}}{{post.title}}{{/link-to}}
+            {{#link-to 'javascript.event' post}}{{post.title}}{{/link-to}}
           </h4>
-          {{moment-calendar post.date}} <br> 
-          {{#link-to 'javascript' class="button"}}Register{{/link-to}}
+          {{moment-calendar post.date}} <br>
+          {{#link-to 'javascript.event' post class="button"}}Register{{/link-to}}
         </div>
       {{/if}}
     {{/each}}

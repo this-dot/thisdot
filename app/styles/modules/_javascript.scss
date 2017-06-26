@@ -207,7 +207,6 @@ $js-color: lighten(saturate($alt-color, 20), 32);
 .video-wrapper {
   position: relative;
 	padding-bottom: 52.8%; /* 16:9 */
-	padding-top: 25px;
 	height: 0;
 
   iframe {

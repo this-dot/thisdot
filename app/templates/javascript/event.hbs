@@ -64,13 +64,6 @@
             </div>
           {{/if}}
         {{/if}}
-        {{#if (is-same model.date (moment) precision='day')}}
-          <div class="streaming-notice" style="width: 100%">
-            <a href="{{model.video}}" class="button straming-button" target="_blank">
-              Go to Livestream
-            </a>
-          </div>
-        {{/if}}
       {{else}}
         <aside class="col-lg-5">
           {{#if isInteractive}}
@@ -88,11 +81,13 @@
               Core team members will discuss topics such as upcoming releases, recent milestones, and community initiatives.
             </p>
           {{/if}}
-          <div class="streaming-notice">
-            <a href="{{model.video}}" class="button straming-button" target="_blank">
-              Go to Livestream
-            </a>
-          </div>
+          {{#if (is-same model.date (moment) precision='day')}}
+            <div class="streaming-notice" style="width: 100%">
+              <a href="{{model.video}}" class="button straming-button" target="_blank">
+                Go to Livestream
+              </a>
+            </div>
+          {{/if}}
         </aside>
         <div class="col-lg-5 push-lg-1">
           <div class="next-event">
@@ -111,9 +106,6 @@
 
 <section class="javascript-events {{if isPrevious "is-previous"}} {{if isInteractive "is-interactive"}}">
   <div class="container">
-    {{#if (is-after (now) model.date precision='day')}}
-        {{lazy-video url=model.video class="video-wrapper" width="560" height="315"}}
-    {{/if}}
     <ul class="row">
       {{event-speakers event=model}}
     </ul>

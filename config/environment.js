@@ -34,7 +34,7 @@ module.exports = function(environment) {
     },
 
     i18n: {
-      defaultLocale: 'zh'
+      defaultLocale: 'en'
     }
   };
 
@@ -74,11 +74,6 @@ module.exports = function(environment) {
           }
         }
       ]
-    };
-
-    ENV.intercom = {
-      appId: 'o8q1jqm4',
-      enabled: true
     };
 
     ENV.host = storageHost;
