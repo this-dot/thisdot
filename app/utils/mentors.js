@@ -94,5 +94,12 @@ export default [{
     image: '/media/mentors/sergio-cruz.jpg',
     frameworks: ['Angular'],
     bio: 'Angular expert, JavaScript instructor, Lead UI Engineer, and conference speaker. '
+  },
+    {
+    name: 'Brian Holt',
+    twitter: 'holtbt',
+    image: '/media/mentors/brian-holt.jpg',
+    frameworks: ['react'],
+    bio: 'UI architect, React and Redux instructor for Frontend Masters. Netflix and Reddit alum, conference speaker and trainer. '
   }
 ];
