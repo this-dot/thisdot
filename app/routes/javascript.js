@@ -1,13 +1,20 @@
 import Ember from 'ember';
 import moment from 'moment';
-const { get } = Ember;
+const { 
+  get,
+  RSVP: { hash }
+} = Ember;
 
 export default Ember.Route.extend({
   model() {
-    let events = this.store.peekAll('post').filterBy('brand', 'this-dot-js').toArray().sort(this._dateSorter);
-    return {
-      events
-    };
+    return hash({
+      events: this.store.findAll('post').then(events => {
+        return events.filterBy('brand', 'this-dot-js')
+          .toArray()
+          .sort(this._dateSorter);
+      }),
+      authors: this.store.findAll('author')
+    });
   },
 
   _dateSorter(a, b) {

@@ -9,6 +9,8 @@ export default Ember.Route.extend({
       let date = moment(get(event, 'date'));
       return date.isAfter(moment());
     });
-    this.transitionTo('javascript.event', nextEvent);
+    if (nextEvent) {
+      this.transitionTo('javascript.event', nextEvent);
+    }
   }
 });
