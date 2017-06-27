@@ -95,11 +95,18 @@ export default [{
     frameworks: ['Angular'],
     bio: 'Angular expert, JavaScript instructor, Lead UI Engineer, and conference speaker. '
   },
-    {
+  {
     name: 'Brian Holt',
     twitter: 'holtbt',
     image: '/media/mentors/brian-holt.jpg',
     frameworks: ['react'],
     bio: 'UI architect, React and Redux instructor for Frontend Masters. Netflix and Reddit alum, conference speaker and trainer. '
+  },
+  {
+    name: 'Jordan Morano',
+    twitter: 'jordan_morano',
+    image: '/media/mentors/jordan-morano.jpg',
+    frameworks: ['react', 'ember', 'elixir'],
+    bio: ''
   }
 ];
