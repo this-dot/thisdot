@@ -106,7 +106,7 @@ export default [{
     name: 'Jordan Morano',
     twitter: 'jordan_morano',
     image: '/media/mentors/jordan-morano.jpg',
-    frameworks: ['react', 'Ember'],
+    frameworks: ['react', 'ember', 'elixir'],
     bio: ''
   }
 ];
