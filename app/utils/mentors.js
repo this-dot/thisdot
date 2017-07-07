@@ -108,5 +108,12 @@ export default [{
     image: '/media/mentors/jordan-morano.jpg',
     frameworks: ['react', 'ember', 'elixir'],
     bio: ''
+  },
+  {
+    name: 'Michael Luskind',
+    twitter: 'mluskind',
+    image: '/media/mentors/michael-luskind.jpg',
+    frameworks: ['Product Management'],
+    bio: ''
   }
 ];
