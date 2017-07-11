@@ -51,7 +51,7 @@
     "ember-export-application-global": "^2.0.0",
     "ember-font-awesome": "3.0.5",
     "ember-i18n": "5.0.1",
-    "ember-inflector": "2.0.1",
+    "ember-inflector": "^2.0.1",
     "ember-intercom-io": "0.1.4",
     "ember-lazy-video": "0.3.0",
     "ember-let": "0.6.0",

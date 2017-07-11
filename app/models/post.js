@@ -2,7 +2,7 @@ import Ember from 'ember';
 import Post from 'ember-writer/models/post';
 import attr from 'ember-data/attr';
 import moment from 'moment';
-const { computed } = Ember;
+const { computed, computed: { mapBy } } = Ember;
 
 export default Post.extend({
   brand: attr('string'),
@@ -11,12 +11,13 @@ export default Post.extend({
   subscribe: attr('string'),
   speakers: attr(),
 
+  videos: mapBy('speakers', 'video'),
+
   timezoneDate: computed('date', function() {
     return moment(this.get('date')).tz('America/Los_Angeles');
   }).readOnly(),
 
   hasSpeakerVideos: computed('speakers.@each.video', function() {
-    let speakers = this.get('speakers') || [];
-    return speakers.mapBy('video').reduce((result, value) => value ? result : false, true);
+    return this.get('videos').reduce((result, value) => value ? result : false, true);
   })
 });
