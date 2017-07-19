@@ -1,0 +1,29 @@
+<section class="container landing-section">
+    <h2 class="large-header">
+      Apprenticeship Program
+      <div class="sub-title">
+        Real projects with a personal mentor.
+      </div>
+    </h2>
+</section>
+
+<section class="container landing-section">
+  <div class="row">
+    <div class="col-md-5 landing-body">
+      {{{model.body}}}
+    </div>
+    <div class="col-md-5 push-md-1 landing-contact">
+      <div class="contact-form">
+        <p>
+          {{model.contactLegend}}
+        </p>
+        {{contact-form 
+          page=model.id 
+          buttonText="Submit"
+          confirmationText="We received your submission"
+          ad=ad
+        }}
+      </div>
+    </div>
+  </div>
+</section>

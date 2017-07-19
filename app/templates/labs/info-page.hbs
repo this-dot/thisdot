@@ -74,7 +74,10 @@
 {{/if}}
 
 <section class="container landing-section">
-  <h3>Our technology leaders will guide your team</h3>
+  <h3>{{model.mentorsLegend}}</h3>
+  {{#if model.mentorsParagraph}}
+    <p>{{model.mentorsParagraph}}</p>
+  {{/if}}
   <ul class="row people-list">
     {{#each pageMentors as |mentor|}}
       {{mentor-card mentor=mentor tagName="li" class="col-md-6"}}
