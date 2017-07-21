@@ -46,6 +46,8 @@ $js-color: lighten(saturate($alt-color, 20), 32);
     .avatar {
       margin-left: auto;
       margin-right: auto;
+      width: 250px;
+      height: 250px;
     }
     .framework-pop {
       position: absolute;
@@ -66,7 +68,7 @@ $js-color: lighten(saturate($alt-color, 20), 32);
         width: 100px;
         height: 100px;
       }
-      $frameworks: "angular" "react" "ember" "rxjs" "vue" "polymer" "webpack" "chrome" "graphql" "mozilla" "edge" "brave";
+      $frameworks: "angular" "react" "ember" "rxjs" "vue" "polymer" "webpack" "chrome" "graphql" "mozilla" "edge" "brave" "node";
       @each $framework in $frameworks {
         &.#{$framework}:before {
           background-image: url(images/frameworks/#{$framework}.svg);
