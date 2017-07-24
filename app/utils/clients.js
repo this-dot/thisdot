@@ -22,5 +22,14 @@ export default [{
   }, {
     name: 'Locus Energy',
     image: '/media/clients/locus-energy.png'
+  }, {
+    name: 'Big Picture',
+    image: '/media/clients/big-picture.png'
+  }, {
+    name: 'Hospital Run',
+    image: '/media/clients/hospital-run.png'
+  }, {
+    name: 'Documize',
+    image: '/media/clients/documize.png'
   }
 ];

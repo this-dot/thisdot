@@ -13,7 +13,6 @@ Router.map(function() {
   this.route('about-redirect', { path: 'about'});
   this.route('about', { path: 'team' });
   this.route('labs', function() {
-    this.route('apprentices');
     this.route('info-page', { path: ':slug' });
   });
   this.route('media');

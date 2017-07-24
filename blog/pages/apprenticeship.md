@@ -17,9 +17,9 @@ mentors:
 - Balint Erdi
 - Sean Larkin
 clients:
-- Standard Chartered
-- Deloitte
-- Locus Energy
+- Big Picture
+- Hospital Run
+- Documize
 ---
 ### Apprentices
 
