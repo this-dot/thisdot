@@ -69,12 +69,6 @@ export default [{
     bio: 'Webpack core team, Angular CLI core team, driving force that integrated Webpack into Angular CLI, developer advocate, OSS contributor and conference speaker. '
   },
   {
-    name: 'Offir Golan',
-    twitter: 'offir_golan',
-    image: '/media/mentors/offir-golan.jpg',
-    frameworks: ['ember']
-  },
-  {
     name: 'Sani Yusuf',
     twitter: 'saniyusuf',
     image: '/media/mentors/sani-yusuf.jpg',
