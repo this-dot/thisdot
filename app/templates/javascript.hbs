@@ -43,9 +43,9 @@
           <div class="video-card col-md-4 is-future">
             {{our-calendar event.date}}
             <h4>
-              {{#link-to 'javascript.event' (moment-format event.date 'MM-YYYY')}}{{event.title}}{{/link-to}}
+              {{#link-to 'javascript.event' (moment-format event.date 'MM-DD-YYYY')}}{{event.title}}{{/link-to}}
             </h4>
-            {{#link-to 'javascript.event' (moment-format event.date 'MM-YYYY') class="button"}}Register{{/link-to}}
+            {{#link-to 'javascript.event' (moment-format event.date 'MM-DD-YYYY') class="button"}}Register{{/link-to}}
           </div>
         {{/if}}
       {{/each}}
@@ -61,9 +61,9 @@
         <div class="video-card col-md-4 is-future">
           {{our-calendar event.date}}
           <h4>
-            {{#link-to 'javascript.event' (moment-format event.date 'MM-YYYY')}}{{event.title}}{{/link-to}}
+            {{#link-to 'javascript.event' (moment-format event.date 'MM-DD-YYYY')}}{{event.title}}{{/link-to}}
           </h4>
-          {{#link-to 'javascript.event' (moment-format event.date 'MM-YYYY') class="button"}}Watch{{/link-to}}
+          {{#link-to 'javascript.event' (moment-format event.date 'MM-DD-YYYY') class="button"}}Watch{{/link-to}}
         </div>
       {{/if}}
     {{/each}}
