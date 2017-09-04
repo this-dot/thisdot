@@ -9,11 +9,12 @@ export default Post.extend({
   video: attr('string'),
   thumbnail: attr('string'),
   subscribe: attr('string'),
+  timeText: attr('string'),
   speakers: attr(),
 
   videos: mapBy('speakers', 'video'),
 
-  timezoneDate: computed('date', function() {
+  timezoneDate: computed('date', 'timeText', function() {
     return moment(this.get('date')).tz('America/Los_Angeles');
   }).readOnly(),
 

@@ -35,11 +35,11 @@
   <div class="row centered-cols">
     {{#each (sort-by (action 'closerDateFirst') (filter-by 'brand' 'this-dot-js' model.posts)) as |post|}}
       {{#if (is-after post.date (now))}}
-        <div class="video-card col-md-3 is-future">
+        <div class="video-card col-md-4 is-future">
           <h4>
             {{#link-to 'javascript.event' post}}{{post.title}}{{/link-to}}
           </h4>
-          {{moment-calendar post.date}} <br>
+          {{moment-format post.date 'MMM Do YYYY'}} <br>
           {{#link-to 'javascript.event' post class="button"}}Register{{/link-to}}
         </div>
       {{/if}}
