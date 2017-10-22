@@ -1,19 +1,21 @@
-{{#each speakers as |author|}}
-  {{#if author.video}}
-    <li class="col-md-5 speaker-card is-video">
-      <strong class="framework-pop {{author.frameworks}}">{{author.framework}}</strong>
-      <p class="description">
-        {{author.description}}
-      </p>
-      {{lazy-video url=author.video}}
-    </li>
-  {{else}}
-    <li class="col-lg-4 col-md-6 speaker-card">
-      <strong class="framework-pop {{author.frameworks}}">{{author.framework}}</strong>
-      <div class="avatar">
-        <img src="{{author.image}}" alt="{{author.name}}" />
-      </div>
-      <h3>{{author.name}}</h3>
-    </li>
+{{#each speakers as |author|}} {{#if author.video}}
+<li class="col-md-5 speaker-card is-video">
+  {{#if author.framework}}
+  <strong class="framework-pop {{author.framework}}">{{author.framework}}</strong>
   {{/if}}
-{{/each}}
+  <p class="description">
+    {{author.description}}
+  </p>
+  {{lazy-video url=author.video}}
+</li>
+{{else}}
+<li class="col-lg-4 col-md-6 speaker-card">
+  {{#if author.framework}}
+  <strong class="framework-pop {{author.framework}}">{{author.framework}}</strong>
+  {{/if}}
+  <div class="avatar">
+    <img src="{{author.image}}" alt="{{author.name}}" />
+  </div>
+  <h3>{{author.name}}</h3>
+</li>
+{{/if}} {{/each}}
