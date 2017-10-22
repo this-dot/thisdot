@@ -12,7 +12,7 @@ speakers:
     framework: chrome
   - id: tracy-lee
     framework: thisdot
-  - id: cat
+  - id: matthew-claypotch
     framework: mozilla
   - id: dog
     framework: edge
