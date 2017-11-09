@@ -68,7 +68,8 @@ $js-color: lighten(saturate($alt-color, 20), 32);
         width: 100px;
         height: 100px;
       }
-      $frameworks: "angular" "react" "ember" "rxjs" "vue" "polymer" "webpack" "chrome" "graphql" "mozilla" "edge" "brave" "node" "thisdot";
+      $frameworks: 'angular' 'react' 'ember' 'rxjs' 'vue' 'polymer' 'webpack' 'chrome' 'graphql'
+        'mozilla' 'edge' 'brave' 'node' 'thisdot' 'beaker';
       @each $framework in $frameworks {
         &.#{$framework}:before {
           background-image: url(images/frameworks/#{$framework}.svg);
@@ -109,16 +110,17 @@ $js-color: lighten(saturate($alt-color, 20), 32);
   }
   .video-wrapper {
     position: relative;
-  	padding-bottom: 52.8%; /* 16:9 */
-  	padding-top: 25px;
-  	height: 0;
+    padding-bottom: 52.8%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
 
-    iframe, .lazyLoad-container {
+    iframe,
+    .lazyLoad-container {
       position: absolute;
-    	top: 0;
-    	left: 0;
-    	width: 100%;
-    	height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
   }
 }
@@ -156,8 +158,8 @@ $js-color: lighten(saturate($alt-color, 20), 32);
       color: $alt-color;
     }
     &:nth-child(3n) {
-      border-color: #B2AD56;
-      color: #B2AD56;
+      border-color: #b2ad56;
+      color: #b2ad56;
     }
   }
 }
@@ -208,14 +210,14 @@ $js-color: lighten(saturate($alt-color, 20), 32);
 
 .video-wrapper {
   position: relative;
-	padding-bottom: 52.8%; /* 16:9 */
-	height: 0;
+  padding-bottom: 52.8%; /* 16:9 */
+  height: 0;
 
   iframe {
     position: absolute;
-  	top: 0;
-  	left: 0;
-  	width: 100%;
-  	height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
