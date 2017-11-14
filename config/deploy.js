@@ -2,17 +2,17 @@
 
 module.exports = function() {
   return {
-    'gcloud': {
+    gcloud: {
       bucket: 'this-dot-assets',
-      key: 'fastboot-release.json'
+      key: 'fastboot-release.json',
     },
     'gcloud-storage': {
       projectId: 'this-dot',
       bucket: 'this-dot-assets',
       filePattern: '**/*.{js,css,png,gif,ico,jpg,map,xml,txt,svg,swf,eot,ttf,woff,woff2,json}',
       metadata: {
-        cacheControl: 'public, max-age=31536000'
-      }
-    }
+        cacheControl: 'public',
+      },
+    },
   };
 };
