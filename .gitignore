@@ -20,3 +20,4 @@ testem.log
 .vscode
 
 .env.deploy.*
+jsconfig.json
