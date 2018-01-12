@@ -9,8 +9,12 @@
   <div class="container">
     <div class="row">
       <header class="col-lg-8">
+        <h2 class="pull-left">
+          {{model.title}}{{#unless (is-equal model.subTitle "")}}: {{model.subTitle}}{{/unless}}
+        </h2>
+
+
         <h2>
-          {{model.title}}
           {{#if isPrevious}}
             <br>
             <strong>Recorded on {{moment-format model.date 'MMMM Do YYYY'}}</strong>
