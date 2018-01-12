@@ -5,6 +5,7 @@ import moment from 'moment';
 const { computed, computed: { mapBy } } = Ember;
 
 export default Post.extend({
+  subTitle: attr('string'),
   brand: attr('string'),
   video: attr('string'),
   thumbnail: attr('string'),

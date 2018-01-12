@@ -36,9 +36,12 @@
     {{#each (sort-by (action 'closerDateFirst') (filter-by 'brand' 'this-dot-js' model.posts)) as |post|}}
       {{#if (is-after post.date (now))}}
         <div class="video-card col-md-4 is-future">
+          {{#link-to 'javascript.event' post}}
           <h4>
-            {{#link-to 'javascript.event' post}}{{post.title}}{{/link-to}}
+            {{post.title}}
           </h4>
+          <h6>{{post.subTitle}}</h6>
+          {{/link-to}}
           {{moment-format post.date 'MMM Do YYYY'}} <br>
           {{#link-to 'javascript.event' post class="button"}}Register{{/link-to}}
         </div>
