@@ -24,6 +24,7 @@ Router.map(function() {
   });
   this.route('privacy-policy');
   this.route('sponsors');
+  this.route('careers');
 });
 
 export default Router;
