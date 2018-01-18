@@ -27,6 +27,13 @@ export default [{
     bio: 'OSS contributor, Ember.js mentor, technical lead for framework agnostic projects in Angular, React, Ember, and GraphQL. Founded EmberSherpa and Global Ember Meetup. Co-founder at This Dot, Inc. Conference speaker.'
   },
   {
+    name: 'Sivakumar Kailasam',
+    twitter: 'sivakumar_k',
+    image: '/media/mentors/sivakumar-kailasam.jpg',
+    frameworks: ['ember'],
+    bio: 'Ember.js Learning team member, OSS contributor, founder of Bangalore Ember.js meetup. Resident mentor at ThisDot, previously Senior Principal Software Engineer - UI at IBM Security.'
+  },
+  {
     name: 'Mike Brocchi',
     twitter: 'Brocco',
     image: '/media/mentors/mike-brocchi.jpg',
