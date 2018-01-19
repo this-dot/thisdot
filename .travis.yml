@@ -26,7 +26,8 @@ script:
 
 before_deploy:
   - openssl aes-256-cbc -K $encrypted_9c84f0cea3d3_key -iv $encrypted_9c84f0cea3d3_iv -in fastboot-min.json.enc -out fastboot-min.json -d
-  - mv fastboot-min.json ~/fastboot-min.json
+  - mv fastboot-min.json /tmp/fastboot-min.json
+  - cat /tmp/fastboot-min.json | wc
 
 deploy:
   provider: script
