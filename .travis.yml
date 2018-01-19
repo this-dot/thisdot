@@ -1,9 +1,10 @@
----
 language: node_js
 node_js:
-  - "6"
+- '8'
 
-sudo: false
+dist: trusty
+sudo: required
+group: deprecated-2017Q4
 
 cache:
   directories:
@@ -13,9 +14,21 @@ before_install:
   - npm config set spin false
   - npm install -g phantomjs-prebuilt
   - phantomjs --version
+  - npm install -g bower
 
 install:
   - npm install
+  - bower install
 
 script:
   - npm test
+
+before_deploy:
+  - echo $DEPLOYMENT_CONFIG > ~/deployment.json
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: npm run deploy
+  on:
+    branch: master
