@@ -11,6 +11,7 @@
   "repository": "",
   "scripts": {
     "build": "ember build",
+    "build:production": "ember build --environment=production",
     "start": "ember server",
     "test": "ember test"
   },

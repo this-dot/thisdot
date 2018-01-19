@@ -37,7 +37,5 @@ jobs:
       # run tests!
       - run: npm test
 
-      - run: ember build --environment=production
-
-
+      - run: npm run build:production
 
