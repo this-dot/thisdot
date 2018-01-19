@@ -18,6 +18,7 @@ before_install:
 
 install:
   - npm install
+  - npm rebuild #required for grpc modules to work properly
   - bower install
 
 script:
