@@ -25,7 +25,7 @@ script:
   - npm test
 
 before_deploy:
-  - echo $DEPLOYMENT_CONFIG > ~/deployment.json
+  - echo $DEPLOYMENT_CONFIG > $GOOGLE_APPLICATION_CREDENTIALS
 
 deploy:
   provider: script
