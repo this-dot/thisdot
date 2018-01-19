@@ -14,7 +14,7 @@
     "build:production": "ember build --environment=production",
     "start": "ember server",
     "test": "ember test",
-    "deploy": "ember deploy production"
+    "deploy": "ember deploy production --verbose"
   },
   "devDependencies": {
     "broccoli-asset-rev": "~2.5.0",
