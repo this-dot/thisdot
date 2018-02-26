@@ -1,16 +1,37 @@
-<div class="input-group">
-  {{if cta cta 'Subscribe to the modern web revolution'}}
-  <div class="input-button">
-    {{input key-press="valueDidChange"
-              placeholder=placeholder
-              value=value
-              type="email"
-              name="EMAIL"
-    }}
-    <button type="submit" class="button">{{buttonText}}</button>
+<form class="input-group" {{action (perform submitTask) on="submit"}}>
+{{#if isRegistered}}
+  <div class="message success-message">
+    You're in, comrade!
   </div>
-</div>
+{{else}}
+  Subscribe to the modern web revolution
 
-{{#if chimpSays}}
-  <div class="message">{{chimpSays}}</div>
+  <div class="input-button">
+    {{one-way-input email 
+      id="subscribe-email" 
+      type="email" 
+      required=true 
+      name="email"
+      update=(action (mut email))
+      focusIn=(action (mut showEmailError) false)
+      focusOut=(action (mut showEmailError) true)
+    }}
+    <button type="submit" class="button" disabled={{submitTask.isRunning}}>
+      {{#if submitTask.isRunning}}
+        {{fa-icon "spinner" spin=true}} Submitting
+      {{else}}
+        Subscribe
+      {{/if}}
+    </button>
+  </div>
+
+  {{#if showEmailError}}
+    {{#if (v-get this "email" "isInvalid")}}
+      <div class="message">Please provide a valid email address.</div>
+    {{/if}}
+  {{else if error}}
+    <div class="error">{{error.message}}</div>
+  {{/if}}
+
 {{/if}}
+</form>

@@ -10,6 +10,7 @@
   },
   "repository": "",
   "scripts": {
+    "postinstall": "bower install",
     "build": "ember build",
     "build:production": "ember build --environment=production",
     "start": "ember server",
@@ -17,10 +18,10 @@
     "deploy": "ember deploy production --verbose"
   },
   "devDependencies": {
+    "bower": "1.8.2",
     "broccoli-asset-rev": "~2.5.0",
     "ember-ajax": "^3.0.0",
     "ember-background-video": "1.0.0",
-    "ember-chimp": "0.1.0",
     "ember-cli": "2.13.2",
     "ember-cli-analytics": "1.0.1",
     "ember-cli-app-version": "^3.0.0",
