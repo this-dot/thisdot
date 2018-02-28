@@ -68,13 +68,16 @@ $js-color: lighten(saturate($alt-color, 20), 32);
         width: 100px;
         height: 100px;
       }
-      $frameworks: 'angular' 'react' 'ember' 'rxjs' 'vue' 'polymer' 'webpack' 'chrome' 'graphql'
-        'mozilla' 'edge' 'brave' 'node' 'thisdot' 'beaker' 'special-guest';
-      @each $framework in $frameworks {
+      
+      $svgFiles: ["angular" "chrome"  "gcloud"  "node" "react" "vue" "beaker"  "edge"  "graphql" "polymer" "rxjs" 
+        "webpack" "brave"   "ember"   "mozilla" "pouchdb" "thisdot" "webkit"];
+      @each $framework in $svgFiles {
         &.#{$framework}:before {
           background-image: url(images/frameworks/#{$framework}.svg);
         }
       }
+
+
     }
     h3 {
       @include title-type();

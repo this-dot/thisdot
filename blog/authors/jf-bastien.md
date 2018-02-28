@@ -4,4 +4,5 @@ name: JF Bastien
 twitter: jfbastien
 github: https://github.com/jfbastien
 image: /media/people/jf-bastien.jpg
+
 ---
