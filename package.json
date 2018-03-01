@@ -14,6 +14,7 @@
     "build": "ember build",
     "build:production": "ember build --environment=production",
     "start": "ember server",
+    "prod": "ember server --environment=production",
     "test": "ember test",
     "deploy": "ember deploy production --verbose"
   },

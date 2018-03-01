@@ -61,23 +61,25 @@ $js-color: lighten(saturate($alt-color, 20), 32);
       text-indent: 10000px;
       overflow: hidden;
       &:before {
-        content: '';
+        content: "";
         display: block;
         background-repeat: no-repeat;
         background-size: contain;
         width: 100px;
         height: 100px;
       }
-      
-      $svgFiles: ["angular" "chrome"  "gcloud"  "node" "react" "vue" "beaker"  "edge"  "graphql" "polymer" "rxjs" 
-        "webpack" "brave"   "ember"   "mozilla" "pouchdb" "thisdot" "webkit"];
+
+      $svgFiles: [
+        "angular" "chrome" "gcloud" "node" "react" "vue" "beaker" "edge"
+        "graphql" "polymer" "rxjs" "webpack" "brave" "ember" "mozilla" "pouchdb"
+          "thisdot" "webkit" "safari" "firefox"
+      ];
+
       @each $framework in $svgFiles {
         &.#{$framework}:before {
           background-image: url(images/frameworks/#{$framework}.svg);
         }
       }
-
-
     }
     h3 {
       @include title-type();
