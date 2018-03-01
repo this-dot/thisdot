@@ -30,7 +30,7 @@ module.exports = function(environment) {
     ],
 
     fastboot: {
-      hostWhitelist: [storageHost, /^localhost:\d+$/, /(www\.)?thisdot\.co$/]
+      hostWhitelist: [storageHost, /^localhost:\d+$/, /(www\.)?thisdot\.co$/, 'default.this-dot.appspot.com']
     },
 
     moment: {
@@ -80,8 +80,8 @@ module.exports = function(environment) {
       ]
     };
 
-    ENV.host = storageHost;
-    ENV.namespace = 'this-dot-assets/api/blog';
+    ENV.host = 'https://www.thisdot.co';
+    ENV.namespace = 'api/blog';
   }
 
   return ENV;
