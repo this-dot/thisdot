@@ -45,16 +45,16 @@ export default Ember.Route.extend({
           email: 'gagan@thisdot.co'
         },
         {
-          name: 'Sarah Rech',
-          image: '/media/team/sarah_rech.jpg',
+          name: 'Deanna Leavitt',
+          image: '/media/team/deanna-leavitt.jpg',
           title: 'Marketing & Operations',
-          email: 'sarah@thisdot.co'
+          email: 'deanna@thisdot.co'
         },
         {
-          name: 'Trinh Kien',
-          image: '/media/team/trinh-kien.png',
+          name: 'Ann Marie Tonog',
+          image: '/media/team/ann-marie.jpg',
           title: 'Marketing & Operations',
-          email: 'trinh@thisdot.co'
+          email: 'annmarie@thisdot.co'
         },
         {
           name: 'Jorge Lainfiesta',
