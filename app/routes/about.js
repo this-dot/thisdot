@@ -7,12 +7,6 @@ export default Ember.Route.extend({
       mentors,
       founders: [
         {
-          name: 'Taras Mankovski',
-          image: '/media/mentors/taras-mankovski.jpg',
-          twitter: 'tarasm',
-          email: 'taras@thisdot.co'
-        },
-        {
           name: 'Tracy Lee',
           image: '/media/mentors/tracy-lee.jpg',
           twitter: 'ladyleet',
@@ -55,12 +49,6 @@ export default Ember.Route.extend({
           image: '/media/team/ann-marie.jpg',
           title: 'Marketing & Operations',
           email: 'annmarie@thisdot.co'
-        },
-        {
-          name: 'Jorge Lainfiesta',
-          image: '/media/team/jorge_lainfiesta.jpg',
-          title: 'Resident Mentor',
-          email: 'jorge@thisdot.co'
         }
       ]
     };
