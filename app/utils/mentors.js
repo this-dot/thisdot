@@ -104,13 +104,6 @@ export default [{
     bio: 'UI architect, React and Redux instructor for Frontend Masters. Netflix and Reddit alum, conference speaker and trainer. '
   },
   {
-    name: 'Jordan Morano',
-    twitter: 'jordan_morano',
-    image: '/media/mentors/jordan-morano.jpg',
-    frameworks: ['react', 'ember', 'elixir'],
-    bio: ''
-  },
-  {
     name: 'Michael Luskind',
     twitter: 'mluskind',
     image: '/media/mentors/michael-luskind.jpg',
