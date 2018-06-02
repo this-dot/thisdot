@@ -58,6 +58,13 @@
     margin-top: unit-space(4);
     margin-bottom: unit-space(4);
   }
+  .sub-title {
+    color: darken($dark-alt-color, 15);
+  }
+  p {
+    margin-top: unit-space(1);
+    margin-bottom: unit-space(1);
+  }
 }
 
 .landing-body {
